@@ -172,11 +172,7 @@ public class Login extends javax.swing.JFrame {
         String login = loginTextField.getText();
         String senha = new String(senhaPasswordField.getPassword());
         //Vai Verificar se o usuario e valido
-        if(login.equals("admin")&&senha.equals("admin"))
-            System.out.println("Bem Vindo ao SolarForYou!");
-        else{
-            System.out.println("Usuario Invalido");  
-        }
+    
     }//GEN-LAST:event_loginTextFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed

@@ -14,12 +14,12 @@ public class ConexaoBD {
     private static String porta = "3306";       
     private static String bd = "solar_toyouods";
     private static String usuario = "root";
-    private static String senha =  "33461635Henrique";
+    private static String senha =  "12345";
     
     public static Connection obtemConexao (){
         try{
             Connection c = DriverManager.getConnection("jdbc:mysql://" + host +
-                    ":" + porta + "/" + bd + "?useTimezone=true&serverTomezone=UTC"
+                    ":" + porta + "/" + bd + "?useTimezone=true&serverTimezone=UTC"
             ,usuario,senha);
             return c;
         }

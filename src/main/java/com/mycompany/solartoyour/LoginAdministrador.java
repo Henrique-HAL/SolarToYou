@@ -4,6 +4,7 @@
  */
 package com.mycompany.solartoyour;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author Henri
@@ -85,7 +86,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
                 .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(81, 81, 81)
                 .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(voltarButton)
                     .addComponent(loginButton))
@@ -124,21 +125,31 @@ public class LoginAdministrador extends javax.swing.JFrame {
         //pega Nome e a senha do usario 
         String login = loginTextField.getText();
         String senha = new String(senhaPasswordField.getPassword());
-
-
-
-
-
-
-
-
-
-
-//Ao clicar em login ele sera direcionado para a tela CRUD Paineis
-        CRUDPaineis crud = new CRUDPaineis();
+        
+        try{
+            Administrador administrador = new Administrador(login,senha);
+            DAOAdimin daoadimin = new DAOAdimin();
+            if(daoadimin.existeAdmin(administrador)){
+                JOptionPane.showMessageDialog(null,"  Seja   Bem Vindo   " +  administrador.getNome() + "!");
+                //Ao clicar em login ele sera direcionado para a tela CRUD Painei
+                if(daoadimin.existeAdmin(administrador)){
+                     CRUDPaineis crud = new CRUDPaineis();
         crud.setVisible(true);
         
         this.dispose();
+                }
+                
+            }
+            
+            else{
+                JOptionPane.showMessageDialog(null,"Usuario Invalido");
+            }
+        }
+        catch(Exception e ){
+            JOptionPane.showMessageDialog(null,"Ocorreu um Erro Volte Mais Tarde");
+        }
+
+       
     }//GEN-LAST:event_loginButtonActionPerformed
 
     /**
