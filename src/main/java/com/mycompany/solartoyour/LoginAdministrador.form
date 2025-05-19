@@ -86,7 +86,7 @@
                   <Component id="loginTextField" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                   <Component id="senhaPasswordField" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="67" max="32767" attributes="0"/>
+                  <EmptySpace pref="66" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="voltarButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="loginButton" alignment="3" min="-2" max="-2" attributes="0"/>

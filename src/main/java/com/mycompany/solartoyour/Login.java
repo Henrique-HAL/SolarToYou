@@ -39,7 +39,6 @@ public class Login extends javax.swing.JFrame {
         cadastrarLoginButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
 
         jPanelExterno.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
         jPanelExterno.setPreferredSize(new java.awt.Dimension(500, 500));
@@ -106,12 +105,12 @@ public class Login extends javax.swing.JFrame {
                                     .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 8, Short.MAX_VALUE)))
+                        .addGap(0, 3, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInternoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(cadastrarLoginButton)
-                .addGap(62, 62, 62))
+                .addGap(64, 64, 64))
         );
         jPanelInternoLayout.setVerticalGroup(
             jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +125,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(loginButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(cadastrarLoginButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -145,7 +144,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanelExternoLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -212,6 +211,10 @@ public class Login extends javax.swing.JFrame {
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         // TODO add your handling code here:
+        OpcaoEntradaTela entrada = new OpcaoEntradaTela();
+        entrada.setVisible(true);
+        
+        this.dispose();
     }//GEN-LAST:event_sairButtonActionPerformed
 
     /**

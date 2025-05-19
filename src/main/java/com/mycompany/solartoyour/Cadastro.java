@@ -4,6 +4,8 @@
  */
 package com.mycompany.solartoyour;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Henri
@@ -14,8 +16,10 @@ public class Cadastro extends javax.swing.JFrame {
      * Creates new form Cadastro
      */
     public Cadastro() {
+        super("Cadastro Usuario");
         initComponents();
-        this.dispose();
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -49,6 +53,11 @@ public class Cadastro extends javax.swing.JFrame {
 
         nomeTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Nome:"));
         nomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        nomeTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomeTextFieldActionPerformed(evt);
+            }
+        });
 
         emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Email:"));
         emailTextField.setPreferredSize(new java.awt.Dimension(270, 55));
@@ -156,8 +165,25 @@ public class Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_voltarButtonActionPerformed
 
     private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
-        // TODO add your handling code here:
+        // Inserir DAO com o metodo inserir para que os dados sejam 
+        //adicionados ao banco de dados 
+        String nome = nomeTextField.getText();
+        String email = emailTextField.getText();
+        String senha = new String(senhaPasswordField.getPassword());
+        
+        try{
+            Usuario usuario = new Usuario(nome,email,senha);
+            DAO dao = new DAO();
+            dao.cadastrar(usuario);
+            JOptionPane.showMessageDialog(null,"Usuario Cadastrado!!!");
+        }catch(Exception e ){
+            JOptionPane.showMessageDialog(null,"Algo de Errado Ocorreu.Usuario Nao Cadastrado!");
+        }
     }//GEN-LAST:event_cadastrarButtonActionPerformed
+
+    private void nomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomeTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
