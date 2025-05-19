@@ -11,6 +11,7 @@ package com.mycompany.solartoyour;
 public class SolarToyour {
 
     public static void main(String[] args) {
+        System.out.println("Testando se vai aparecer no git");
         
     }
 }

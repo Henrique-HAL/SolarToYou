@@ -83,7 +83,7 @@ public class Cadastro extends javax.swing.JFrame {
                     .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelInternoLayout.createSequentialGroup()
                         .addComponent(voltarButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
                         .addComponent(cadastrarButton)))
                 .addGap(50, 50, 50))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInternoLayout.createSequentialGroup()
@@ -106,7 +106,7 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGroup(jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(voltarButton)
                     .addComponent(cadastrarButton))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelExternoLayout = new javax.swing.GroupLayout(jPanelExterno);
