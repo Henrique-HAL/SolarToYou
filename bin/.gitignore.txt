@@ -1,0 +1,20 @@
+# NetBeans
+nbproject/private/
+build/
+dist/
+nbbuild/
+.nb-gradle/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs e temporários
+*.log
+*.tmp
+*~
+
+# MacOS
+.DS_Store
