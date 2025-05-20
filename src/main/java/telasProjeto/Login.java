@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.solartoyour;
+package telasProjeto;
+import com.mycompany.solartoyour.DAO;
+import com.mycompany.solartoyour.Usuario;
+import telasProjeto.OpcaoEntradaTela;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Henri
@@ -105,7 +109,7 @@ public class Login extends javax.swing.JFrame {
                                     .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 3, Short.MAX_VALUE)))
+                        .addGap(0, 8, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInternoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -144,7 +148,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanelExternoLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -186,10 +190,10 @@ public class Login extends javax.swing.JFrame {
             Usuario usuario = new Usuario(login,login,senha);
             DAO dao = new DAO();
             if(dao.existe(usuario)){
-                System.out.println("Seja Bem Vindo" + usuario.getNome()+ "!");
+                JOptionPane.showMessageDialog(null,"Seja Bem vindo" + usuario.getNome()+ "!");
             }
             else{
-                System.out.println("Usuario Invalido");
+                JOptionPane.showMessageDialog(null,"Usuario Invalido");
             }  
         }
         catch(Exception e ){

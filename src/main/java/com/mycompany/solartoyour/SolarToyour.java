@@ -4,6 +4,8 @@
 
 package com.mycompany.solartoyour;
 
+import telasProjeto.OpcaoEntradaTela;
+
 /**
  *
  * @author Henri

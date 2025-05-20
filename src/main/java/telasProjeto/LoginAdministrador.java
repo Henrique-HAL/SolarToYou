@@ -2,8 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.solartoyour;
+package telasProjeto;
 
+import com.mycompany.solartoyour.Administrador;
+import com.mycompany.solartoyour.DAOAdimin;
+import telasProjeto.OpcaoEntradaTela;
 import javax.swing.JOptionPane;
 /**
  *
@@ -36,7 +39,6 @@ public class LoginAdministrador extends javax.swing.JFrame {
         loginButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Login Administrador"));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 400));

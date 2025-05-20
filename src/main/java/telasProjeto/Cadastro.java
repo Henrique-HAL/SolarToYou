@@ -2,8 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.solartoyour;
+package telasProjeto;
 
+import com.mycompany.solartoyour.DAO;
+import com.mycompany.solartoyour.Usuario;
+import telasProjeto.Login;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,7 +44,6 @@ public class Cadastro extends javax.swing.JFrame {
         cadastrarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(500, 500));
 
         jPanelExterno.setPreferredSize(new java.awt.Dimension(500, 500));
 

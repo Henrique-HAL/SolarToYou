@@ -11,7 +11,7 @@ import java.sql.ResultSet;
  * @author Henri
  */
 public class DAO {
-    //Aqui e criado para ser chamado no BottonLogin da tela Login
+    //Aqui e criado o metodo para ser chamado no BottonLogin da tela Login
     public boolean existe(Usuario usuario) throws Exception{
         String sql= "SELECT*FROM tb_Usuarios WHERE (nome = ? OR email = ?) AND senha = ?"; //Vai verificar nome ou email no Banco de dados//
         try(Connection conn = ConexaoBD.obtemConexao();
