@@ -34,5 +34,5 @@ public class Administrador {
        this.senha = senha;
    }
     
-    // master
+    // vamoqvamo
 }
