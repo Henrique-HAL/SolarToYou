@@ -36,3 +36,11 @@ public class Administrador {
     
     // vamoqvamo
 }
+
+//opa
+=======
+//oi de novo
+//opa
+// opa 2
+// bacalhau
+>>>>>>> 777a8491a8aa15dedccee10546bab7bfe4727d89
