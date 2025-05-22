@@ -36,7 +36,7 @@ public class Administrador {
     
     // vamoqvamo
 }
-<<<<<<< HEAD
+
 //opa
 =======
 //oi de novo
