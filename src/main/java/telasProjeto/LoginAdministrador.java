@@ -5,7 +5,7 @@
 package telasProjeto;
 
 import com.mycompany.solartoyour.Administrador;
-import com.mycompany.solartoyour.DAOAdimin;
+import DAO.DAOAdimin;
 import telasProjeto.OpcaoEntradaTela;
 import javax.swing.JOptionPane;
 /**
