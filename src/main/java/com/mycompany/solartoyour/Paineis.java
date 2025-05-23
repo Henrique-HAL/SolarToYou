@@ -10,61 +10,54 @@ package com.mycompany.solartoyour;
  */
 public class Paineis {
     
-    private String desvantagens;
-    private String vantagens;
-    private String tipo;
+    private String modelo;
+    private double preco;
+    private String tipo_eficiencia;
     private int eficiencia;
-    private int custo;
+    private int potencia_maxima;
     
     //Construtor do Objeto Paineis
 
-    public Paineis(String desvantagens, String vantagens, String tipo, int eficiencia, int custo) {
-        this.desvantagens = desvantagens;
-        this.vantagens = vantagens;
-        this.tipo = tipo;
+    public Paineis(String modelo, double preco, String tipo_eficiencia, int eficiencia, int potencia_maxima) {
+        this.modelo = modelo;
+        this.preco = preco;
+        this.tipo_eficiencia = tipo_eficiencia;
         this.eficiencia = eficiencia;
-        this.custo = custo; 
+        this.potencia_maxima = potencia_maxima; 
     }
     
     //Encapsulamento
-    
-    public String getDesvantagens() {
-        return desvantagens;
-    }
 
-    public void setDesvantagens(String desvantagens) {
-        this.desvantagens = desvantagens;
+    public String getModelo() {
+        return modelo;
     }
-
-    public String getVantagens() {
-        return vantagens;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
-
-    public void setVantagens(String vantagens) {
-        this.vantagens = vantagens;
+    public double getPreco() {
+        return preco;
     }
-
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+    public String getTipo_eficiencia() {
+        return tipo_eficiencia;
+    }
+    public void setTipo_eficiencia(String tipo_eficiencia) {
+        this.tipo_eficiencia = tipo_eficiencia;
+    }
+    public int getPotencia_maxima() {
+        return potencia_maxima;
+    }
+    public void setPotencia_maxima(int potencia_maxima) {
+        this.potencia_maxima = potencia_maxima;
+    }
     public int getEficiencia() {
         return eficiencia;
     }
-
     public void setEficiencia(int eficiencia) {
         this.eficiencia = eficiencia;
     }
 
-    public int getCusto() {
-        return custo;
-    }
 
-    public void setCusto(int custo) {
-        this.custo = custo;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 }
