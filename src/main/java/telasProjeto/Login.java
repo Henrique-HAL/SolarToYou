@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package telasProjeto;
-import com.mycompany.solartoyour.DAO;
+import DAO.DAO;
 import com.mycompany.solartoyour.Usuario;
 import telasProjeto.OpcaoEntradaTela;
 import java.sql.SQLException;

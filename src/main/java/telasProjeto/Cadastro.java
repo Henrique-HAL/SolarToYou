@@ -4,7 +4,7 @@
  */
 package telasProjeto;
 
-import com.mycompany.solartoyour.DAO;
+import DAO.DAO;
 import com.mycompany.solartoyour.Usuario;
 import telasProjeto.Login;
 import javax.swing.JOptionPane;

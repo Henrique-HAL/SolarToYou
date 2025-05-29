@@ -34,9 +34,9 @@ public class Administrador {
        this.senha = senha;
    }
     
-    // vamoqvamo
 }
 
+//<<<<<<< HEAD
 //opa
 
 //oi de novo
@@ -44,3 +44,6 @@ public class Administrador {
 // opa 2
 // bacalhau
 //>>>>>>> 777a8491a8aa15dedccee10546bab7bfe4727d89
+//=======
+
+//>>>>>>> 3ef089655588d7cf40a0537a19e60c977d9c5f4e
