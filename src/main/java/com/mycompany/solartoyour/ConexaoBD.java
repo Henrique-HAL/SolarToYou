@@ -14,7 +14,7 @@ public class ConexaoBD {
     private static String porta = "3306";       
     private static String bd = "solar_toyouods";
     private static String usuario = "root";
-    private static String senha =  "12345";
+    private static String senha =  "33461635Henrique";
     
     public static Connection obtemConexao (){
         try{

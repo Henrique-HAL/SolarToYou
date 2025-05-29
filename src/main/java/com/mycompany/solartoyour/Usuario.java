@@ -20,7 +20,7 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
     }
-    //Encapsulameto//
+    //Encapsulamento
     public String getNome(){
         return nome;
     }

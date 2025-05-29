@@ -27,7 +27,7 @@ public class DAO {
             
         }
     }
-    
+    //Aqui foi criado o metodo para cadastrar o usuario no Banco de Dados
     public void cadastrar (Usuario usuario) throws Exception{
         String sql= "INSERT INTO tb_Usuarios(nome,email,senha) values(?,?,?)";
         try(Connection conn = ConexaoBD.obtemConexao();

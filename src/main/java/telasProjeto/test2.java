@@ -42,7 +42,7 @@ public class test2 extends javax.swing.JFrame {
 
         jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Login"));
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(64, 94, 200, 39);
+        jTextField1.setBounds(64, 94, 200, 37);
 
         jPasswordField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Sua Senha"));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -51,15 +51,15 @@ public class test2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(64, 198, 200, 39);
+        jPasswordField1.setBounds(64, 198, 200, 37);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Login");
         getContentPane().add(jButton1);
-        jButton1.setBounds(245, 288, 75, 23);
+        jButton1.setBounds(245, 288, 62, 25);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Sair");
         getContentPane().add(jButton2);
-        jButton2.setBounds(6, 288, 75, 23);
+        jButton2.setBounds(6, 288, 54, 25);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -69,9 +69,9 @@ public class test2 extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(20, 358, 327, 34);
 
-        jButton3.setText("jButton3");
+        jButton3.setText("Cadastar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(246, 452, 75, 23);
+        jButton3.setBounds(246, 452, 90, 25);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/assets_task_01jvpy33qve6qb0kxya51wb6yp_1747747768_img_3.png"))); // NOI18N
         jLabel1.setText("jLabel1");
