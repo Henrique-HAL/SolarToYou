@@ -120,7 +120,7 @@ public class OpcaoEntradaTela extends javax.swing.JFrame {
         //Aqui o Administrador sera direcionado para a tela de Login do Administrador
         LoginAdministrador admin = new LoginAdministrador();
         admin.setVisible(true);
-               
+        
         this.dispose();
         
     }//GEN-LAST:event_adminRadioButtonActionPerformed

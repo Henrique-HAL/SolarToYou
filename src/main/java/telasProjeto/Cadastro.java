@@ -174,7 +174,7 @@ public class Cadastro extends javax.swing.JFrame {
         String senha = new String(senhaPasswordField.getPassword());
         
         try{
-            Usuario usuario = new Usuario(nome,email,senha);
+            Usuario usuario = new Usuario(nome,email,senha,"0");
             DAO dao = new DAO();
             dao.cadastrar(usuario);
             JOptionPane.showMessageDialog(null,"Usuario Cadastrado!!!");

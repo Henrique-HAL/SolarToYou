@@ -187,7 +187,7 @@ public class Login extends javax.swing.JFrame {
         String senha = new String (senhaPasswordField.getPassword());
         
         try{
-            Usuario usuario = new Usuario(login,login,senha);
+            Usuario usuario = new Usuario(login,login,senha,"0");
             DAO dao = new DAO();
             if(dao.existe(usuario)){
                 JOptionPane.showMessageDialog(null,"Seja Bem vindo" + usuario.getNome()+ "!");

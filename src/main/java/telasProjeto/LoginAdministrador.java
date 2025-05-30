@@ -45,6 +45,11 @@ public class LoginAdministrador extends javax.swing.JFrame {
 
         loginTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Nome:"));
         loginTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        loginTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginTextFieldActionPerformed(evt);
+            }
+        });
 
         senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Sua Senha:"));
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
@@ -129,7 +134,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
         String senha = new String(senhaPasswordField.getPassword());
         
         try{
-            Administrador administrador = new Administrador(login,senha);
+            Administrador administrador = new Administrador(login, login, senha,"1");
             DAOAdimin daoadimin = new DAOAdimin();
             if(daoadimin.existeAdmin(administrador)){
                 JOptionPane.showMessageDialog(null,"  Seja   Bem Vindo   " +  administrador.getNome() + "!");
@@ -153,6 +158,10 @@ public class LoginAdministrador extends javax.swing.JFrame {
 
        
     }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
