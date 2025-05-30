@@ -9,25 +9,46 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexaoBD {
-    //Aqui estarei colocando as Informacoes do meu Banco de Dados (Henrique)
-    private static String host = "localhost";
-    private static String porta = "3306";       
-    private static String bd = "solar_toyouods";
-    private static String usuario = "root";
-    private static String senha =  "33461635Henrique";
-    
-    public static Connection obtemConexao (){
-        try{
-            Connection c = DriverManager.getConnection("jdbc:mysql://" + host +
-                    ":" + porta + "/" + bd + "?useTimezone=true&serverTimezone=UTC"
-            ,usuario,senha);
-            return c;
-        }
-        catch(SQLException e ){
+   
+
+    // Informações para conexão com Azure SQL Database
+    // Substitua {sua_senha_aqui} pela senha real
+    private static String connectionUrl = "jdbc:sqlserver://solartoyou.database.windows.net:1433;database=A3;user=Giovanni@solartoyou;password={São Judas1};encrypt=false;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+
+    public static Connection obtemConexao() {
+        Connection connection = null;
+        try {
+            // Certifique-se de que o driver JDBC do SQL Server está no classpath
+            // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); // Descomente se necessário carregar manualmente
+
+            // Obter a conexão usando a URL completa
+            System.out.println("Conexão com Azure SQL Database estabelecida com sucesso!");
+            
+            connection = DriverManager.getConnection(connectionUrl);
+            System.out.println("Conexão com Azure SQL Database estabelecida com sucesso!"); // Opcional: Log de sucesso
+            return connection;
+        } catch (SQLException e) {
+            System.err.println("Erro ao conectar ao Azure SQL Database: " + e.getMessage());
+            // Imprime o stack trace para depuração
             return null;
+        } /*catch (ClassNotFoundException e) { // Descomente se usar Class.forName
+            System.err.println("Driver JDBC do SQL Server não encontrado: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }*/
+    }
+
+    // Método principal para teste rápido (opcional)
+    public static void main(String[] args) {
+        Connection conn = obtemConexao();
+        if (conn != null) {
+            try {
+                conn.close();
+                System.out.println("Conexão fechada.");
+            } catch (SQLException e) {
+                System.err.println("Erro ao fechar a conexão: " + e.getMessage());
+            }
         }
     }
 }
-
-    
 
