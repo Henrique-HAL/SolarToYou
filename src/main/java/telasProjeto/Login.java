@@ -3,11 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package telasProjeto;
+
 import DAO.DAO;
+import DAO.DAOAdimin;
+import com.mycompany.solartoyour.Administrador;
 import com.mycompany.solartoyour.Usuario;
-import telasProjeto.OpcaoEntradaTela;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Henri
@@ -172,11 +175,11 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
-       //Ira Pegar a Senha,(Email e Nome) do Usuario.Por mais que Nome ou Email seja necessario.
+        //Ira Pegar a Senha,(Email e Nome) do Usuario.Por mais que Nome ou Email seja necessario.
         String login = loginTextField.getText();
         String senha = new String(senhaPasswordField.getPassword());
         //Vai Verificar se o usuario e valido
-    
+
     }//GEN-LAST:event_loginTextFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
@@ -184,36 +187,40 @@ public class Login extends javax.swing.JFrame {
         //O programa vai pegar o Login e Senha
         String login = loginTextField.getText();
         //Pega a senha do usuario como char[] e converte para String
-        String senha = new String (senhaPasswordField.getPassword());
-        
-        try{
-            Usuario usuario = new Usuario(login,login,senha,"0");
+        String senha = new String(senhaPasswordField.getPassword());
+
+        try {
+            Usuario usuario = new Usuario(login, login, senha, false);
             DAO dao = new DAO();
-            if(dao.existe(usuario)){
-                JOptionPane.showMessageDialog(null,"Seja Bem vindo" + usuario.getNome()+ "!");
+            Administrador adm = new Administrador(login, login, senha, true);
+            if (dao.existe(usuario)) {
+                JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
+                Menuteste menu = new Menuteste();
+                menu.setVisible(true);
+            } else if (true) {
+                JOptionPane.showMessageDialog(null, "Seja Bem vindo " + adm.getNome() + "!");
+                CRUDPaineis paineis = new CRUDPaineis();
+                paineis.setVisible(true);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario Invalido");
             }
-            else{
-                JOptionPane.showMessageDialog(null,"Usuario Invalido");
-            }  
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro.Tente Novamente Mais Tarde!");
         }
-        catch(Exception e ){
-                    System.out.println("Ocorreu um erro.Tente Novamente Mais Tarde!");
-                    }
+
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void cadastrarLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarLoginButtonActionPerformed
         // Ao clicar em Cadastar Login , vai ser redirecionado para tal
         Cadastro cadastro = new Cadastro();
         cadastro.setVisible(true);
-        
+
         this.dispose();
     }//GEN-LAST:event_cadastrarLoginButtonActionPerformed
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         // TODO add your handling code here:
-        OpcaoEntradaTela entrada = new OpcaoEntradaTela();
-        entrada.setVisible(true);
-        
         this.dispose();
     }//GEN-LAST:event_sairButtonActionPerformed
 

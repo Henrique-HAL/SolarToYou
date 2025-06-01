@@ -16,15 +16,12 @@ import java.sql.ResultSet;
  */
 public class DAOPainel {
     public boolean verificaPainel(Paineis painel ) throws Exception{
-        String sql="SELECT*FROM tb_PaineisSolares WHERE modelo = ? , preco = ? , tipo_eficiencia = ?"
-                + " eficiencia = ? AND potencia_maxima = ?";
+        String sql="SELECT*FROM tb_paineis WHERE modelo = ? AND descricao = ? AND preco = ?";
         try (Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setString(1, painel.getModelo());
+            ps.setString(1, painel.getDescricao());
             ps.setDouble(2, painel.getPreco());
-            ps.setString(3, painel.getTipo_eficiencia());
-            ps.setInt(4, painel.getEficiencia());
-            ps.setInt(5, painel.getPotencia_maxima());
             
             
             try(ResultSet rs = ps.executeQuery()){

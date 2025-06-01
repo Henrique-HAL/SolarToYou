@@ -4,7 +4,7 @@
 
 package com.mycompany.solartoyour;
 
-import telasProjeto.OpcaoEntradaTela;
+import telasProjeto.Login;
 
 /**
  *
@@ -13,7 +13,7 @@ import telasProjeto.OpcaoEntradaTela;
 public class SolarToyour {
 
     public static void main(String[] args) {
-        new OpcaoEntradaTela().setVisible(true);
+        new Login().setVisible(true);
         
     }
 }

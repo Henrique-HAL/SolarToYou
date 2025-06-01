@@ -22,7 +22,7 @@ public class Cadastro extends javax.swing.JFrame {
         super("Cadastro Usuario");
         initComponents();
         this.setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -161,9 +161,9 @@ public class Cadastro extends javax.swing.JFrame {
         // Ao clicar em Voltar ,sera redirecionado para a tela Login//
         Login login = new Login();
         login.setVisible(true);
-        
+
         this.dispose();
-        
+
     }//GEN-LAST:event_voltarButtonActionPerformed
 
     private void cadastrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarButtonActionPerformed
@@ -172,14 +172,17 @@ public class Cadastro extends javax.swing.JFrame {
         String nome = nomeTextField.getText();
         String email = emailTextField.getText();
         String senha = new String(senhaPasswordField.getPassword());
-        
-        try{
-            Usuario usuario = new Usuario(nome,email,senha,"0");
+
+        try {
+            Usuario usuario = new Usuario(nome, email, senha, false);
             DAO dao = new DAO();
             dao.cadastrar(usuario);
-            JOptionPane.showMessageDialog(null,"Usuario Cadastrado!!!");
-        }catch(Exception e ){
-            JOptionPane.showMessageDialog(null,"Algo de Errado Ocorreu.Usuario Nao Cadastrado!");
+            JOptionPane.showMessageDialog(null, "Usuario Cadastrado!!!");
+            Login login = new Login();
+            login.setVisible(true);
+            this.dispose();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Algo de Errado Ocorreu.Usuario Nao Cadastrado!");
         }
     }//GEN-LAST:event_cadastrarButtonActionPerformed
 

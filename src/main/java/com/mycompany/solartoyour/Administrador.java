@@ -13,14 +13,14 @@ public class Administrador {
     private String nome;
     private String email;
     private String senha;
-    private String is_admin;
+    private boolean is_admin;
 
     //Construtor do Objeto Administrador
-    public Administrador(String nome, String email, String senha, String is_admin) {
+    public Administrador(String nome, String email, String senha, boolean is_admin) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.is_admin = is_admin;
+        this.is_admin = true;
     }
 
     //Encapsulamento//
@@ -48,11 +48,11 @@ public class Administrador {
         this.email = email;
     }
 
-    public String getIs_admin() {
+    public boolean getIs_admin() {
         return is_admin;
     }
 
-    public void setIs_admin(String is_admin) {
+    public void setIs_admin(boolean is_admin) {
         this.is_admin = is_admin;
     }
 

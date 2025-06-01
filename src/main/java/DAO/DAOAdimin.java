@@ -21,7 +21,7 @@ public class DAOAdimin {
             ps.setString(1, administrador.getNome());
             ps.setString(2, administrador.getEmail());
             ps.setString(3, administrador.getSenha());
-            ps.setString(4, administrador.getIs_admin());
+            ps.setBoolean(4, administrador.getIs_admin());
             
             try(ResultSet rs = ps.executeQuery()){
                 return rs.next();

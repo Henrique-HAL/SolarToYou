@@ -15,14 +15,14 @@ import java.sql.ResultSet;
 public class DAO {
     //Aqui e criado o metodo para ser chamado no BottonLogin da tela Login
     public boolean existe(Usuario usuario) throws Exception{
-        String sql= "SELECT*FROM tb_usuarios WHERE (nome = ? OR email = ?), senha = ? AND is_admin = ?"; //Vai verificar nome ou email no Banco de dados//
+        String sql= "SELECT*FROM tb_usuario WHERE (nome = ? OR email = ?) AND senha = ? AND is_admin = ?"; //Vai verificar nome ou email no Banco de dados//
         try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
             ps.setString(1, usuario.getNome()); //Pode ser o Nome 
             ps.setString(2, usuario.getEmail());// Ou pode ser O email para validar login
             ps.setString(3, usuario.getSenha());
-            ps.setString(4, usuario.getIs_admin());
+            ps.setBoolean(4, usuario.getIs_admin());
             
             try(ResultSet rs = ps.executeQuery()){
                 return rs.next();
@@ -32,14 +32,14 @@ public class DAO {
     }
     //Aqui foi criado o metodo para cadastrar o usuario no Banco de Dados
     public void cadastrar (Usuario usuario) throws Exception{
-        String sql= "INSERT INTO tb_usuarios(nome,email,senha,is_admin) values(?,?,?,?)";
+        String sql= "INSERT INTO tb_usuario(nome,email,senha,is_admin) values(?,?,?,?)";
         try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
             ps.setString(1, usuario.getNome());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getSenha());
-            ps.setString(4, usuario.getIs_admin());
+            ps.setBoolean(4, usuario.getIs_admin());
             ps.execute();
         }
         

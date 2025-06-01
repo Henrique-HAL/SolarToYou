@@ -4,7 +4,7 @@
  */
 package telasProjeto;
 
-import telasProjeto.LoginAdministrador;
+import telasProjeto.Login;
 
 /**
  *
@@ -72,17 +72,17 @@ public class CRUDPaineis extends javax.swing.JFrame {
                         .addComponent(btnVoltar)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnInserirPainelSolar)
-                        .addGap(108, 108, 108)
                         .addComponent(btnExcluirPainelSolar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 418, Short.MAX_VALUE)
+                        .addGap(244, 244, 244)
                         .addComponent(btnAtualizarPainelSolar)
-                        .addGap(38, 38, 38))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 264, Short.MAX_VALUE)
+                        .addComponent(btnInserirPainelSolar)
+                        .addGap(45, 45, 45))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(413, Short.MAX_VALUE)
+                .addContainerGap(416, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInserirPainelSolar)
                     .addComponent(btnExcluirPainelSolar)
@@ -108,14 +108,14 @@ public class CRUDPaineis extends javax.swing.JFrame {
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         //Voltar para a tela de Login
-        LoginAdministrador admin = new LoginAdministrador();
+        Login admin = new Login();
         admin.setVisible(true);
         
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnInserirPainelSolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirPainelSolarActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnInserirPainelSolarActionPerformed
 
     /**

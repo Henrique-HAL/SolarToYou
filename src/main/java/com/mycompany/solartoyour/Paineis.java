@@ -11,19 +11,15 @@ package com.mycompany.solartoyour;
 public class Paineis {
     
     private String modelo;
+    private String descricao;
     private double preco;
-    private String tipo_eficiencia;
-    private int eficiencia;
-    private int potencia_maxima;
-    
+   
     //Construtor do Objeto Paineis
 
-    public Paineis(String modelo, double preco, String tipo_eficiencia, int eficiencia, int potencia_maxima) {
+    public Paineis(String modelo, String descricao, double preco) {
         this.modelo = modelo;
+        this.descricao = descricao;
         this.preco = preco;
-        this.tipo_eficiencia = tipo_eficiencia;
-        this.eficiencia = eficiencia;
-        this.potencia_maxima = potencia_maxima; 
     }
     
     //Encapsulamento
@@ -34,30 +30,22 @@ public class Paineis {
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    
     public double getPreco() {
         return preco;
     }
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    public String getTipo_eficiencia() {
-        return tipo_eficiencia;
-    }
-    public void setTipo_eficiencia(String tipo_eficiencia) {
-        this.tipo_eficiencia = tipo_eficiencia;
-    }
-    public int getPotencia_maxima() {
-        return potencia_maxima;
-    }
-    public void setPotencia_maxima(int potencia_maxima) {
-        this.potencia_maxima = potencia_maxima;
-    }
-    public int getEficiencia() {
-        return eficiencia;
-    }
-    public void setEficiencia(int eficiencia) {
-        this.eficiencia = eficiencia;
-    }
+    
 
 
 }
