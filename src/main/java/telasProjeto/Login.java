@@ -4,10 +4,11 @@
  */
 package telasProjeto;
 
-import DAO.DAO;
-import com.mycompany.solartoyour.Usuario;
-import java.sql.SQLException;
 import javax.swing.JOptionPane;
+
+import com.mycompany.solartoyour.Usuario;
+
+import DAO.DAO;
 
 /**
  *
@@ -188,26 +189,8 @@ public class Login extends javax.swing.JFrame {
         String senha = new String(senhaPasswordField.getPassword());
 
         try {
-<<<<<<< HEAD
             Usuario usuario = new Usuario(login, login, senha);
-=======
-            Usuario usuario = new Usuario(login, login, senha, false,1);
->>>>>>> 33ae4529986709c737832d8b7126ab2eb91d65c9
             DAO dao = new DAO();
-            /*if (dao.existe(usuario)) {
-                JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
-                Menu menu = new Menu();
-                menu.setVisible(true);
-            } else if (true) {
-                JOptionPane.showMessageDialog(null, "Seja Bem vindo " + adm.getNome() + "!");
-                CRUDPaineis paineis = new CRUDPaineis();
-                paineis.setVisible(true);
-                this.dispose();
-            } else {
-                JOptionPane.showMessageDialog(null, "Usuario Invalido");
-           
-        }*/
-
             if(dao.existe(usuario))
                 if(usuario.getIs_admin()){
                     JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");

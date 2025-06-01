@@ -19,7 +19,6 @@ public class Usuario {
     private int id_usuario;
     
     //Construtor do Obejto Usuario//
-<<<<<<< HEAD
     public Usuario(String nome,String email,String senha) throws Exception{
         this.nome = nome;
         this.email = email;
@@ -28,14 +27,6 @@ public class Usuario {
     //checa se o usuario a ser criado é um adm e atribue o valor ao is_admin
         DAO dao = new DAO();
         this.is_admin = dao.admin(this);
-=======
-    public Usuario(String nome,String email,String senha, boolean is_admin, int id_usuario){
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.is_admin = false;
-        this.id_usuario = id_usuario;
->>>>>>> 33ae4529986709c737832d8b7126ab2eb91d65c9
     }
     //Encapsulamento
     public String getNome(){

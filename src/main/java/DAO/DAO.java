@@ -46,7 +46,6 @@ public class DAO {
             ps.execute();
         }
     }
-<<<<<<< HEAD
 
     //verifica se o usuario é um adm ou não, retorna um boolean
     public boolean admin(Usuario usuario) throws Exception {
@@ -65,7 +64,6 @@ public class DAO {
             return is_admin > 0;
         }
     }
-=======
     
     //Aqui foi criado o metodo para atualizar o perfil do usuario no Banco de Dados
     public void atualizarPerfil(Usuario usuario) throws Exception {
@@ -100,5 +98,4 @@ public class DAO {
     
     //tetste
     
->>>>>>> 33ae4529986709c737832d8b7126ab2eb91d65c9
 }
