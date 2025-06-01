@@ -162,7 +162,6 @@
             </Component>
             <Component class="javax.swing.JPasswordField" name="senhaPasswordField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="jPasswordField1"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder title="Digite Sua Senha:"/>

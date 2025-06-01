@@ -46,6 +46,7 @@ public class DAO {
             ps.execute();
         }
     }
+<<<<<<< HEAD
 
     //verifica se o usuario é um adm ou não, retorna um boolean
     public boolean admin(Usuario usuario) throws Exception {
@@ -64,4 +65,40 @@ public class DAO {
             return is_admin > 0;
         }
     }
+=======
+    
+    //Aqui foi criado o metodo para atualizar o perfil do usuario no Banco de Dados
+    public void atualizarPerfil(Usuario usuario) throws Exception {
+        String sql="UPDATE tb_usuario SET nome = ?, email = ?, senha = ?, WHERE id_usuario = ?";
+         try(Connection conn = ConexaoBD.obtemConexao();
+        PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setString(1, usuario.getNome());
+            ps.setString(2, usuario.getEmail());
+            ps.setString(3, usuario.getSenha());
+            ps.setInt(4, usuario.getId_usuario());
+            ps.execute();
+        }
+        
+    }
+    
+    //Aqui foi criado o metodo para deletar o perfil do usuario no Banco de Dados
+    public void deletarPerfil(Usuario usuario) throws Exception {
+        String sql="DELETE FROM tb_usuario WHERE Id = ?";
+         try(Connection conn = ConexaoBD.obtemConexao();
+        PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setInt(1, usuario.getId_usuario());
+            ps.execute();
+        }
+        
+    }
+    
+    
+    
+    
+    
+    //tetste
+    
+>>>>>>> 33ae4529986709c737832d8b7126ab2eb91d65c9
 }
