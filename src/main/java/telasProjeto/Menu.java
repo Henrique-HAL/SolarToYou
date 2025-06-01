@@ -8,12 +8,12 @@ package telasProjeto;
  *
  * @author USER
  */
-public class Menuteste extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame {
 
     /**
      * Creates new form Menuteste
      */
-    public Menuteste() {
+    public Menu() {
         super("SolarToyour");
         initComponents();
         this.setLocationRelativeTo(null);
@@ -97,7 +97,7 @@ public class Menuteste extends javax.swing.JFrame {
     }//GEN-LAST:event_SairjButtonActionPerformed
 
     private void FazerSimulacaojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FazerSimulacaojButtonActionPerformed
-        testttt tt = new testttt();
+        simulacao tt = new simulacao();
         tt.setVisible(true);
     }//GEN-LAST:event_FazerSimulacaojButtonActionPerformed
 
@@ -118,20 +118,20 @@ public class Menuteste extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menuteste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menuteste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menuteste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menuteste.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Menuteste().setVisible(true);
+                new Menu().setVisible(true);
             }
         });
     }

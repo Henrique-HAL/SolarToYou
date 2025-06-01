@@ -4,6 +4,8 @@
  */
 package com.mycompany.solartoyour;
 
+import DAO.DAO;
+
 /**
  *
  * @author Henri
@@ -16,11 +18,14 @@ public class Usuario {
     private boolean is_admin;
     
     //Construtor do Obejto Usuario//
-    public Usuario(String nome,String email,String senha, boolean is_admin){
+    public Usuario(String nome,String email,String senha) throws Exception{
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.is_admin = false;
+
+    //checa se o usuario a ser criado é um adm e atribue o valor ao is_admin
+        DAO dao = new DAO();
+        this.is_admin = dao.admin(this);
     }
     //Encapsulamento
     public String getNome(){

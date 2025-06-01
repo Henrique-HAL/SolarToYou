@@ -5,8 +5,6 @@
 package telasProjeto;
 
 import DAO.DAO;
-import DAO.DAOAdimin;
-import com.mycompany.solartoyour.Administrador;
 import com.mycompany.solartoyour.Usuario;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -190,12 +188,11 @@ public class Login extends javax.swing.JFrame {
         String senha = new String(senhaPasswordField.getPassword());
 
         try {
-            Usuario usuario = new Usuario(login, login, senha, false);
+            Usuario usuario = new Usuario(login, login, senha);
             DAO dao = new DAO();
-            Administrador adm = new Administrador(login, login, senha, true);
-            if (dao.existe(usuario)) {
+            /*if (dao.existe(usuario)) {
                 JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
-                Menuteste menu = new Menuteste();
+                Menu menu = new Menu();
                 menu.setVisible(true);
             } else if (true) {
                 JOptionPane.showMessageDialog(null, "Seja Bem vindo " + adm.getNome() + "!");
@@ -203,6 +200,22 @@ public class Login extends javax.swing.JFrame {
                 paineis.setVisible(true);
                 this.dispose();
             } else {
+                JOptionPane.showMessageDialog(null, "Usuario Invalido");
+           
+        }*/
+
+            if(dao.existe(usuario))
+                if(usuario.getIs_admin()){
+                    JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
+                    CRUDPaineis paineis = new CRUDPaineis();
+                    paineis.setVisible(true);
+                    this.dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
+                    Menu menu = new Menu();
+                    menu.setVisible(true);
+                }
+            else {
                 JOptionPane.showMessageDialog(null, "Usuario Invalido");
             }
         } catch (Exception e) {

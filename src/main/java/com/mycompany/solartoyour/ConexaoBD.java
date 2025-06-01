@@ -31,17 +31,13 @@ public class ConexaoBD {
             System.err.println("Erro ao conectar ao Azure SQL Database: " + e.getMessage());
             // Imprime o stack trace para depuração
             return null;
-        } /*catch (ClassNotFoundException e) { // Descomente se usar Class.forName
-            System.err.println("Driver JDBC do SQL Server não encontrado: " + e.getMessage());
-            e.printStackTrace();
-            return null;
-        }*/
+        }
     }
 
-    // Método principal para teste rápido (opcional)
+    /* Método principal para teste rápido (opcional)
     public static void main(String[] args) {
         Connection conn = obtemConexao();
-        if (conn != null) {
+       if (conn != null) {
             try {
                 conn.close();
                 System.out.println("Conexão fechada.");
@@ -50,5 +46,6 @@ public class ConexaoBD {
             }
         }
     }
+    */
 }
 
