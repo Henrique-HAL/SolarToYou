@@ -64,7 +64,6 @@ public class Cadastro extends javax.swing.JFrame {
         emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Email:"));
         emailTextField.setPreferredSize(new java.awt.Dimension(270, 55));
 
-        senhaPasswordField.setText("jPasswordField1");
         senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Sua Senha:"));
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
 
@@ -174,7 +173,7 @@ public class Cadastro extends javax.swing.JFrame {
         String senha = new String(senhaPasswordField.getPassword());
 
         try {
-            Usuario usuario = new Usuario(nome, email, senha, false);
+            Usuario usuario = new Usuario(nome, email, senha, false,1);
             DAO dao = new DAO();
             dao.cadastrar(usuario);
             JOptionPane.showMessageDialog(null, "Usuario Cadastrado!!!");

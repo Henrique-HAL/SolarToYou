@@ -190,7 +190,7 @@ public class Login extends javax.swing.JFrame {
         String senha = new String(senhaPasswordField.getPassword());
 
         try {
-            Usuario usuario = new Usuario(login, login, senha, false);
+            Usuario usuario = new Usuario(login, login, senha, false,1);
             DAO dao = new DAO();
             Administrador adm = new Administrador(login, login, senha, true);
             if (dao.existe(usuario)) {

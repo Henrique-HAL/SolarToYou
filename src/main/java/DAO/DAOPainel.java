@@ -15,6 +15,8 @@ import java.sql.ResultSet;
  * @author USER
  */
 public class DAOPainel {
+    
+    //Aqui foi criado o metodo para verificar o Painél na Simualação pelo Banco de Dados
     public boolean verificaPainel(Paineis painel ) throws Exception{
         String sql="SELECT*FROM tb_paineis WHERE modelo = ? AND descricao = ? AND preco = ?";
         try (Connection conn = ConexaoBD.obtemConexao();
@@ -28,6 +30,48 @@ public class DAOPainel {
                 return rs.next();
             }
         }
+    }
+    //Aqui foi criado o metodo para cadastrar o Painél pelo CRUD no Banco de Dados
+    public void cadastrarPainel(Paineis painel) throws Exception {
+        String sql="INSERT INTO tb_paineis(modelo,descricao,preco,potencia) values(?,?,?,?)";
+         try(Connection conn = ConexaoBD.obtemConexao();
+        PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setString(1, painel.getModelo());
+            ps.setString(2, painel.getDescricao());
+            ps.setDouble(3, painel.getPreco());
+            ps.setDouble(4, painel.getPotencia());
+            ps.execute();
+        }
+        
+    }
+    
+    //Aqui foi criado o metodo para atualizar o Painél pelo CRUD no Banco de Dados
+    public void atualizarPainel(Paineis painel) throws Exception {
+        String sql="UPDATE tb_paineis SET modelo = ?, descricao = ?, preco = ?, potencia = ? WHERE Id = ?";
+         try(Connection conn = ConexaoBD.obtemConexao();
+        PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setString(1, painel.getModelo());
+            ps.setString(2, painel.getDescricao());
+            ps.setDouble(3, painel.getPreco());
+            ps.setDouble(4, painel.getPotencia());
+            ps.setInt(5, painel.getId());
+            ps.execute();
+        }
+        
+    }
+    
+    //Aqui foi criado o metodo para deletar o Painél pelo CRUD no Banco de Dados
+    public void deletarPainel(Paineis painel) throws Exception {
+        String sql="DELETE FROM tb_paineis WHERE Id = ?";
+         try(Connection conn = ConexaoBD.obtemConexao();
+        PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setInt(1, painel.getId());
+            ps.execute();
+        }
+        
     }
     
 }

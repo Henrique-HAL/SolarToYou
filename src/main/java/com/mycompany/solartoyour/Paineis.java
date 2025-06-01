@@ -13,13 +13,17 @@ public class Paineis {
     private String modelo;
     private String descricao;
     private double preco;
+    private double potencia;
+    private int Id;
    
     //Construtor do Objeto Paineis
 
-    public Paineis(String modelo, String descricao, double preco) {
+    public Paineis(String modelo, String descricao, double preco, double potencia, int Id) {
         this.modelo = modelo;
         this.descricao = descricao;
         this.preco = preco;
+        this.potencia = potencia;
+        this.Id = Id;
     }
     
     //Encapsulamento
@@ -45,6 +49,23 @@ public class Paineis {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    public double getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(double potencia) {
+        this.potencia = potencia;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+    
     
 
 

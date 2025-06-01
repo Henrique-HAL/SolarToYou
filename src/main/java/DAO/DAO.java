@@ -45,6 +45,33 @@ public class DAO {
         
     }
     
+    //Aqui foi criado o metodo para atualizar o perfil do usuario no Banco de Dados
+    public void atualizarPerfil(Usuario usuario) throws Exception {
+        String sql="UPDATE tb_usuario SET nome = ?, email = ?, senha = ?, WHERE id_usuario = ?";
+         try(Connection conn = ConexaoBD.obtemConexao();
+        PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setString(1, usuario.getNome());
+            ps.setString(2, usuario.getEmail());
+            ps.setString(3, usuario.getSenha());
+            ps.setInt(4, usuario.getId_usuario());
+            ps.execute();
+        }
+        
+    }
+    
+    //Aqui foi criado o metodo para deletar o perfil do usuario no Banco de Dados
+    public void deletarPerfil(Usuario usuario) throws Exception {
+        String sql="DELETE FROM tb_usuario WHERE Id = ?";
+         try(Connection conn = ConexaoBD.obtemConexao();
+        PreparedStatement ps = conn.prepareStatement(sql)){
+            
+            ps.setInt(1, usuario.getId_usuario());
+            ps.execute();
+        }
+        
+    }
+    
     
     
     

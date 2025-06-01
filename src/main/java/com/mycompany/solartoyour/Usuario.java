@@ -14,13 +14,15 @@ public class Usuario {
     private String email;
     private String senha;
     private boolean is_admin;
+    private int id_usuario;
     
     //Construtor do Obejto Usuario//
-    public Usuario(String nome,String email,String senha, boolean is_admin){
+    public Usuario(String nome,String email,String senha, boolean is_admin, int id_usuario){
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.is_admin = false;
+        this.id_usuario = id_usuario;
     }
     //Encapsulamento
     public String getNome(){
@@ -49,5 +51,14 @@ public class Usuario {
     public void setIs_admin(boolean is_admin) {
         this.is_admin = is_admin;
     }
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+    
     
 }
