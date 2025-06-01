@@ -97,8 +97,10 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_SairjButtonActionPerformed
 
     private void FazerSimulacaojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FazerSimulacaojButtonActionPerformed
+        this.dispose(); 
         simulacao tt = new simulacao();
         tt.setVisible(true);
+        
     }//GEN-LAST:event_FazerSimulacaojButtonActionPerformed
 
     /**
