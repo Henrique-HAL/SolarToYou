@@ -41,7 +41,8 @@ public class CRUDPaineis extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Gerenciador de Paineis", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Gerenciador de Paineis", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
@@ -99,7 +100,7 @@ public class CRUDPaineis extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(100, 20, 551, 530);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ProjetoNoCanva.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 800, 600);
 

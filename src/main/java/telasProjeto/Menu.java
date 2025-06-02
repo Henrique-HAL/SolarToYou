@@ -38,10 +38,11 @@ public class Menu extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1280, 720));
         getContentPane().setLayout(null);
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Menu");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(350, 30, 31, 16);
+        jLabel1.setBounds(170, 0, 150, 80);
 
         FazerSimulacaojButton.setText("Fazer Simulação");
         FazerSimulacaojButton.addActionListener(new java.awt.event.ActionListener() {
@@ -50,11 +51,11 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(FazerSimulacaojButton);
-        FazerSimulacaojButton.setBounds(20, 140, 130, 23);
+        FazerSimulacaojButton.setBounds(10, 120, 130, 23);
 
         VisualizarHistoricojButton.setText("Visualizar Histórico");
         getContentPane().add(VisualizarHistoricojButton);
-        VisualizarHistoricojButton.setBounds(20, 250, 130, 23);
+        VisualizarHistoricojButton.setBounds(10, 180, 130, 23);
 
         sairButton.setText("jButton1");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
@@ -63,11 +64,11 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sairButton);
-        sairButton.setBounds(30, 490, 75, 23);
+        sairButton.setBounds(10, 530, 75, 23);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 1280, 610);
+        jLabel2.setBounds(380, 0, 1280, 610);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);

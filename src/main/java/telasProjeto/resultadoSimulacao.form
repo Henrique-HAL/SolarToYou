@@ -96,7 +96,12 @@
                               <Component id="inserirValorDeInvestimentoTextField" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
                               <Component id="inserirValorDeConsumoMensalEmR$TextField" alignment="0" min="-2" pref="198" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="171" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="voltarButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="137" max="32767" attributes="0"/>
+                          <Component id="realizarSimulacaoButton" min="-2" pref="160" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -118,7 +123,12 @@
                   <Component id="tarifaLocalComboBox" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="selecionarPotenciaDoPainelComboBox" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="76" max="32767" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="realizarSimulacaoButton" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="voltarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -127,11 +137,13 @@
         <Component class="javax.swing.JTextField" name="inserirConsumoMensalEmkWhTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Consumo Mensal Em kWh"/>
+                <TitledBorder title="Consumo Mensal Em kWh">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -139,7 +151,7 @@
         <Component class="javax.swing.JTextField" name="inserirValorDeInvestimentoTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="12" style="0"/>
@@ -150,7 +162,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="Valor de Investimento">
-                  <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
                 </TitledBorder>
               </Border>
             </Property>
@@ -163,11 +175,13 @@
         <Component class="javax.swing.JTextField" name="inserirHorasDeSolTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Quantas Horas em Media Sua Propriedade Recebe de Luz Solar?"/>
+                <TitledBorder title="Quantas Horas em Media Sua Propriedade Recebe de Luz Solar?">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -175,7 +189,10 @@
         <Component class="javax.swing.JComboBox" name="selecionarPotenciaDoPainelComboBox">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="5">
@@ -188,7 +205,9 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Qul A Potencia Do Painel Gostaria de Usar?"/>
+                <TitledBorder title="Qul A Potencia Do Painel Gostaria de Usar?">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -199,7 +218,10 @@
         <Component class="javax.swing.JComboBox" name="tarifaLocalComboBox">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="1">
@@ -208,7 +230,9 @@
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Qual Tarifa Local Voce Ira Usar?"/>
+                <TitledBorder title="Qual Tarifa Local Voce Ira Usar?">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -222,7 +246,7 @@
         <Component class="javax.swing.JTextField" name="inserirValorDeConsumoMensalEmR$TextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -230,7 +254,7 @@
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="Valor de Consumo Mensal Em R$ :">
-                  <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
                 </TitledBorder>
               </Border>
             </Property>
@@ -239,6 +263,34 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inserirValorDeConsumoMensalEmR$TextFieldActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="realizarSimulacaoButton">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="2b" green="e" red="7" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Realizar Simulacao"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="voltarButton">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="2b" green="e" red="7" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Voltar"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -258,40 +310,11 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JButton" name="realizarSimulacaoButton">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="33" green="33" red="0" type="rgb"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Realizar Simulacao"/>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="260" y="540" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-    <Component class="javax.swing.JButton" name="voltarButton">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="a9" green="b5" red="ff" type="rgb"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Voltar"/>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="40" y="540" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
-    </Component>
     <Container class="javax.swing.JPanel" name="resultadoSimulacaoPanel">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="27" green="d" red="8" type="rgb"/>
+        </Property>
         <Property name="opaque" type="boolean" value="false"/>
       </Properties>
       <Constraints>
@@ -305,38 +328,40 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="InserirLinkTextField" max="32767" attributes="0"/>
                       <Component id="SeparadorDeLinha" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
+                          <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="InserirLinkTextField" pref="705" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Component id="retornarQuantidadeDePaineisNecessariosTextField" min="-2" pref="210" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                          <Component id="retornarROITextField" min="-2" pref="210" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="retornarEconomiaMensalTextField" min="-2" pref="210" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="retornarReducaoDeCO2TextField" min="-2" pref="210" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="inserirAtributosDoPainel1TextField" min="-2" pref="695" max="-2" attributes="0"/>
+                                      <Component id="jLabel2" min="-2" pref="687" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="retornarQuantidadeDePaineisNecessariosTextField" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                                              <Component id="retornarEconomiaMensalTextField" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="retornarReducaoDeCO2TextField" min="-2" pref="210" max="-2" attributes="0"/>
+                                              <Component id="retornarROITextField" min="-2" pref="210" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="inserirAtributosDoPainel1TextField" min="-2" pref="695" max="-2" attributes="0"/>
-                              <Component id="inserirAtributosDoPainel2TextField" alignment="0" min="-2" pref="703" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="inserirLinkTextField" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="inserirAtributosDoPainel2TextField" pref="703" max="32767" attributes="0"/>
+                              <Component id="inserirLinkTextField" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" pref="687" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -361,11 +386,11 @@
                   <Component id="inserirAtributosDoPainel1TextField" min="-2" pref="102" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="InserirLinkTextField" min="-2" pref="31" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="inserirAtributosDoPainel2TextField" pref="101" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="inserirLinkTextField" min="-2" pref="33" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -374,11 +399,13 @@
         <Component class="javax.swing.JTextField" name="retornarQuantidadeDePaineisNecessariosTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Quantidade de Paineis Necessarios:"/>
+                <TitledBorder title="Quantidade de Paineis Necessarios:">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -386,11 +413,13 @@
         <Component class="javax.swing.JTextField" name="retornarEconomiaMensalTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Economia Mensal:"/>
+                <TitledBorder title="Economia Mensal:">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -398,11 +427,16 @@
         <Component class="javax.swing.JTextField" name="retornarReducaoDeCO2TextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Reducao de CO2"/>
+                <TitledBorder title="Reducao de CO2">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -410,10 +444,10 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value=" Aqui Estao Algumas Recomendacoes De Paines Solares. Ao Clicar no Link Voce sera Direcionado Para o Site do vendedor"/>
             <Property name="opaque" type="boolean" value="true"/>
@@ -422,11 +456,13 @@
         <Component class="javax.swing.JTextField" name="retornarROITextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="ROI(Retorno Sobre Investimento)"/>
+                <TitledBorder title="ROI(Retorno Sobre Investimento)">
+                  <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+                </TitledBorder>
               </Border>
             </Property>
           </Properties>
@@ -434,7 +470,10 @@
         <Component class="javax.swing.JTextField" name="InserirLinkTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Link A ser Inserido"/>
           </Properties>
@@ -445,7 +484,10 @@
         <Component class="javax.swing.JTextField" name="inserirLinkTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Link A ser Inserido"/>
           </Properties>
@@ -455,14 +497,14 @@
         <Component class="javax.swing.JTextField" name="inserirAtributosDoPainel1TextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="inserirAtributosDoPainel2TextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
           </Properties>
         </Component>

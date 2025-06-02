@@ -34,7 +34,7 @@
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Inserir Pain&#xe9;is:">
-              <Color PropertyName="color" blue="0" green="0" red="0" type="rgb"/>
+              <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -144,7 +144,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagens/Imagem4Projeto.png"/>
+          <Image iconType="3" name="/Imagens/ProjetoNoCanva.png"/>
         </Property>
       </Properties>
       <Constraints>

@@ -44,7 +44,7 @@ public class InserirPaineis extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inserir Painéis:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Inserir Painéis:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 600));
 
@@ -115,7 +115,7 @@ public class InserirPaineis extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(10, 20, 770, 520);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ProjetoNoCanva.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 800, 600);
 

@@ -44,10 +44,6 @@ public class Cadastro extends javax.swing.JFrame {
         cadastrarButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
-        getContentPane().setLayout(null);
-
         jPanelExterno.setOpaque(false);
         jPanelExterno.setPreferredSize(new java.awt.Dimension(500, 500));
 
@@ -81,16 +77,19 @@ public class Cadastro extends javax.swing.JFrame {
                 .addContainerGap(396, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanelExterno);
-        jPanelExterno.setBounds(180, 40, 429, 441);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 600));
+        getContentPane().setLayout(null);
 
-        jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabelCadastro.setText("Cadastro Usuario ");
         jLabelCadastro.setPreferredSize(new java.awt.Dimension(150, 50));
         getContentPane().add(jLabelCadastro);
-        jLabelCadastro.setBounds(20, 40, 218, 50);
+        jLabelCadastro.setBounds(20, 40, 320, 50);
 
-        nomeTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Nome:"));
+        nomeTextField.setBackground(new java.awt.Color(204, 204, 204));
+        nomeTextField.setForeground(new java.awt.Color(0, 0, 0));
+        nomeTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Seu Nome:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         nomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
         nomeTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,16 +99,20 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(nomeTextField);
         nomeTextField.setBounds(20, 150, 270, 55);
 
-        emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Email:"));
+        emailTextField.setBackground(new java.awt.Color(204, 204, 204));
+        emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Seu Email:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         emailTextField.setPreferredSize(new java.awt.Dimension(270, 55));
         getContentPane().add(emailTextField);
         emailTextField.setBounds(20, 260, 270, 55);
 
-        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Sua Senha:"));
+        senhaPasswordField.setBackground(new java.awt.Color(204, 204, 204));
+        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Sua Senha:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
         getContentPane().add(senhaPasswordField);
         senhaPasswordField.setBounds(20, 350, 270, 55);
 
+        voltarButton.setBackground(new java.awt.Color(7, 14, 43));
+        voltarButton.setForeground(new java.awt.Color(255, 255, 102));
         voltarButton.setText("Voltar");
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +122,8 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(voltarButton);
         voltarButton.setBounds(10, 480, 72, 23);
 
+        cadastrarButton.setBackground(new java.awt.Color(7, 14, 43));
+        cadastrarButton.setForeground(new java.awt.Color(255, 255, 102));
         cadastrarButton.setText("Cadastrar");
         cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,9 +133,9 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(cadastrarButton);
         cadastrarButton.setBounds(220, 480, 80, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 800, 600);
+        jLabel1.setBounds(380, 0, 420, 600);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);

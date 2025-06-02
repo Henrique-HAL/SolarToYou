@@ -39,11 +39,11 @@ public class Login extends javax.swing.JFrame {
         loginTextField = new javax.swing.JTextField();
         senhaPasswordField = new javax.swing.JPasswordField();
         sairButton = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         loginButton = new javax.swing.JButton();
         cadastrarLoginButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jPanelExterno.setMinimumSize(new java.awt.Dimension(800, 800));
         jPanelExterno.setOpaque(false);
@@ -80,10 +80,12 @@ public class Login extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 51, 153));
         setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
-        loginTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Login(Nome ou Email):"));
+        loginTextField.setBackground(new java.awt.Color(204, 204, 204));
+        loginTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Seu Login(Nome ou Email):", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         loginTextField.setPreferredSize(new java.awt.Dimension(270, 55));
         loginTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,13 +93,16 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(loginTextField);
-        loginTextField.setBounds(10, 100, 270, 55);
+        loginTextField.setBounds(510, 160, 270, 55);
 
-        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Sua Senha:"));
+        senhaPasswordField.setBackground(new java.awt.Color(204, 204, 204));
+        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Sua Senha:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
         getContentPane().add(senhaPasswordField);
-        senhaPasswordField.setBounds(10, 210, 270, 55);
+        senhaPasswordField.setBounds(510, 280, 270, 55);
 
+        sairButton.setBackground(new java.awt.Color(7, 14, 43));
+        sairButton.setForeground(new java.awt.Color(255, 255, 102));
         sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,20 +110,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sairButton);
-        sairButton.setBounds(10, 340, 72, 23);
+        sairButton.setBounds(550, 390, 72, 23);
 
-        jScrollPane1.setBorder(null);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Ainda Nao tem um Login? Clique em \"Cadastrar Login \" para criar um!");
-        jTextArea1.setToolTipText("");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 430, 426, 44);
-
+        loginButton.setBackground(new java.awt.Color(7, 14, 43));
+        loginButton.setForeground(new java.awt.Color(255, 255, 102));
         loginButton.setText("Login");
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,8 +121,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(loginButton);
-        loginButton.setBounds(250, 340, 72, 23);
+        loginButton.setBounds(710, 390, 72, 23);
 
+        cadastrarLoginButton.setBackground(new java.awt.Color(7, 14, 43));
+        cadastrarLoginButton.setForeground(new java.awt.Color(255, 255, 102));
         cadastrarLoginButton.setText("Cadastrar Login");
         cadastrarLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,11 +132,21 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cadastrarLoginButton);
-        cadastrarLoginButton.setBounds(10, 500, 150, 23);
+        cadastrarLoginButton.setBounds(620, 520, 150, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 800, 600);
+        jLabel1.setBounds(0, 0, 420, 600);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setText("Login");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(560, 60, 170, 50);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Ainda Nao Tem Login? Clique em Casdatrar e Crie Um!");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(430, 440, 370, 50);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);
@@ -234,10 +241,10 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastrarLoginButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanelExterno;
     private javax.swing.JPanel jPanelInterno;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton loginButton;
     private javax.swing.JTextField loginTextField;
     private javax.swing.JButton sairButton;
