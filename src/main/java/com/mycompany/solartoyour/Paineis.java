@@ -22,7 +22,19 @@ public class Paineis {
         this.modelo = modelo;
         this.descricao = descricao;
         this.preco = preco;
+    
     }
+    
+    //Construtor para Atualizar BD so a inclusao Do Id//
+    
+    public Paineis(String modelo, String descricao, double preco,int Id){
+        this.modelo = modelo;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.Id = Id;
+    }
+    
+    
     
     //Encapsulamento
 
