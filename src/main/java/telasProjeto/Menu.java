@@ -34,7 +34,6 @@ public class Menu extends javax.swing.JFrame {
         VisualizarHistoricojButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         SairjButton.setText("Sair");
         SairjButton.addActionListener(new java.awt.event.ActionListener() {
