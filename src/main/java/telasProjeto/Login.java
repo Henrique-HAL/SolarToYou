@@ -39,17 +39,49 @@ public class Login extends javax.swing.JFrame {
         loginTextField = new javax.swing.JTextField();
         senhaPasswordField = new javax.swing.JPasswordField();
         sairButton = new javax.swing.JButton();
-        loginButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        loginButton = new javax.swing.JButton();
         cadastrarLoginButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanelExterno.setMinimumSize(new java.awt.Dimension(800, 800));
+        jPanelExterno.setOpaque(false);
+        jPanelExterno.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jPanelExterno.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
-        jPanelExterno.setPreferredSize(new java.awt.Dimension(500, 500));
-
+        jPanelInterno.setOpaque(false);
         jPanelInterno.setPreferredSize(new java.awt.Dimension(380, 400));
+
+        javax.swing.GroupLayout jPanelInternoLayout = new javax.swing.GroupLayout(jPanelInterno);
+        jPanelInterno.setLayout(jPanelInternoLayout);
+        jPanelInternoLayout.setHorizontalGroup(
+            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 440, Short.MAX_VALUE)
+        );
+        jPanelInternoLayout.setVerticalGroup(
+            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanelExternoLayout = new javax.swing.GroupLayout(jPanelExterno);
+        jPanelExterno.setLayout(jPanelExternoLayout);
+        jPanelExternoLayout.setHorizontalGroup(
+            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelExternoLayout.createSequentialGroup()
+                .addContainerGap(360, Short.MAX_VALUE)
+                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanelExternoLayout.setVerticalGroup(
+            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelExternoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(394, Short.MAX_VALUE))
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 600));
+        getContentPane().setLayout(null);
 
         loginTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Login(Nome ou Email):"));
         loginTextField.setPreferredSize(new java.awt.Dimension(270, 55));
@@ -58,9 +90,13 @@ public class Login extends javax.swing.JFrame {
                 loginTextFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(loginTextField);
+        loginTextField.setBounds(10, 100, 270, 55);
 
         senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Sua Senha:"));
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
+        getContentPane().add(senhaPasswordField);
+        senhaPasswordField.setBounds(10, 210, 270, 55);
 
         sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
@@ -68,13 +104,8 @@ public class Login extends javax.swing.JFrame {
                 sairButtonActionPerformed(evt);
             }
         });
-
-        loginButton.setText("Login");
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
-            }
-        });
+        getContentPane().add(sairButton);
+        sairButton.setBounds(10, 340, 72, 23);
 
         jScrollPane1.setBorder(null);
 
@@ -85,92 +116,33 @@ public class Login extends javax.swing.JFrame {
         jTextArea1.setToolTipText("");
         jScrollPane1.setViewportView(jTextArea1);
 
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(10, 430, 426, 44);
+
+        loginButton.setText("Login");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(loginButton);
+        loginButton.setBounds(250, 340, 72, 23);
+
         cadastrarLoginButton.setText("Cadastrar Login");
         cadastrarLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarLoginButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(cadastrarLoginButton);
+        cadastrarLoginButton.setBounds(20, 540, 113, 23);
 
-        javax.swing.GroupLayout jPanelInternoLayout = new javax.swing.GroupLayout(jPanelInterno);
-        jPanelInterno.setLayout(jPanelInternoLayout);
-        jPanelInternoLayout.setHorizontalGroup(
-            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelInternoLayout.createSequentialGroup()
-                .addGroup(jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelInternoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(sairButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(loginButton))
-                    .addGroup(jPanelInternoLayout.createSequentialGroup()
-                        .addGroup(jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelInternoLayout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addGroup(jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 426, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 3, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInternoLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(cadastrarLoginButton)
-                .addGap(64, 64, 64))
-        );
-        jPanelInternoLayout.setVerticalGroup(
-            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelInternoLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
-                .addGroup(jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sairButton)
-                    .addComponent(loginButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(cadastrarLoginButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/!280x720.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 800, 600);
 
-        javax.swing.GroupLayout jPanelExternoLayout = new javax.swing.GroupLayout(jPanelExterno);
-        jPanelExterno.setLayout(jPanelExternoLayout);
-        jPanelExternoLayout.setHorizontalGroup(
-            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelExternoLayout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
-        );
-        jPanelExternoLayout.setVerticalGroup(
-            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelExternoLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
-                .addComponent(jPanelExterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(293, Short.MAX_VALUE)
-                .addComponent(jPanelExterno, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(214, 214, 214))
-        );
-
-        pack();
+        setSize(new java.awt.Dimension(816, 609));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
@@ -261,6 +233,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cadastrarLoginButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanelExterno;
     private javax.swing.JPanel jPanelInterno;
     private javax.swing.JScrollPane jScrollPane1;

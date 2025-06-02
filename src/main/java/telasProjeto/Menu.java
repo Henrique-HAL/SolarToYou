@@ -28,21 +28,20 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        SairjButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         FazerSimulacaojButton = new javax.swing.JButton();
         VisualizarHistoricojButton = new javax.swing.JButton();
+        sairButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 720));
+        getContentPane().setLayout(null);
 
-        SairjButton.setText("Sair");
-        SairjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SairjButtonActionPerformed(evt);
-            }
-        });
-
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Menu");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(350, 30, 31, 16);
 
         FazerSimulacaojButton.setText("Fazer Simulação");
         FazerSimulacaojButton.addActionListener(new java.awt.event.ActionListener() {
@@ -50,50 +49,29 @@ public class Menu extends javax.swing.JFrame {
                 FazerSimulacaojButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(FazerSimulacaojButton);
+        FazerSimulacaojButton.setBounds(20, 140, 130, 23);
 
         VisualizarHistoricojButton.setText("Visualizar Histórico");
+        getContentPane().add(VisualizarHistoricojButton);
+        VisualizarHistoricojButton.setBounds(20, 250, 130, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(337, 337, 337)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(SairjButton)))
-                        .addGap(66, 66, 66))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(FazerSimulacaojButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(VisualizarHistoricojButton)))
-                .addContainerGap(392, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(81, 81, 81)
-                .addComponent(FazerSimulacaojButton)
-                .addGap(51, 51, 51)
-                .addComponent(VisualizarHistoricojButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 313, Short.MAX_VALUE)
-                .addComponent(SairjButton)
-                .addContainerGap())
-        );
+        sairButton.setText("jButton1");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sairButton);
+        sairButton.setBounds(30, 490, 75, 23);
 
-        pack();
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/!280x720.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1280, 610);
+
+        setSize(new java.awt.Dimension(816, 609));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void SairjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairjButtonActionPerformed
-        this.dispose();
-        
-    }//GEN-LAST:event_SairjButtonActionPerformed
 
     private void FazerSimulacaojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FazerSimulacaojButtonActionPerformed
         this.dispose(); 
@@ -101,6 +79,11 @@ public class Menu extends javax.swing.JFrame {
         tt.setVisible(true);
         
     }//GEN-LAST:event_FazerSimulacaojButtonActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_sairButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,8 +122,9 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton FazerSimulacaojButton;
-    private javax.swing.JButton SairjButton;
     private javax.swing.JButton VisualizarHistoricojButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton sairButton;
     // End of variables declaration//GEN-END:variables
 }
