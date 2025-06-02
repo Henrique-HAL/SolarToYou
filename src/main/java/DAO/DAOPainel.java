@@ -47,14 +47,14 @@ public class DAOPainel {
     
     //Aqui foi criado o metodo para atualizar o Painél pelo CRUD no Banco de Dados
     public void atualizarPainel(Paineis painel) throws Exception {
-        String sql="UPDATE tb_paineis SET modelo = ?, descricao = ?, preco = ? WHERE Id = ?";
+        String sql="UPDATE tb_paineis SET modelo = ?, descricao = ?, preco = ? WHERE Id_paineis = ?";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
             ps.setString(1, painel.getModelo());
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
-            ps.setInt(4, painel.getId());
+            ps.setInt(4, painel.getId_paineis());
             ps.execute();
         }
         
@@ -62,11 +62,11 @@ public class DAOPainel {
     
     //Aqui foi criado o metodo para deletar o Painél pelo CRUD no Banco de Dados
     public void deletarPainel(Paineis painel) throws Exception {
-        String sql="DELETE FROM tb_paineis WHERE Id = ?";
+        String sql="DELETE FROM tb_paineis WHERE Id_paineis = ?";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
-            ps.setInt(1, painel.getId());
+            ps.setInt(1, painel.getId_paineis());
             ps.execute();
         }
         

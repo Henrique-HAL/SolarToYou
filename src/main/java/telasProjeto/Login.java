@@ -4,6 +4,7 @@
  */
 package telasProjeto;
 
+import CRUD.CRUDPaineis;
 import javax.swing.JOptionPane;
 
 import com.mycompany.solartoyour.Usuario;

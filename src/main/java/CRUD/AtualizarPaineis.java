@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package telasProjeto;
+package CRUD;
 import DAO.DAOPainel;
 import com.mycompany.solartoyour.Paineis;
 import javax.swing.JOptionPane;
@@ -21,7 +21,9 @@ public class AtualizarPaineis extends javax.swing.JFrame {
      * Creates new form AtualizarPaineis
      */
     public AtualizarPaineis() {
+        super("Solartoyour");
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -44,7 +46,6 @@ public class AtualizarPaineis extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
         jPanel1.setOpaque(false);
@@ -162,13 +163,13 @@ public class AtualizarPaineis extends javax.swing.JFrame {
 
     private void btnConfirmarAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarAtualizarActionPerformed
         //Aqui o programa ira pegar o ID,Modelo,Descricao e Preco que irao ser atualizados no BD//
-        int Id = Integer.parseInt(txtIdAtualizar.getText());
+        int Id_paineis = Integer.parseInt(txtIdAtualizar.getText());
         String Modelo = txtModeloAtualizar.getText();
         String Descricao = txtDescricaoAtualizar.getText();
         double preco = Double.parseDouble(txtPrecoAtualizar.getText());
         
         try{
-            Paineis painel = new Paineis(Modelo,Descricao,preco,Id);
+            Paineis painel = new Paineis(Modelo,Descricao,preco,Id_paineis);
             DAOPainel dao = new DAOPainel();
             dao.atualizarPainel(painel);
             JOptionPane.showMessageDialog(null,"Painel Atualizado Com Sucesso");                    

@@ -14,7 +14,9 @@ public class resultadoSimulacao extends javax.swing.JFrame {
      * Creates new form resultadoSimulacao
      */
     public resultadoSimulacao() {
+        super ("Solartoyour");
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -89,12 +91,12 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         questionarioSimulacaoPanel.setOpaque(false);
 
         inserirConsumoMensalEmkWhTextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirConsumoMensalEmkWhTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Consumo Mensal Em kWh", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        inserirConsumoMensalEmkWhTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Consumo Mensal Em kWh"));
 
         inserirValorDeInvestimentoTextField.setBackground(new java.awt.Color(204, 204, 255));
         inserirValorDeInvestimentoTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         inserirValorDeInvestimentoTextField.setForeground(new java.awt.Color(255, 255, 255));
-        inserirValorDeInvestimentoTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Valor de Investimento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        inserirValorDeInvestimentoTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Valor de Investimento"));
         inserirValorDeInvestimentoTextField.setOpaque(true);
         inserirValorDeInvestimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,17 +105,15 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         });
 
         inserirHorasDeSolTextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirHorasDeSolTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quantas Horas em Media Sua Propriedade Recebe de Luz Solar?", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        inserirHorasDeSolTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Quantas Horas em Media Sua Propriedade Recebe de Luz Solar?"));
 
         selecionarPotenciaDoPainelComboBox.setBackground(new java.awt.Color(204, 204, 255));
-        selecionarPotenciaDoPainelComboBox.setForeground(new java.awt.Color(0, 0, 0));
         selecionarPotenciaDoPainelComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "100W", "200W", "300W", "400W", "500W" }));
-        selecionarPotenciaDoPainelComboBox.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Qul A Potencia Do Painel Gostaria de Usar?", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        selecionarPotenciaDoPainelComboBox.setBorder(javax.swing.BorderFactory.createTitledBorder("Qul A Potencia Do Painel Gostaria de Usar?"));
 
         tarifaLocalComboBox.setBackground(new java.awt.Color(204, 204, 255));
-        tarifaLocalComboBox.setForeground(new java.awt.Color(0, 0, 0));
         tarifaLocalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sao Paulo/Sao Paulo" }));
-        tarifaLocalComboBox.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Qual Tarifa Local Voce Ira Usar?", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        tarifaLocalComboBox.setBorder(javax.swing.BorderFactory.createTitledBorder("Qual Tarifa Local Voce Ira Usar?"));
         tarifaLocalComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tarifaLocalComboBoxActionPerformed(evt);
@@ -121,8 +121,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         });
 
         inserirValorDeConsumoMensalEmR$TextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirValorDeConsumoMensalEmR$TextField.setForeground(new java.awt.Color(0, 0, 0));
-        inserirValorDeConsumoMensalEmR$TextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Valor de Consumo Mensal Em R$ :", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        inserirValorDeConsumoMensalEmR$TextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Valor de Consumo Mensal Em R$ :"));
         inserirValorDeConsumoMensalEmR$TextField.setOpaque(true);
         inserirValorDeConsumoMensalEmR$TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,25 +196,22 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         resultadoSimulacaoPanel.setOpaque(false);
 
         retornarQuantidadeDePaineisNecessariosTextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarQuantidadeDePaineisNecessariosTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Quantidade de Paineis Necessarios:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        retornarQuantidadeDePaineisNecessariosTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Quantidade de Paineis Necessarios:"));
 
         retornarEconomiaMensalTextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarEconomiaMensalTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Economia Mensal:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        retornarEconomiaMensalTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Economia Mensal:"));
 
         retornarReducaoDeCO2TextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarReducaoDeCO2TextField.setForeground(new java.awt.Color(0, 0, 0));
-        retornarReducaoDeCO2TextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Reducao de CO2", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        retornarReducaoDeCO2TextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Reducao de CO2"));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText(" Aqui Estao Algumas Recomendacoes De Paines Solares. Ao Clicar no Link Voce sera Direcionado Para o Site do vendedor");
         jLabel2.setOpaque(true);
 
         retornarROITextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarROITextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ROI(Retorno Sobre Investimento)", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        retornarROITextField.setBorder(javax.swing.BorderFactory.createTitledBorder("ROI(Retorno Sobre Investimento)"));
 
         InserirLinkTextField.setBackground(new java.awt.Color(204, 204, 255));
-        InserirLinkTextField.setForeground(new java.awt.Color(0, 0, 0));
         InserirLinkTextField.setText("Link A ser Inserido");
         InserirLinkTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,7 +220,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         });
 
         inserirLinkTextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirLinkTextField.setForeground(new java.awt.Color(0, 0, 0));
         inserirLinkTextField.setText("Link A ser Inserido");
 
         inserirAtributosDoPainel1TextField.setBackground(new java.awt.Color(204, 204, 255));

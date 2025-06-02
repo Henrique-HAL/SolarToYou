@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package telasProjeto;
+package CRUD;
 
 import telasProjeto.Login;
 
@@ -38,7 +38,6 @@ public class CRUDPaineis extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -55,8 +54,18 @@ public class CRUDPaineis extends javax.swing.JFrame {
         });
 
         btnExcluirPainelSolar.setText("Excluir");
+        btnExcluirPainelSolar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirPainelSolarActionPerformed(evt);
+            }
+        });
 
         btnAtualizarPainelSolar.setText("Atualizar");
+        btnAtualizarPainelSolar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtualizarPainelSolarActionPerformed(evt);
+            }
+        });
 
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -72,17 +81,15 @@ public class CRUDPaineis extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(btnExcluirPainelSolar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnAtualizarPainelSolar)
-                            .addComponent(btnInserirPainelSolar)))
+                            .addComponent(btnInserirPainelSolar)
+                            .addComponent(btnExcluirPainelSolar)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnVoltar)))
-                .addContainerGap(434, Short.MAX_VALUE))
+                .addContainerGap(444, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,9 +98,9 @@ public class CRUDPaineis extends javax.swing.JFrame {
                 .addComponent(btnAtualizarPainelSolar)
                 .addGap(102, 102, 102)
                 .addComponent(btnInserirPainelSolar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
                 .addComponent(btnExcluirPainelSolar)
-                .addGap(85, 85, 85)
+                .addGap(83, 83, 83)
                 .addComponent(btnVoltar)
                 .addContainerGap())
         );
@@ -122,6 +129,18 @@ public class CRUDPaineis extends javax.swing.JFrame {
         create.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnInserirPainelSolarActionPerformed
+
+    private void btnAtualizarPainelSolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarPainelSolarActionPerformed
+        AtualizarPaineis update = new AtualizarPaineis();
+        update.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAtualizarPainelSolarActionPerformed
+
+    private void btnExcluirPainelSolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirPainelSolarActionPerformed
+        DeletarPaineis delete = new DeletarPaineis();
+        delete.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnExcluirPainelSolarActionPerformed
 
     /**
      * @param args the command line arguments
