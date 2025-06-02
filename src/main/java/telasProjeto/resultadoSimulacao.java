@@ -285,7 +285,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(670, 10, 280, 30);
 
-        PlanoDeFundoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/!280x720.png"))); // NOI18N
+        PlanoDeFundoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1280x720Projeto.png"))); // NOI18N
         getContentPane().add(PlanoDeFundoLabel);
         PlanoDeFundoLabel.setBounds(0, -30, 1270, 770);
 

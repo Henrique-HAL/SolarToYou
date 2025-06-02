@@ -141,7 +141,7 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(jPanelExterno);
         jPanelExterno.setBounds(180, 40, 429, 441);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/!280x720.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1280x720Projeto.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 800, 600);
 
