@@ -18,12 +18,10 @@ public class Paineis {
    
     //Construtor do Objeto Paineis
 
-    public Paineis(String modelo, String descricao, double preco, double potencia, int Id) {
+    public Paineis(String modelo, String descricao, double preco) {
         this.modelo = modelo;
         this.descricao = descricao;
         this.preco = preco;
-        this.potencia = potencia;
-        this.Id = Id;
     }
     
     //Encapsulamento

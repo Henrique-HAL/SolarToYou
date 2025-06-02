@@ -22,10 +22,10 @@ public class ConexaoBD {
             // Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); // Descomente se necessário carregar manualmente
 
             // Obter a conexão usando a URL completa
-            System.out.println("Conexão com Azure SQL Database estabelecida com sucesso!");
+            System.out.println("Conexao com Azure SQL Database estabelecida com sucesso!");
             
             connection = DriverManager.getConnection(connectionUrl);
-            System.out.println("Conexão com Azure SQL Database estabelecida com sucesso!"); // Opcional: Log de sucesso
+            System.out.println("Conexao com Azure SQL Database estabelecida com sucesso!"); // Opcional: Log de sucesso
             return connection;
         } catch (SQLException e) {
             System.err.println("Erro ao conectar ao Azure SQL Database: " + e.getMessage());

@@ -110,12 +110,14 @@ public class CRUDPaineis extends javax.swing.JFrame {
         //Voltar para a tela de Login
         Login admin = new Login();
         admin.setVisible(true);
-        
+
         this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnInserirPainelSolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirPainelSolarActionPerformed
-        
+        InserirPaineis create = new InserirPaineis();
+        create.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnInserirPainelSolarActionPerformed
 
     /**

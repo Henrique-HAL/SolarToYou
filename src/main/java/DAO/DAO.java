@@ -82,7 +82,7 @@ public class DAO {
     
     //Aqui foi criado o metodo para deletar o perfil do usuario no Banco de Dados
     public void deletarPerfil(Usuario usuario) throws Exception {
-        String sql="DELETE FROM tb_usuario WHERE Id = ?";
+        String sql="DELETE FROM tb_usuario WHERE id_usuario = ?";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
