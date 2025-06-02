@@ -168,7 +168,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         questionarioSimulacaoPanel.setBounds(15, 101, 381, 423);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText(" Simulação");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 0, 270, 70);
@@ -280,12 +280,12 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         resultadoSimulacaoPanel.setBounds(494, 49, 725, 602);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 51, 51));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Resultado");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(670, 10, 280, 30);
+        jLabel4.setBounds(670, 20, 280, 30);
 
-        PlanoDeFundoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1280x720Projeto.png"))); // NOI18N
+        PlanoDeFundoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ProjetoNoCanva1280x720.png"))); // NOI18N
         getContentPane().add(PlanoDeFundoLabel);
         PlanoDeFundoLabel.setBounds(0, -30, 1270, 770);
 

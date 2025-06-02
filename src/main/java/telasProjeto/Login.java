@@ -135,9 +135,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cadastrarLoginButton);
-        cadastrarLoginButton.setBounds(20, 540, 150, 23);
+        cadastrarLoginButton.setBounds(10, 500, 150, 23);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1280x720Projeto.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 800, 600);
 

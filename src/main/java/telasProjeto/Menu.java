@@ -65,7 +65,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(sairButton);
         sairButton.setBounds(30, 490, 75, 23);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1280x720Projeto.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 1280, 610);
 

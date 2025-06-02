@@ -48,13 +48,47 @@ public class Cadastro extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
 
+        jPanelExterno.setOpaque(false);
         jPanelExterno.setPreferredSize(new java.awt.Dimension(500, 500));
 
+        jPanelInterno.setOpaque(false);
         jPanelInterno.setPreferredSize(new java.awt.Dimension(380, 400));
+
+        javax.swing.GroupLayout jPanelInternoLayout = new javax.swing.GroupLayout(jPanelInterno);
+        jPanelInterno.setLayout(jPanelInternoLayout);
+        jPanelInternoLayout.setHorizontalGroup(
+            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 11, Short.MAX_VALUE)
+        );
+        jPanelInternoLayout.setVerticalGroup(
+            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanelExternoLayout = new javax.swing.GroupLayout(jPanelExterno);
+        jPanelExterno.setLayout(jPanelExternoLayout);
+        jPanelExternoLayout.setHorizontalGroup(
+            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelExternoLayout.createSequentialGroup()
+                .addGap(0, 418, Short.MAX_VALUE)
+                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanelExternoLayout.setVerticalGroup(
+            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelExternoLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(396, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanelExterno);
+        jPanelExterno.setBounds(180, 40, 429, 441);
 
         jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelCadastro.setText("Cadastro Usuario ");
         jLabelCadastro.setPreferredSize(new java.awt.Dimension(150, 50));
+        getContentPane().add(jLabelCadastro);
+        jLabelCadastro.setBounds(20, 40, 218, 50);
 
         nomeTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Nome:"));
         nomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
@@ -63,12 +97,18 @@ public class Cadastro extends javax.swing.JFrame {
                 nomeTextFieldActionPerformed(evt);
             }
         });
+        getContentPane().add(nomeTextField);
+        nomeTextField.setBounds(20, 150, 270, 55);
 
         emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Seu Email:"));
         emailTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        getContentPane().add(emailTextField);
+        emailTextField.setBounds(20, 260, 270, 55);
 
         senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder("Digite Sua Senha:"));
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
+        getContentPane().add(senhaPasswordField);
+        senhaPasswordField.setBounds(20, 350, 270, 55);
 
         voltarButton.setText("Voltar");
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +116,8 @@ public class Cadastro extends javax.swing.JFrame {
                 voltarButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(voltarButton);
+        voltarButton.setBounds(10, 480, 72, 23);
 
         cadastrarButton.setText("Cadastrar");
         cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -83,65 +125,10 @@ public class Cadastro extends javax.swing.JFrame {
                 cadastrarButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(cadastrarButton);
+        cadastrarButton.setBounds(220, 480, 80, 23);
 
-        javax.swing.GroupLayout jPanelInternoLayout = new javax.swing.GroupLayout(jPanelInterno);
-        jPanelInterno.setLayout(jPanelInternoLayout);
-        jPanelInternoLayout.setHorizontalGroup(
-            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelInternoLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelInternoLayout.createSequentialGroup()
-                        .addComponent(voltarButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                        .addComponent(cadastrarButton)))
-                .addGap(50, 50, 50))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelInternoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
-        );
-        jPanelInternoLayout.setVerticalGroup(
-            jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelInternoLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(senhaPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(jPanelInternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(voltarButton)
-                    .addComponent(cadastrarButton))
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanelExternoLayout = new javax.swing.GroupLayout(jPanelExterno);
-        jPanelExterno.setLayout(jPanelExternoLayout);
-        jPanelExternoLayout.setHorizontalGroup(
-            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelExternoLayout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
-                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanelExternoLayout.setVerticalGroup(
-            jPanelExternoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelExternoLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jPanelInterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanelExterno);
-        jPanelExterno.setBounds(180, 40, 429, 441);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/1280x720Projeto.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Imagem4Projeto.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 800, 600);
 
