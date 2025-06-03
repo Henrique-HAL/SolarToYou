@@ -43,6 +43,9 @@ public class Cadastro extends javax.swing.JFrame {
         voltarButton = new javax.swing.JButton();
         cadastrarButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         jPanelExterno.setOpaque(false);
         jPanelExterno.setPreferredSize(new java.awt.Dimension(500, 500));
@@ -82,6 +85,7 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabelCadastro.setForeground(new java.awt.Color(0, 0, 0));
         jLabelCadastro.setText("Cadastro Usuario ");
         jLabelCadastro.setPreferredSize(new java.awt.Dimension(150, 50));
         getContentPane().add(jLabelCadastro);
@@ -89,7 +93,7 @@ public class Cadastro extends javax.swing.JFrame {
 
         nomeTextField.setBackground(new java.awt.Color(204, 204, 204));
         nomeTextField.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Seu Nome:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        nomeTextField.setBorder(null);
         nomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
         nomeTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,45 +101,67 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(nomeTextField);
-        nomeTextField.setBounds(20, 150, 270, 55);
+        nomeTextField.setBounds(20, 140, 250, 40);
 
         emailTextField.setBackground(new java.awt.Color(204, 204, 204));
-        emailTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Seu Email:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        emailTextField.setBorder(null);
         emailTextField.setPreferredSize(new java.awt.Dimension(270, 55));
         getContentPane().add(emailTextField);
-        emailTextField.setBounds(20, 260, 270, 55);
+        emailTextField.setBounds(20, 240, 250, 40);
 
         senhaPasswordField.setBackground(new java.awt.Color(204, 204, 204));
-        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Sua Senha:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        senhaPasswordField.setBorder(null);
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
         getContentPane().add(senhaPasswordField);
-        senhaPasswordField.setBounds(20, 350, 270, 55);
+        senhaPasswordField.setBounds(20, 340, 250, 40);
 
-        voltarButton.setBackground(new java.awt.Color(7, 14, 43));
-        voltarButton.setForeground(new java.awt.Color(255, 255, 102));
+        voltarButton.setBackground(new java.awt.Color(255, 255, 102));
+        voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        voltarButton.setForeground(new java.awt.Color(0, 0, 0));
         voltarButton.setText("Voltar");
+        voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 voltarButtonActionPerformed(evt);
             }
         });
         getContentPane().add(voltarButton);
-        voltarButton.setBounds(10, 480, 72, 23);
+        voltarButton.setBounds(20, 480, 90, 27);
 
-        cadastrarButton.setBackground(new java.awt.Color(7, 14, 43));
-        cadastrarButton.setForeground(new java.awt.Color(255, 255, 102));
+        cadastrarButton.setBackground(new java.awt.Color(255, 255, 102));
+        cadastrarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cadastrarButton.setForeground(new java.awt.Color(0, 0, 0));
         cadastrarButton.setText("Cadastrar");
+        cadastrarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarButtonActionPerformed(evt);
             }
         });
         getContentPane().add(cadastrarButton);
-        cadastrarButton.setBounds(220, 480, 80, 23);
+        cadastrarButton.setBounds(220, 480, 110, 27);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(380, 0, 420, 600);
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Digite Seu Nome:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(20, 120, 120, 14);
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Digite Seu Email:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(20, 220, 250, 14);
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Digite Sua Senha:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(20, 320, 120, 14);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);
@@ -213,6 +239,9 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JButton cadastrarButton;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelCadastro;
     private javax.swing.JPanel jPanelExterno;
     private javax.swing.JPanel jPanelInterno;

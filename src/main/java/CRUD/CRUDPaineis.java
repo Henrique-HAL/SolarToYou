@@ -34,6 +34,7 @@ public class CRUDPaineis extends javax.swing.JFrame {
         btnInserirPainelSolar = new javax.swing.JButton();
         btnExcluirPainelSolar = new javax.swing.JButton();
         btnAtualizarPainelSolar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         btnVoltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -41,72 +42,93 @@ public class CRUDPaineis extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Gerenciador de Paineis", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.setMinimumSize(new java.awt.Dimension(0, 0));
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
 
+        btnInserirPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
+        btnInserirPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnInserirPainelSolar.setForeground(new java.awt.Color(0, 0, 0));
         btnInserirPainelSolar.setText("Inserir");
+        btnInserirPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInserirPainelSolar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInserirPainelSolarActionPerformed(evt);
             }
         });
 
+        btnExcluirPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
+        btnExcluirPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnExcluirPainelSolar.setForeground(new java.awt.Color(0, 0, 0));
         btnExcluirPainelSolar.setText("Excluir");
+        btnExcluirPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExcluirPainelSolar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirPainelSolarActionPerformed(evt);
             }
         });
 
+        btnAtualizarPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
+        btnAtualizarPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnAtualizarPainelSolar.setForeground(new java.awt.Color(0, 0, 0));
         btnAtualizarPainelSolar.setText("Atualizar");
+        btnAtualizarPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAtualizarPainelSolar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAtualizarPainelSolarActionPerformed(evt);
             }
         });
 
-        btnVoltar.setText("Voltar");
-        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltarActionPerformed(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Gerenciar Paineis Solares");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAtualizarPainelSolar)
-                            .addComponent(btnInserirPainelSolar)
-                            .addComponent(btnExcluirPainelSolar)))
+                        .addComponent(btnExcluirPainelSolar)
+                        .addGap(156, 156, 156)
+                        .addComponent(btnAtualizarPainelSolar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnInserirPainelSolar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnVoltar)))
-                .addContainerGap(444, Short.MAX_VALUE))
+                        .addComponent(jLabel2)
+                        .addGap(0, 100, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(btnAtualizarPainelSolar)
-                .addGap(102, 102, 102)
-                .addComponent(btnInserirPainelSolar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
-                .addComponent(btnExcluirPainelSolar)
-                .addGap(83, 83, 83)
-                .addComponent(btnVoltar)
-                .addContainerGap())
+                .addGap(54, 54, 54)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnExcluirPainelSolar)
+                    .addComponent(btnAtualizarPainelSolar)
+                    .addComponent(btnInserirPainelSolar))
+                .addGap(108, 108, 108))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(100, 20, 551, 530);
+        jPanel1.setBounds(100, 30, 551, 530);
+
+        btnVoltar.setBackground(new java.awt.Color(255, 255, 102));
+        btnVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
+        btnVoltar.setText("Voltar");
+        btnVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVoltar);
+        btnVoltar.setBounds(20, 550, 72, 24);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ProjetoNoCanva.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -183,6 +205,7 @@ public class CRUDPaineis extends javax.swing.JFrame {
     private javax.swing.JButton btnInserirPainelSolar;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

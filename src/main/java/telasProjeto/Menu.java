@@ -31,7 +31,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         FazerSimulacaojButton = new javax.swing.JButton();
         VisualizarHistoricojButton = new javax.swing.JButton();
-        sairButton = new javax.swing.JButton();
+        voltarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -42,33 +42,45 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Menu");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(170, 0, 150, 80);
+        jLabel1.setBounds(10, 10, 150, 80);
 
+        FazerSimulacaojButton.setBackground(new java.awt.Color(255, 255, 102));
+        FazerSimulacaojButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        FazerSimulacaojButton.setForeground(new java.awt.Color(0, 0, 0));
         FazerSimulacaojButton.setText("Fazer Simulação");
+        FazerSimulacaojButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         FazerSimulacaojButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FazerSimulacaojButtonActionPerformed(evt);
             }
         });
         getContentPane().add(FazerSimulacaojButton);
-        FazerSimulacaojButton.setBounds(10, 120, 130, 23);
+        FazerSimulacaojButton.setBounds(10, 160, 160, 27);
 
+        VisualizarHistoricojButton.setBackground(new java.awt.Color(255, 255, 102));
+        VisualizarHistoricojButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        VisualizarHistoricojButton.setForeground(new java.awt.Color(0, 0, 0));
         VisualizarHistoricojButton.setText("Visualizar Histórico");
+        VisualizarHistoricojButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(VisualizarHistoricojButton);
-        VisualizarHistoricojButton.setBounds(10, 180, 130, 23);
+        VisualizarHistoricojButton.setBounds(10, 230, 170, 27);
 
-        sairButton.setText("jButton1");
-        sairButton.addActionListener(new java.awt.event.ActionListener() {
+        voltarButton.setBackground(new java.awt.Color(255, 255, 51));
+        voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        voltarButton.setForeground(new java.awt.Color(0, 0, 0));
+        voltarButton.setText("Voltar");
+        voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sairButtonActionPerformed(evt);
+                voltarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(sairButton);
-        sairButton.setBounds(10, 530, 75, 23);
+        getContentPane().add(voltarButton);
+        voltarButton.setBounds(10, 530, 72, 27);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(380, 0, 1280, 610);
+        jLabel2.setBounds(380, 0, 800, 600);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);
@@ -76,15 +88,15 @@ public class Menu extends javax.swing.JFrame {
 
     private void FazerSimulacaojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FazerSimulacaojButtonActionPerformed
         this.dispose(); 
-        simulacao tt = new simulacao();
-        tt.setVisible(true);
+        resultadoSimulacao simulacao = new resultadoSimulacao();
+        simulacao.setVisible(true);
         
     }//GEN-LAST:event_FazerSimulacaojButtonActionPerformed
 
-    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_sairButtonActionPerformed
+    }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +138,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton VisualizarHistoricojButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton sairButton;
+    private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }

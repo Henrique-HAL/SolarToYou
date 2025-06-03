@@ -45,6 +45,8 @@ public class Login extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         jPanelExterno.setMinimumSize(new java.awt.Dimension(800, 800));
         jPanelExterno.setOpaque(false);
@@ -86,7 +88,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         loginTextField.setBackground(new java.awt.Color(204, 204, 204));
-        loginTextField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Seu Login(Nome ou Email):", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        loginTextField.setBorder(null);
         loginTextField.setPreferredSize(new java.awt.Dimension(270, 55));
         loginTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,46 +96,52 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(loginTextField);
-        loginTextField.setBounds(510, 160, 270, 55);
+        loginTextField.setBounds(510, 150, 230, 40);
 
         senhaPasswordField.setBackground(new java.awt.Color(204, 204, 204));
-        senhaPasswordField.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Digite Sua Senha:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0))); // NOI18N
+        senhaPasswordField.setBorder(null);
         senhaPasswordField.setPreferredSize(new java.awt.Dimension(270, 55));
         getContentPane().add(senhaPasswordField);
-        senhaPasswordField.setBounds(510, 280, 270, 55);
+        senhaPasswordField.setBounds(510, 270, 230, 40);
 
-        sairButton.setBackground(new java.awt.Color(7, 14, 43));
-        sairButton.setForeground(new java.awt.Color(255, 255, 102));
+        sairButton.setBackground(new java.awt.Color(255, 255, 102));
+        sairButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        sairButton.setForeground(new java.awt.Color(0, 0, 0));
         sairButton.setText("Sair");
+        sairButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sairButtonActionPerformed(evt);
             }
         });
         getContentPane().add(sairButton);
-        sairButton.setBounds(550, 390, 72, 23);
+        sairButton.setBounds(550, 390, 72, 27);
 
-        loginButton.setBackground(new java.awt.Color(7, 14, 43));
-        loginButton.setForeground(new java.awt.Color(255, 255, 102));
+        loginButton.setBackground(new java.awt.Color(255, 255, 102));
+        loginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        loginButton.setForeground(new java.awt.Color(0, 0, 0));
         loginButton.setText("Login");
+        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
             }
         });
         getContentPane().add(loginButton);
-        loginButton.setBounds(710, 390, 72, 23);
+        loginButton.setBounds(710, 390, 72, 27);
 
-        cadastrarLoginButton.setBackground(new java.awt.Color(7, 14, 43));
-        cadastrarLoginButton.setForeground(new java.awt.Color(255, 255, 102));
+        cadastrarLoginButton.setBackground(new java.awt.Color(255, 255, 102));
+        cadastrarLoginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cadastrarLoginButton.setForeground(new java.awt.Color(0, 0, 0));
         cadastrarLoginButton.setText("Cadastrar Login");
+        cadastrarLoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastrarLoginButtonActionPerformed(evt);
             }
         });
         getContentPane().add(cadastrarLoginButton);
-        cadastrarLoginButton.setBounds(620, 520, 150, 23);
+        cadastrarLoginButton.setBounds(630, 520, 150, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -148,6 +156,18 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("Ainda Nao Tem Login? Clique em Casdatrar e Crie Um!");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(430, 440, 370, 50);
+
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Digite Seu Login(Nome ou Email):");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(510, 130, 210, 14);
+
+        jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Digite Sua Senha:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(510, 250, 140, 14);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);
@@ -244,6 +264,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanelExterno;
     private javax.swing.JPanel jPanelInterno;
     private javax.swing.JButton loginButton;

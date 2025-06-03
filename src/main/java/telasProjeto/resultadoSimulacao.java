@@ -4,6 +4,9 @@
  */
 package telasProjeto;
 
+import com.mycompany.solartoyour.CalculoSimulacao;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Henri
@@ -30,16 +33,16 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jLayeredPane2 = new javax.swing.JLayeredPane();
-        questionarioSimulacaoPanel = new javax.swing.JPanel();
-        inserirConsumoMensalEmkWhTextField = new javax.swing.JTextField();
-        inserirValorDeInvestimentoTextField = new javax.swing.JTextField();
-        inserirHorasDeSolTextField = new javax.swing.JTextField();
-        selecionarPotenciaDoPainelComboBox = new javax.swing.JComboBox<>();
-        tarifaLocalComboBox = new javax.swing.JComboBox<>();
-        inserirValorDeConsumoMensalEmR$TextField = new javax.swing.JTextField();
-        realizarSimulacaoButton = new javax.swing.JButton();
-        voltarButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        voltarButton = new javax.swing.JButton();
+        realizarSimulacaoButton = new javax.swing.JButton();
+        inserirValorDeInvestimentoTextField = new javax.swing.JTextField();
+        inserirConsumoMensalEmkWhTextField = new javax.swing.JTextField();
+        inserirValorDeConsumoMensalEmR$TextField = new javax.swing.JTextField();
+        inserirHorasDeSolTextField = new javax.swing.JTextField();
+        tarifaLocalComboBox = new javax.swing.JComboBox<>();
+        selecionarPotenciaDoPainelComboBox = new javax.swing.JComboBox<>();
         resultadoSimulacaoPanel = new javax.swing.JPanel();
         retornarQuantidadeDePaineisNecessariosTextField = new javax.swing.JTextField();
         retornarEconomiaMensalTextField = new javax.swing.JTextField();
@@ -47,11 +50,19 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         retornarROITextField = new javax.swing.JTextField();
         InserirLinkTextField = new javax.swing.JTextField();
-        inserirLinkTextField = new javax.swing.JTextField();
-        SeparadorDeLinha = new javax.swing.JSeparator();
         inserirAtributosDoPainel1TextField = new javax.swing.JTextField();
         inserirAtributosDoPainel2TextField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        inserirLinkTextField = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         PlanoDeFundoLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -88,130 +99,148 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         getContentPane().add(jLayeredPane2);
         jLayeredPane2.setBounds(1425, 505, 100, 100);
 
-        questionarioSimulacaoPanel.setOpaque(false);
-
-        inserirConsumoMensalEmkWhTextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirConsumoMensalEmkWhTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Consumo Mensal Em kWh"));
-
-        inserirValorDeInvestimentoTextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirValorDeInvestimentoTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        inserirValorDeInvestimentoTextField.setForeground(new java.awt.Color(255, 255, 255));
-        inserirValorDeInvestimentoTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Valor de Investimento"));
-        inserirValorDeInvestimentoTextField.setOpaque(true);
-        inserirValorDeInvestimentoTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inserirValorDeInvestimentoTextFieldActionPerformed(evt);
-            }
-        });
-
-        inserirHorasDeSolTextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirHorasDeSolTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Quantas Horas em Media Sua Propriedade Recebe de Luz Solar?"));
-
-        selecionarPotenciaDoPainelComboBox.setBackground(new java.awt.Color(204, 204, 255));
-        selecionarPotenciaDoPainelComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "100W", "200W", "300W", "400W", "500W" }));
-        selecionarPotenciaDoPainelComboBox.setBorder(javax.swing.BorderFactory.createTitledBorder("Qul A Potencia Do Painel Gostaria de Usar?"));
-
-        tarifaLocalComboBox.setBackground(new java.awt.Color(204, 204, 255));
-        tarifaLocalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sao Paulo/Sao Paulo" }));
-        tarifaLocalComboBox.setBorder(javax.swing.BorderFactory.createTitledBorder("Qual Tarifa Local Voce Ira Usar?"));
-        tarifaLocalComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tarifaLocalComboBoxActionPerformed(evt);
-            }
-        });
-
-        inserirValorDeConsumoMensalEmR$TextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirValorDeConsumoMensalEmR$TextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Valor de Consumo Mensal Em R$ :"));
-        inserirValorDeConsumoMensalEmR$TextField.setOpaque(true);
-        inserirValorDeConsumoMensalEmR$TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inserirValorDeConsumoMensalEmR$TextFieldActionPerformed(evt);
-            }
-        });
-
-        realizarSimulacaoButton.setBackground(new java.awt.Color(7, 14, 43));
-        realizarSimulacaoButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        realizarSimulacaoButton.setForeground(new java.awt.Color(255, 255, 102));
-        realizarSimulacaoButton.setText("Realizar Simulacao");
-
-        voltarButton.setBackground(new java.awt.Color(7, 14, 43));
-        voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        voltarButton.setForeground(new java.awt.Color(255, 255, 102));
-        voltarButton.setText("Voltar");
-
-        javax.swing.GroupLayout questionarioSimulacaoPanelLayout = new javax.swing.GroupLayout(questionarioSimulacaoPanel);
-        questionarioSimulacaoPanel.setLayout(questionarioSimulacaoPanelLayout);
-        questionarioSimulacaoPanelLayout.setHorizontalGroup(
-            questionarioSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(questionarioSimulacaoPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(questionarioSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(selecionarPotenciaDoPainelComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tarifaLocalComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(inserirHorasDeSolTextField)
-                    .addGroup(questionarioSimulacaoPanelLayout.createSequentialGroup()
-                        .addGroup(questionarioSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(inserirConsumoMensalEmkWhTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inserirValorDeInvestimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inserirValorDeConsumoMensalEmR$TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(questionarioSimulacaoPanelLayout.createSequentialGroup()
-                        .addComponent(voltarButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
-                        .addComponent(realizarSimulacaoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        questionarioSimulacaoPanelLayout.setVerticalGroup(
-            questionarioSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(questionarioSimulacaoPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(inserirValorDeInvestimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(inserirValorDeConsumoMensalEmR$TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(inserirConsumoMensalEmkWhTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(inserirHorasDeSolTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(tarifaLocalComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(selecionarPotenciaDoPainelComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addGroup(questionarioSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(realizarSimulacaoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(voltarButton))
-                .addContainerGap())
-        );
-
-        getContentPane().add(questionarioSimulacaoPanel);
-        questionarioSimulacaoPanel.setBounds(15, 101, 381, 423);
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText(" Simulação");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 0, 270, 70);
 
-        resultadoSimulacaoPanel.setBackground(new java.awt.Color(8, 13, 39));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Resultado");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(670, 10, 280, 30);
+
+        voltarButton.setBackground(new java.awt.Color(255, 255, 102));
+        voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        voltarButton.setForeground(new java.awt.Color(0, 0, 0));
+        voltarButton.setText("Voltar");
+        voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(voltarButton);
+        voltarButton.setBounds(10, 620, 72, 27);
+
+        realizarSimulacaoButton.setBackground(new java.awt.Color(255, 255, 102));
+        realizarSimulacaoButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        realizarSimulacaoButton.setForeground(new java.awt.Color(0, 0, 0));
+        realizarSimulacaoButton.setText("Realizar Simulação");
+        realizarSimulacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        realizarSimulacaoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                realizarSimulacaoButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(realizarSimulacaoButton);
+        realizarSimulacaoButton.setBounds(250, 620, 160, 27);
+
+        inserirValorDeInvestimentoTextField.setBackground(new java.awt.Color(204, 204, 255));
+        inserirValorDeInvestimentoTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        inserirValorDeInvestimentoTextField.setForeground(new java.awt.Color(0, 0, 0));
+        inserirValorDeInvestimentoTextField.setBorder(null);
+        inserirValorDeInvestimentoTextField.setOpaque(true);
+        inserirValorDeInvestimentoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inserirValorDeInvestimentoTextFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inserirValorDeInvestimentoTextField);
+        inserirValorDeInvestimentoTextField.setBounds(10, 100, 200, 30);
+
+        inserirConsumoMensalEmkWhTextField.setBackground(new java.awt.Color(204, 204, 255));
+        inserirConsumoMensalEmkWhTextField.setForeground(new java.awt.Color(0, 0, 0));
+        inserirConsumoMensalEmkWhTextField.setBorder(null);
+        inserirConsumoMensalEmkWhTextField.setCaretColor(new java.awt.Color(0, 0, 0));
+        inserirConsumoMensalEmkWhTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        inserirConsumoMensalEmkWhTextField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        inserirConsumoMensalEmkWhTextField.setOpaque(true);
+        inserirConsumoMensalEmkWhTextField.setSelectedTextColor(new java.awt.Color(0, 0, 0));
+        inserirConsumoMensalEmkWhTextField.setSelectionColor(new java.awt.Color(0, 0, 0));
+        inserirConsumoMensalEmkWhTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inserirConsumoMensalEmkWhTextFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inserirConsumoMensalEmkWhTextField);
+        inserirConsumoMensalEmkWhTextField.setBounds(10, 240, 200, 30);
+
+        inserirValorDeConsumoMensalEmR$TextField.setBackground(new java.awt.Color(204, 204, 255));
+        inserirValorDeConsumoMensalEmR$TextField.setForeground(new java.awt.Color(0, 0, 0));
+        inserirValorDeConsumoMensalEmR$TextField.setBorder(null);
+        inserirValorDeConsumoMensalEmR$TextField.setOpaque(true);
+        inserirValorDeConsumoMensalEmR$TextField.setPreferredSize(new java.awt.Dimension(64, 14));
+        inserirValorDeConsumoMensalEmR$TextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inserirValorDeConsumoMensalEmR$TextFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inserirValorDeConsumoMensalEmR$TextField);
+        inserirValorDeConsumoMensalEmR$TextField.setBounds(10, 170, 200, 30);
+
+        inserirHorasDeSolTextField.setBackground(new java.awt.Color(204, 204, 255));
+        inserirHorasDeSolTextField.setForeground(new java.awt.Color(0, 0, 0));
+        inserirHorasDeSolTextField.setBorder(null);
+        getContentPane().add(inserirHorasDeSolTextField);
+        inserirHorasDeSolTextField.setBounds(10, 300, 200, 30);
+
+        tarifaLocalComboBox.setBackground(new java.awt.Color(204, 204, 255));
+        tarifaLocalComboBox.setForeground(new java.awt.Color(0, 0, 0));
+        tarifaLocalComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sao Paulo/Sao Paulo" }));
+        tarifaLocalComboBox.setBorder(null);
+        tarifaLocalComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tarifaLocalComboBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(tarifaLocalComboBox);
+        tarifaLocalComboBox.setBounds(10, 370, 200, 30);
+
+        selecionarPotenciaDoPainelComboBox.setBackground(new java.awt.Color(204, 204, 255));
+        selecionarPotenciaDoPainelComboBox.setForeground(new java.awt.Color(0, 0, 0));
+        selecionarPotenciaDoPainelComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "100W", "200W", "300W", "400W", "500W" }));
+        selecionarPotenciaDoPainelComboBox.setBorder(null);
+        selecionarPotenciaDoPainelComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selecionarPotenciaDoPainelComboBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(selecionarPotenciaDoPainelComboBox);
+        selecionarPotenciaDoPainelComboBox.setBounds(10, 450, 200, 30);
+
+        resultadoSimulacaoPanel.setBackground(new java.awt.Color(0, 0, 50));
         resultadoSimulacaoPanel.setOpaque(false);
 
         retornarQuantidadeDePaineisNecessariosTextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarQuantidadeDePaineisNecessariosTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Quantidade de Paineis Necessarios:"));
+        retornarQuantidadeDePaineisNecessariosTextField.setForeground(new java.awt.Color(0, 0, 0));
+        retornarQuantidadeDePaineisNecessariosTextField.setBorder(null);
+        retornarQuantidadeDePaineisNecessariosTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retornarQuantidadeDePaineisNecessariosTextFieldActionPerformed(evt);
+            }
+        });
 
         retornarEconomiaMensalTextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarEconomiaMensalTextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Economia Mensal:"));
+        retornarEconomiaMensalTextField.setForeground(new java.awt.Color(0, 0, 0));
+        retornarEconomiaMensalTextField.setBorder(null);
+        retornarEconomiaMensalTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                retornarEconomiaMensalTextFieldActionPerformed(evt);
+            }
+        });
 
         retornarReducaoDeCO2TextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarReducaoDeCO2TextField.setBorder(javax.swing.BorderFactory.createTitledBorder("Reducao de CO2"));
+        retornarReducaoDeCO2TextField.setForeground(new java.awt.Color(0, 0, 0));
+        retornarReducaoDeCO2TextField.setBorder(null);
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText(" Aqui Estao Algumas Recomendacoes De Paines Solares. Ao Clicar no Link Voce sera Direcionado Para o Site do vendedor");
         jLabel2.setOpaque(true);
 
         retornarROITextField.setBackground(new java.awt.Color(204, 204, 255));
-        retornarROITextField.setBorder(javax.swing.BorderFactory.createTitledBorder("ROI(Retorno Sobre Investimento)"));
+        retornarROITextField.setForeground(new java.awt.Color(0, 0, 0));
+        retornarROITextField.setBorder(null);
 
         InserirLinkTextField.setBackground(new java.awt.Color(204, 204, 255));
+        InserirLinkTextField.setForeground(new java.awt.Color(0, 0, 0));
         InserirLinkTextField.setText("Link A ser Inserido");
         InserirLinkTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,82 +248,135 @@ public class resultadoSimulacao extends javax.swing.JFrame {
             }
         });
 
-        inserirLinkTextField.setBackground(new java.awt.Color(204, 204, 255));
-        inserirLinkTextField.setText("Link A ser Inserido");
-
         inserirAtributosDoPainel1TextField.setBackground(new java.awt.Color(204, 204, 255));
+        inserirAtributosDoPainel1TextField.setForeground(new java.awt.Color(0, 0, 0));
 
         inserirAtributosDoPainel2TextField.setBackground(new java.awt.Color(204, 204, 255));
+        inserirAtributosDoPainel2TextField.setForeground(new java.awt.Color(0, 0, 0));
+
+        inserirLinkTextField.setBackground(new java.awt.Color(204, 204, 255));
+        inserirLinkTextField.setForeground(new java.awt.Color(0, 0, 0));
+        inserirLinkTextField.setText("Link A ser Inserido");
+
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Quantidade Necessarias de Paineis Solares:");
+
+        jLabel11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Economia Mensal:");
+
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("ROI (Retorno Sobre Investimento)");
+
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Reducao De CO2:");
 
         javax.swing.GroupLayout resultadoSimulacaoPanelLayout = new javax.swing.GroupLayout(resultadoSimulacaoPanel);
         resultadoSimulacaoPanel.setLayout(resultadoSimulacaoPanelLayout);
         resultadoSimulacaoPanelLayout.setHorizontalGroup(
             resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(resultadoSimulacaoPanelLayout.createSequentialGroup()
-                .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(SeparadorDeLinha)
-                    .addGroup(resultadoSimulacaoPanelLayout.createSequentialGroup()
-                        .addGap(14, 14, 14)
+                .addContainerGap()
+                .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(InserirLinkTextField)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, resultadoSimulacaoPanelLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
                         .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(InserirLinkTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10)
+                            .addComponent(retornarQuantidadeDePaineisNecessariosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(retornarEconomiaMensalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(retornarROITextField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12)
                             .addGroup(resultadoSimulacaoPanelLayout.createSequentialGroup()
-                                .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(inserirAtributosDoPainel1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 695, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(resultadoSimulacaoPanelLayout.createSequentialGroup()
-                                        .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(retornarQuantidadeDePaineisNecessariosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(retornarEconomiaMensalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(49, 49, 49)
-                                        .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(retornarReducaoDeCO2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(retornarROITextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, resultadoSimulacaoPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(inserirAtributosDoPainel2TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 703, Short.MAX_VALUE)
-                            .addComponent(inserirLinkTextField))))
-                .addContainerGap())
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel13))
+                            .addComponent(retornarReducaoDeCO2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inserirAtributosDoPainel2TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 703, Short.MAX_VALUE)
+                    .addComponent(inserirLinkTextField)
+                    .addComponent(inserirAtributosDoPainel1TextField, javax.swing.GroupLayout.Alignment.LEADING))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         resultadoSimulacaoPanelLayout.setVerticalGroup(
             resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(resultadoSimulacaoPanelLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(14, 14, 14)
                 .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(retornarQuantidadeDePaineisNecessariosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(retornarROITextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel12))
+                .addGap(10, 10, 10)
                 .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(retornarEconomiaMensalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(retornarReducaoDeCO2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(SeparadorDeLinha, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(retornarQuantidadeDePaineisNecessariosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(retornarROITextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7)
+                .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(resultadoSimulacaoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(retornarEconomiaMensalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(retornarReducaoDeCO2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(inserirAtributosDoPainel1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
+                .addComponent(inserirAtributosDoPainel1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addComponent(InserirLinkTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(inserirAtributosDoPainel2TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                .addGap(46, 46, 46)
+                .addGap(27, 27, 27)
+                .addComponent(inserirAtributosDoPainel2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
                 .addComponent(inserirLinkTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         getContentPane().add(resultadoSimulacaoPanel);
-        resultadoSimulacaoPanel.setBounds(494, 49, 725, 602);
+        resultadoSimulacaoPanel.setBounds(480, 40, 725, 680);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Resultado");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(670, 20, 280, 30);
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Valor De Investimento");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(10, 80, 120, 16);
 
-        PlanoDeFundoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ProjetoNoCanva1280x720.png"))); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Digite seu Consumo Mensal Em R$");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(10, 150, 200, 14);
+
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Consumo Mensal Em kWh");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(10, 220, 190, 14);
+
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Qual a Media em Horas que sua Residencia/Propriedade recebe por Dia");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(10, 270, 400, 30);
+
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Qual a Tarifa Local Voce ira Usar?");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(10, 350, 210, 14);
+
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Qual potencia de Painel voce ira Usar?");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(10, 430, 240, 14);
+
+        PlanoDeFundoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PlanoDeFundo5.jpg"))); // NOI18N
         getContentPane().add(PlanoDeFundoLabel);
-        PlanoDeFundoLabel.setBounds(0, -30, 1270, 770);
+        PlanoDeFundoLabel.setBounds(0, -10, 1350, 740);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -314,6 +396,45 @@ public class resultadoSimulacao extends javax.swing.JFrame {
     private void tarifaLocalComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tarifaLocalComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tarifaLocalComboBoxActionPerformed
+
+    private void realizarSimulacaoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_realizarSimulacaoButtonActionPerformed
+       
+        try{
+            //Como sao Varios Double E enecesario pasar de De String para Double//
+            
+        //Calcular Quantidade de paineis/   
+        String txtConsumo = inserirValorDeConsumoMensalEmR$TextField.getText().replace(",", ".");    // Aqui e so para trocar , por ponto pois o parseDouble nAo reconhe pelo jeito//
+        double consumoMensal = Double.parseDouble(txtConsumo);
+        String txtPotencia = selecionarPotenciaDoPainelComboBox.getSelectedItem().toString(); //Tive que pesquisar essa po**a pqp //
+        double potenciaPainel = Double.parseDouble(txtPotencia);
+        
+        double quantidadeP = CalculoSimulacao.quantidadePaineis ( consumoMensal,potenciaPainel);
+        
+        retornarQuantidadeDePaineisNecessariosTextField.setText("Voce Precisara de :"+ quantidadeP);
+        }catch(Exception e){
+            retornarQuantidadeDePaineisNecessariosTextField.setText("Deu Algo de errado nos Calculos:");
+            
+        }
+        
+    }//GEN-LAST:event_realizarSimulacaoButtonActionPerformed
+
+        
+        
+    private void retornarQuantidadeDePaineisNecessariosTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarQuantidadeDePaineisNecessariosTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_retornarQuantidadeDePaineisNecessariosTextFieldActionPerformed
+
+    private void selecionarPotenciaDoPainelComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarPotenciaDoPainelComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_selecionarPotenciaDoPainelComboBoxActionPerformed
+
+    private void inserirConsumoMensalEmkWhTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inserirConsumoMensalEmkWhTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inserirConsumoMensalEmkWhTextFieldActionPerformed
+
+    private void retornarEconomiaMensalTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarEconomiaMensalTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_retornarEconomiaMensalTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -353,7 +474,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField InserirLinkTextField;
     private javax.swing.JLabel PlanoDeFundoLabel;
-    private javax.swing.JSeparator SeparadorDeLinha;
     private javax.swing.JTextField inserirAtributosDoPainel1TextField;
     private javax.swing.JTextField inserirAtributosDoPainel2TextField;
     private javax.swing.JTextField inserirConsumoMensalEmkWhTextField;
@@ -362,11 +482,20 @@ public class resultadoSimulacao extends javax.swing.JFrame {
     private javax.swing.JTextField inserirValorDeConsumoMensalEmR$TextField;
     private javax.swing.JTextField inserirValorDeInvestimentoTextField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
-    private javax.swing.JPanel questionarioSimulacaoPanel;
     private javax.swing.JButton realizarSimulacaoButton;
     private javax.swing.JPanel resultadoSimulacaoPanel;
     private javax.swing.JTextField retornarEconomiaMensalTextField;
