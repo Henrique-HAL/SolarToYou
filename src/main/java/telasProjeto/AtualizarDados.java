@@ -188,6 +188,8 @@ public class AtualizarDados extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Perfil Nao Atualizado");
 
         }
+        
+        this.dispose();
     }//GEN-LAST:event_ConfirmarjButtonActionPerformed
 
     /**

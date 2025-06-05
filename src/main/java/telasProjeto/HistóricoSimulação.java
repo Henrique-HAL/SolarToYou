@@ -14,7 +14,9 @@ public class HistóricoSimulação extends javax.swing.JFrame {
      * Creates new form HistóricoSimulação
      */
     public HistóricoSimulação() {
+        super("Solartoyour");
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -44,8 +46,13 @@ public class HistóricoSimulação extends javax.swing.JFrame {
         VoltarButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         VoltarButton.setText("Voltar");
         VoltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        VoltarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(VoltarButton);
-        VoltarButton.setBounds(20, 520, 76, 23);
+        VoltarButton.setBounds(20, 520, 72, 23);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -72,6 +79,12 @@ public class HistóricoSimulação extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void VoltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarButtonActionPerformed
+        this.dispose();
+        Menu menu = new Menu();
+        menu.setVisible(true);
+    }//GEN-LAST:event_VoltarButtonActionPerformed
 
     /**
      * @param args the command line arguments

@@ -108,7 +108,8 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_FazerSimulacaojButtonActionPerformed
 
     private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
-        // TODO add your handling code here:
+        Login login = new Login();
+        login.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_voltarButtonActionPerformed
 
@@ -120,7 +121,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_PerfiljButtonActionPerformed
 
     private void VisualizarHistoricojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VisualizarHistoricojButtonActionPerformed
-        // TODO add your handling code here:
+        HistóricoSimulação simulacao = new HistóricoSimulação();
+        simulacao.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_VisualizarHistoricojButtonActionPerformed
 
     /**

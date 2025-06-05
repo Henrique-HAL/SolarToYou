@@ -110,15 +110,18 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         voltarButton.setBackground(new java.awt.Color(255, 255, 102));
         voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        voltarButton.setForeground(new java.awt.Color(0, 0, 0));
         voltarButton.setText("Voltar");
         voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        voltarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(voltarButton);
-        voltarButton.setBounds(10, 620, 90, 30);
+        voltarButton.setBounds(10, 620, 90, 27);
 
         realizarSimulacaoButton.setBackground(new java.awt.Color(255, 255, 102));
         realizarSimulacaoButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        realizarSimulacaoButton.setForeground(new java.awt.Color(0, 0, 0));
         realizarSimulacaoButton.setText("Realizar Simulação");
         realizarSimulacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         realizarSimulacaoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +130,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(realizarSimulacaoButton);
-        realizarSimulacaoButton.setBounds(250, 620, 180, 30);
+        realizarSimulacaoButton.setBounds(250, 620, 180, 27);
 
         inserirValorDeInvestimentoTextField.setBackground(new java.awt.Color(204, 204, 255));
         inserirValorDeInvestimentoTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -142,7 +145,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         inserirConsumoMensalEmkWhTextField.setBackground(new java.awt.Color(204, 204, 255));
         inserirConsumoMensalEmkWhTextField.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        inserirConsumoMensalEmkWhTextField.setForeground(new java.awt.Color(0, 0, 0));
         inserirConsumoMensalEmkWhTextField.setBorder(null);
         inserirConsumoMensalEmkWhTextField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         inserirConsumoMensalEmkWhTextField.setDisabledTextColor(new java.awt.Color(0, 0, 0));
@@ -158,9 +160,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         inserirValorDeConsumoMensalEmR$TextField.setBackground(new java.awt.Color(204, 204, 255));
         inserirValorDeConsumoMensalEmR$TextField.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        inserirValorDeConsumoMensalEmR$TextField.setForeground(new java.awt.Color(0, 0, 0));
         inserirValorDeConsumoMensalEmR$TextField.setBorder(null);
-        inserirValorDeConsumoMensalEmR$TextField.setPreferredSize(new java.awt.Dimension(64, 14));
         inserirValorDeConsumoMensalEmR$TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inserirValorDeConsumoMensalEmR$TextFieldActionPerformed(evt);
@@ -171,7 +171,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         inserirHorasDeSolTextField.setBackground(new java.awt.Color(204, 204, 255));
         inserirHorasDeSolTextField.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        inserirHorasDeSolTextField.setForeground(new java.awt.Color(0, 0, 0));
         inserirHorasDeSolTextField.setBorder(null);
         inserirHorasDeSolTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,7 +181,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         inserirHorasDeSolTextField.setBounds(10, 300, 200, 30);
 
         selecionarPotenciaDoPainelComboBox.setBackground(new java.awt.Color(204, 204, 255));
-        selecionarPotenciaDoPainelComboBox.setForeground(new java.awt.Color(0, 0, 0));
         selecionarPotenciaDoPainelComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "100", "200", "300", "400", "500" }));
         selecionarPotenciaDoPainelComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,7 +195,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         retornarQuantidadeDePaineisNecessariosTextField.setBackground(new java.awt.Color(204, 204, 255));
         retornarQuantidadeDePaineisNecessariosTextField.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        retornarQuantidadeDePaineisNecessariosTextField.setForeground(new java.awt.Color(0, 0, 0));
         retornarQuantidadeDePaineisNecessariosTextField.setBorder(null);
         retornarQuantidadeDePaineisNecessariosTextField.setEnabled(false);
         retornarQuantidadeDePaineisNecessariosTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +205,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         retornarEconomiaMensalTextField.setBackground(new java.awt.Color(204, 204, 255));
         retornarEconomiaMensalTextField.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        retornarEconomiaMensalTextField.setForeground(new java.awt.Color(0, 0, 0));
         retornarEconomiaMensalTextField.setBorder(null);
         retornarEconomiaMensalTextField.setEnabled(false);
         retornarEconomiaMensalTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +215,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         retornarReducaoDeCO2TextField.setBackground(new java.awt.Color(204, 204, 255));
         retornarReducaoDeCO2TextField.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        retornarReducaoDeCO2TextField.setForeground(new java.awt.Color(0, 0, 0));
         retornarReducaoDeCO2TextField.setBorder(null);
         retornarReducaoDeCO2TextField.setEnabled(false);
         retornarReducaoDeCO2TextField.addActionListener(new java.awt.event.ActionListener() {
@@ -230,13 +225,11 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText(" Aqui Estao Algumas Recomendacoes De Paines Solares. Ao Clicar no Link Voce sera Direcionado Para o Site do vendedor");
         jLabel2.setOpaque(true);
 
         retornarROITextField.setBackground(new java.awt.Color(204, 204, 255));
         retornarROITextField.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        retornarROITextField.setForeground(new java.awt.Color(0, 0, 0));
         retornarROITextField.setBorder(null);
         retornarROITextField.setEnabled(false);
         retornarROITextField.addActionListener(new java.awt.event.ActionListener() {
@@ -246,7 +239,6 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         });
 
         InserirLinkTextField.setBackground(new java.awt.Color(204, 204, 255));
-        InserirLinkTextField.setForeground(new java.awt.Color(0, 0, 0));
         InserirLinkTextField.setText("Link A ser Inserido");
         InserirLinkTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -327,7 +319,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         );
 
         getContentPane().add(resultadoSimulacaoPanel);
-        resultadoSimulacaoPanel.setBounds(480, 40, 731, 680);
+        resultadoSimulacaoPanel.setBounds(480, 40, 725, 680);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -445,6 +437,12 @@ public class resultadoSimulacao extends javax.swing.JFrame {
     private void retornarROITextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retornarROITextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_retornarROITextFieldActionPerformed
+
+    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
+        this.dispose();
+        Menu menu = new Menu();
+        menu.setVisible(true);
+    }//GEN-LAST:event_voltarButtonActionPerformed
 
     /**
      * @param args the command line arguments

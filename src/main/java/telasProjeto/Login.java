@@ -203,7 +203,8 @@ public class Login extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Ocorreu um erro.Tente Novamente Mais Tarde!");
         }
-
+        
+        this.dispose();
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void cadastrarLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarLoginButtonActionPerformed
