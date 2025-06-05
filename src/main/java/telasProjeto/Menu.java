@@ -40,7 +40,6 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Menu");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 10, 150, 80);
