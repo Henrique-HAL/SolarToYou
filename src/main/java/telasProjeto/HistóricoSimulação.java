@@ -26,23 +26,48 @@ public class HistóricoSimulação extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        VoltarButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        VoltarButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabelCadastro = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(null);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(380, -1, 680, 600);
 
         VoltarButton.setBackground(new java.awt.Color(255, 255, 102));
         VoltarButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         VoltarButton.setText("Voltar");
         VoltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(VoltarButton);
-        VoltarButton.setBounds(40, 510, 72, 23);
+        VoltarButton.setBounds(20, 520, 72, 23);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(380, -1, 680, 600);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Modelo", "Custo"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(20, 60, 330, 430);
+
+        jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabelCadastro.setText("Histórico");
+        jLabelCadastro.setPreferredSize(new java.awt.Dimension(150, 50));
+        getContentPane().add(jLabelCadastro);
+        jLabelCadastro.setBounds(20, 0, 320, 50);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);
@@ -86,5 +111,8 @@ public class HistóricoSimulação extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton VoltarButton;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelCadastro;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
