@@ -85,14 +85,12 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabelCadastro.setForeground(new java.awt.Color(0, 0, 0));
         jLabelCadastro.setText("Cadastro Usuario ");
         jLabelCadastro.setPreferredSize(new java.awt.Dimension(150, 50));
         getContentPane().add(jLabelCadastro);
         jLabelCadastro.setBounds(20, 40, 320, 50);
 
         nomeTextField.setBackground(new java.awt.Color(204, 204, 204));
-        nomeTextField.setForeground(new java.awt.Color(0, 0, 0));
         nomeTextField.setBorder(null);
         nomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
         nomeTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +115,6 @@ public class Cadastro extends javax.swing.JFrame {
 
         voltarButton.setBackground(new java.awt.Color(255, 255, 102));
         voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        voltarButton.setForeground(new java.awt.Color(0, 0, 0));
         voltarButton.setText("Voltar");
         voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +127,6 @@ public class Cadastro extends javax.swing.JFrame {
 
         cadastrarButton.setBackground(new java.awt.Color(255, 255, 102));
         cadastrarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        cadastrarButton.setForeground(new java.awt.Color(0, 0, 0));
         cadastrarButton.setText("Cadastrar");
         cadastrarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -146,19 +142,16 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel1.setBounds(380, 0, 420, 600);
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Digite Seu Nome:");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 120, 120, 14);
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Digite Seu Email:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(20, 220, 250, 14);
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Digite Sua Senha:");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(20, 320, 120, 14);

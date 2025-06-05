@@ -42,6 +42,8 @@ public class InserirPaineis extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        PotenciaTextField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -63,7 +65,6 @@ public class InserirPaineis extends javax.swing.JFrame {
 
         ConfirmarButton.setBackground(new java.awt.Color(255, 255, 102));
         ConfirmarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ConfirmarButton.setForeground(new java.awt.Color(0, 0, 0));
         ConfirmarButton.setText("Confirmar");
         ConfirmarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,7 +74,6 @@ public class InserirPaineis extends javax.swing.JFrame {
 
         VoltarButton.setBackground(new java.awt.Color(255, 255, 102));
         VoltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        VoltarButton.setForeground(new java.awt.Color(0, 0, 0));
         VoltarButton.setText("Voltar");
         VoltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,21 +90,29 @@ public class InserirPaineis extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Cadastrar Painel ");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Modelo:");
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Descrição:");
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Preço:");
         jLabel5.setToolTipText("");
+
+        PotenciaTextField.setBackground(new java.awt.Color(204, 204, 255));
+        PotenciaTextField.setBorder(null);
+        PotenciaTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PotenciaTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel6.setText("Potência:");
+        jLabel6.setToolTipText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,14 +131,17 @@ public class InserirPaineis extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(48, 48, 48))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(PrecoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel5)
+                                .addComponent(PotenciaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel6))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(DescricaoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ModeloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ModeloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(24, 24, 24))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -146,11 +157,15 @@ public class InserirPaineis extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(9, 9, 9)
                 .addComponent(DescricaoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PrecoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PotenciaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VoltarButton)
                     .addComponent(ConfirmarButton))
@@ -175,18 +190,19 @@ public class InserirPaineis extends javax.swing.JFrame {
     }//GEN-LAST:event_VoltarButtonActionPerformed
 
     private void ConfirmarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarButtonActionPerformed
- 
+
         //O programa vai pegar o modelo, descrição, e o preço 
         String modelo = ModeloTextField.getText();
         String descricao = DescricaoTextField.getText();
         double preco = Double.parseDouble(PrecoTextField.getText());
-        
+        double potencia = Double.parseDouble(PotenciaTextField.getText());
+
         try {
-            Paineis painel = new Paineis(modelo, descricao,preco);
+            Paineis painel = new Paineis(modelo, descricao, preco, potencia);
             DAOPainel dao = new DAOPainel();
             dao.cadastrarPainel(painel);
             JOptionPane.showMessageDialog(null, "Painel cadastrado!");
-        }catch(Exception e){
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Não foi possivel cadastrar!");
         }
     }//GEN-LAST:event_ConfirmarButtonActionPerformed
@@ -198,6 +214,10 @@ public class InserirPaineis extends javax.swing.JFrame {
     private void PrecoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrecoTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PrecoTextFieldActionPerformed
+
+    private void PotenciaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PotenciaTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PotenciaTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,6 +258,7 @@ public class InserirPaineis extends javax.swing.JFrame {
     private javax.swing.JButton ConfirmarButton;
     private javax.swing.JTextField DescricaoTextField;
     private javax.swing.JTextField ModeloTextField;
+    private javax.swing.JTextField PotenciaTextField;
     private javax.swing.JTextField PrecoTextField;
     private javax.swing.JButton VoltarButton;
     private javax.swing.JLabel jLabel1;
@@ -245,6 +266,7 @@ public class InserirPaineis extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

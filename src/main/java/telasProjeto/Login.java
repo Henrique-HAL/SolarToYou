@@ -106,7 +106,6 @@ public class Login extends javax.swing.JFrame {
 
         sairButton.setBackground(new java.awt.Color(255, 255, 102));
         sairButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        sairButton.setForeground(new java.awt.Color(0, 0, 0));
         sairButton.setText("Sair");
         sairButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sairButton.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +118,6 @@ public class Login extends javax.swing.JFrame {
 
         loginButton.setBackground(new java.awt.Color(255, 255, 102));
         loginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        loginButton.setForeground(new java.awt.Color(0, 0, 0));
         loginButton.setText("Login");
         loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +130,6 @@ public class Login extends javax.swing.JFrame {
 
         cadastrarLoginButton.setBackground(new java.awt.Color(255, 255, 102));
         cadastrarLoginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        cadastrarLoginButton.setForeground(new java.awt.Color(0, 0, 0));
         cadastrarLoginButton.setText("Cadastrar Login");
         cadastrarLoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarLoginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -158,13 +155,11 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setBounds(430, 440, 370, 50);
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Digite Seu Login(Nome ou Email):");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(510, 130, 210, 14);
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Digite Sua Senha:");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(510, 250, 140, 14);
@@ -197,7 +192,7 @@ public class Login extends javax.swing.JFrame {
                     CRUDPaineis paineis = new CRUDPaineis();
                     paineis.setVisible(true);
                     this.dispose();
-                } else {
+                } else  {
                     JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
                     Menu menu = new Menu();
                     menu.setVisible(true);

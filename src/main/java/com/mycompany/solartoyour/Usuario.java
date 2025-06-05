@@ -11,40 +11,52 @@ import DAO.DAO;
  * @author Henri
  */
 public class Usuario {
-   
+
     private String nome;
     private String email;
     private String senha;
     private boolean is_admin;
     private int id_usuario;
-    
+
     //Construtor do Obejto Usuario//
-    public Usuario(String nome,String email,String senha) throws Exception{
+    public Usuario(String nome, String email, String senha) throws Exception {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+    }
+    
+    //Construtor para deletar usuario
+    public Usuario(String nome, String senha) throws Exception {
+        this.nome = nome;
+        this.senha = senha;
 
-    //checa se o usuario a ser criado é um adm e atribue o valor ao is_admin
+        //checa se o usuario a ser criado é um adm e atribue o valor ao is_admin
         DAO dao = new DAO();
         this.is_admin = dao.admin(this);
     }
+
     //Encapsulamento
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return email;
     }
-    public String getSenha(){
+
+    public String getSenha() {
         return senha;
     }
-    public void setNome(String nome){
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setEmail(String email){
+
+    public void setEmail(String email) {
         this.email = email;
     }
-    public void setSenha(String senha){
+
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 
@@ -63,6 +75,5 @@ public class Usuario {
     public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
     }
-    
-    
+
 }

@@ -33,13 +33,14 @@ public class DAOPainel {
     }
     //Aqui foi criado o metodo para cadastrar o Painél pelo CRUD no Banco de Dados
     public void cadastrarPainel(Paineis painel) throws Exception {
-        String sql="INSERT INTO tb_paineis(modelo,descricao,preco) values(?,?,?)";
+        String sql="INSERT INTO tb_paineis(modelo,descricao,preco,potencia) values(?,?,?,?)";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
             ps.setString(1, painel.getModelo());
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
+            ps.setDouble(4, painel.getPotencia());
             ps.execute();
         }
         
@@ -47,14 +48,15 @@ public class DAOPainel {
     
     //Aqui foi criado o metodo para atualizar o Painél pelo CRUD no Banco de Dados
     public void atualizarPainel(Paineis painel) throws Exception {
-        String sql="UPDATE tb_paineis SET modelo = ?, descricao = ?, preco = ? WHERE Id_paineis = ?";
+        String sql="UPDATE tb_paineis SET modelo = ?, descricao = ?, preco = ?, potencia = ?  WHERE Id_paineis = ?";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
             ps.setString(1, painel.getModelo());
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
-            ps.setInt(4, painel.getId_paineis());
+            ps.setDouble(4, painel.getPotencia());
+            ps.setInt(5, painel.getId_paineis());
             ps.execute();
         }
         

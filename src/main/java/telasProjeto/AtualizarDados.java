@@ -4,6 +4,10 @@
  */
 package telasProjeto;
 
+import DAO.DAO;
+import com.mycompany.solartoyour.Usuario;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gabva
@@ -14,7 +18,9 @@ public class AtualizarDados extends javax.swing.JFrame {
      * Creates new form AtualizarDados
      */
     public AtualizarDados() {
+        super("Solartoyour");
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -29,66 +35,74 @@ public class AtualizarDados extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabelCadastro = new javax.swing.JLabel();
-        nomeTextField = new javax.swing.JTextField();
+        SenhaTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        nomeTextField1 = new javax.swing.JTextField();
+        NomeTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        nomeTextField2 = new javax.swing.JTextField();
+        EmailTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        VoltarjButton = new javax.swing.JButton();
+        ConfirmarjButton = new javax.swing.JButton();
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
 
         jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabelCadastro.setForeground(new java.awt.Color(0, 0, 0));
         jLabelCadastro.setText("Atualizar dados");
         jLabelCadastro.setPreferredSize(new java.awt.Dimension(150, 50));
 
-        nomeTextField.setBackground(new java.awt.Color(204, 204, 204));
-        nomeTextField.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTextField.setBorder(null);
-        nomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
-        nomeTextField.addActionListener(new java.awt.event.ActionListener() {
+        SenhaTextField.setBackground(new java.awt.Color(204, 204, 204));
+        SenhaTextField.setBorder(null);
+        SenhaTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        SenhaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTextFieldActionPerformed(evt);
+                SenhaTextFieldActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Email:");
 
-        nomeTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        nomeTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTextField1.setBorder(null);
-        nomeTextField1.setPreferredSize(new java.awt.Dimension(270, 55));
-        nomeTextField1.addActionListener(new java.awt.event.ActionListener() {
+        NomeTextField.setBackground(new java.awt.Color(204, 204, 204));
+        NomeTextField.setBorder(null);
+        NomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        NomeTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTextField1ActionPerformed(evt);
+                NomeTextFieldActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Nome:");
 
-        nomeTextField2.setBackground(new java.awt.Color(204, 204, 204));
-        nomeTextField2.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTextField2.setBorder(null);
-        nomeTextField2.setPreferredSize(new java.awt.Dimension(270, 55));
-        nomeTextField2.addActionListener(new java.awt.event.ActionListener() {
+        EmailTextField.setBackground(new java.awt.Color(204, 204, 204));
+        EmailTextField.setBorder(null);
+        EmailTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        EmailTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTextField2ActionPerformed(evt);
+                EmailTextFieldActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Senha:");
+
+        VoltarjButton.setText("Voltar");
+        VoltarjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarjButtonActionPerformed(evt);
+            }
+        });
+
+        ConfirmarjButton.setText("Confirmar");
+        ConfirmarjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmarjButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,15 +110,20 @@ public class AtualizarDados extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(VoltarjButton)
+                        .addGap(176, 176, 176)
+                        .addComponent(ConfirmarjButton))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(NomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SenhaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(EmailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jLabel1))
         );
         layout.setVerticalGroup(
@@ -118,32 +137,58 @@ public class AtualizarDados extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(NomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
+                .addComponent(EmailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(SenhaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(VoltarjButton)
+                    .addComponent(ConfirmarjButton))
+                .addGap(19, 19, 19))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextFieldActionPerformed
+    private void SenhaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTextFieldActionPerformed
+    }//GEN-LAST:event_SenhaTextFieldActionPerformed
 
-    private void nomeTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextField1ActionPerformed
+    private void NomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTextField1ActionPerformed
+    }//GEN-LAST:event_NomeTextFieldActionPerformed
 
-    private void nomeTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextField2ActionPerformed
+    private void EmailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTextField2ActionPerformed
+    }//GEN-LAST:event_EmailTextFieldActionPerformed
+
+    private void VoltarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarjButtonActionPerformed
+        TelaPerfil perfil = new TelaPerfil();
+        perfil.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_VoltarjButtonActionPerformed
+
+    private void ConfirmarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarjButtonActionPerformed
+        String nome = NomeTextField.getText();
+        String email = EmailTextField.getText();
+        String senha = SenhaTextField.getText();
+
+        try {
+            Usuario perfil = new Usuario(nome, email, senha);
+            DAO dao = new DAO();
+            dao.atualizarPerfil(perfil);
+            JOptionPane.showMessageDialog(null, "Perfil Atualizado Com Sucesso");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Perfil Nao Atualizado");
+
+        }
+    }//GEN-LAST:event_ConfirmarjButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,14 +226,16 @@ public class AtualizarDados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ConfirmarjButton;
+    private javax.swing.JTextField EmailTextField;
+    private javax.swing.JTextField NomeTextField;
+    private javax.swing.JTextField SenhaTextField;
+    private javax.swing.JButton VoltarjButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelCadastro;
-    private javax.swing.JTextField nomeTextField;
-    private javax.swing.JTextField nomeTextField1;
-    private javax.swing.JTextField nomeTextField2;
     // End of variables declaration//GEN-END:variables
 }

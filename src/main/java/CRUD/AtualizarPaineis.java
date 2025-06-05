@@ -3,13 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package CRUD;
+
 import DAO.DAOPainel;
 import com.mycompany.solartoyour.Paineis;
 import javax.swing.JOptionPane;
-
-
-
-
 
 /**
  *
@@ -47,6 +44,8 @@ public class AtualizarPaineis extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        txtPotenciaAtualizar = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -80,7 +79,6 @@ public class AtualizarPaineis extends javax.swing.JFrame {
 
         btnVoltarAtualizar.setBackground(new java.awt.Color(255, 255, 102));
         btnVoltarAtualizar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnVoltarAtualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnVoltarAtualizar.setText("Voltar");
         btnVoltarAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +88,6 @@ public class AtualizarPaineis extends javax.swing.JFrame {
 
         btnConfirmarAtualizar.setBackground(new java.awt.Color(255, 255, 102));
         btnConfirmarAtualizar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnConfirmarAtualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnConfirmarAtualizar.setText("Confirmar");
         btnConfirmarAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,20 +99,21 @@ public class AtualizarPaineis extends javax.swing.JFrame {
         jLabel1.setText("Atualizar Paineis");
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Digite a Descrição:");
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Digite o Preço:");
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Digite o ID:");
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Digite o Modelo:");
+
+        txtPotenciaAtualizar.setBorder(null);
+
+        jLabel7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel7.setText("Digite a Potência:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -130,6 +128,8 @@ public class AtualizarPaineis extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(403, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPotenciaAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
                     .addComponent(jLabel2)
                     .addComponent(txtDescricaoAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtModeloAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -145,23 +145,27 @@ public class AtualizarPaineis extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtIdAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtModeloAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addGap(3, 3, 3)
                 .addComponent(txtDescricaoAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtPrecoAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtPotenciaAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnConfirmarAtualizar)
                     .addComponent(btnVoltarAtualizar))
@@ -196,22 +200,22 @@ public class AtualizarPaineis extends javax.swing.JFrame {
     private void btnConfirmarAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarAtualizarActionPerformed
         //Aqui o programa ira pegar o ID,Modelo,Descricao e Preco que irao ser atualizados no BD//
         int Id_paineis = Integer.parseInt(txtIdAtualizar.getText());
-        String Modelo = txtModeloAtualizar.getText();
-        String Descricao = txtDescricaoAtualizar.getText();
+        String modelo = txtModeloAtualizar.getText();
+        String descricao = txtDescricaoAtualizar.getText();
         double preco = Double.parseDouble(txtPrecoAtualizar.getText());
-        
-        try{
-            Paineis painel = new Paineis(Modelo,Descricao,preco,Id_paineis);
+        double potencia = Double.parseDouble(txtPotenciaAtualizar.getText());
+
+        try {
+            Paineis painel = new Paineis(modelo, descricao, preco, potencia, Id_paineis);
             DAOPainel dao = new DAOPainel();
             dao.atualizarPainel(painel);
-            JOptionPane.showMessageDialog(null,"Painel Atualizado Com Sucesso");                    
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null,"Painel Nao Atualizado");
-            
+            JOptionPane.showMessageDialog(null, "Painel Atualizado Com Sucesso");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Painel Nao Atualizado");
+
         }
-        
-        
-        
+
+
     }//GEN-LAST:event_btnConfirmarAtualizarActionPerformed
 
     private void txtIdAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdAtualizarActionPerformed
@@ -262,10 +266,12 @@ public class AtualizarPaineis extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtDescricaoAtualizar;
     private javax.swing.JTextField txtIdAtualizar;
     private javax.swing.JTextField txtModeloAtualizar;
+    private javax.swing.JTextField txtPotenciaAtualizar;
     private javax.swing.JTextField txtPrecoAtualizar;
     // End of variables declaration//GEN-END:variables
 }

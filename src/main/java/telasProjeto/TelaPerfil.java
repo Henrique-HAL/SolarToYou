@@ -14,7 +14,9 @@ public class TelaPerfil extends javax.swing.JFrame {
      * Creates new form TelaPerfil
      */
     public TelaPerfil() {
+        super("SolarToyour");
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -28,35 +30,42 @@ public class TelaPerfil extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        AtualizarjButton = new javax.swing.JButton();
+        ExcluirjButton = new javax.swing.JButton();
+        VoltarjButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 600));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Perfil de Usuário");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("Atualizar Dados");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        AtualizarjButton.setBackground(new java.awt.Color(255, 255, 102));
+        AtualizarjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AtualizarjButton.setText("Atualizar Dados");
+        AtualizarjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                AtualizarjButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 102));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
-        jButton3.setText("Excluir Conta");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ExcluirjButton.setBackground(new java.awt.Color(255, 255, 102));
+        ExcluirjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExcluirjButton.setText("Excluir Conta");
+        ExcluirjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ExcluirjButtonActionPerformed(evt);
+            }
+        });
+
+        VoltarjButton.setBackground(new java.awt.Color(255, 255, 102));
+        VoltarjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        VoltarjButton.setText("Voltar");
+        VoltarjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarjButtonActionPerformed(evt);
             }
         });
 
@@ -68,8 +77,9 @@ public class TelaPerfil extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AtualizarjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExcluirjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(VoltarjButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jLabel2))
         );
@@ -79,10 +89,12 @@ public class TelaPerfil extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AtualizarjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(94, 94, 94)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(ExcluirjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(VoltarjButton)
+                .addGap(17, 17, 17))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel2))
@@ -91,13 +103,26 @@ public class TelaPerfil extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void AtualizarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtualizarjButtonActionPerformed
+        AtualizarDados atualizar = new AtualizarDados();
+        atualizar.setVisible(true);
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_AtualizarjButtonActionPerformed
+
+    private void ExcluirjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirjButtonActionPerformed
+        ExcluirConta excluir = new ExcluirConta();
+        excluir.setVisible(true);
+
+        this.dispose();
+    }//GEN-LAST:event_ExcluirjButtonActionPerformed
+
+    private void VoltarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarjButtonActionPerformed
+        Menu menu = new Menu();
+        menu.setVisible(true);
+
+        this.dispose();
+    }//GEN-LAST:event_VoltarjButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,8 +160,9 @@ public class TelaPerfil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton AtualizarjButton;
+    private javax.swing.JButton ExcluirjButton;
+    private javax.swing.JButton VoltarjButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

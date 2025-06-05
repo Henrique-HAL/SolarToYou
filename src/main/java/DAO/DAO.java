@@ -36,13 +36,12 @@ public class DAO {
 
     //Aqui foi criado o metodo para cadastrar o usuario no Banco de Dados
     public void cadastrar(Usuario usuario) throws Exception {
-        String sql = "INSERT INTO tb_usuario(nome,email,senha,is_admin) values(?,?,?,?)";
+        String sql = "INSERT INTO tb_usuario(nome,email,senha,is_admin) values(?,?,?)";
         try (Connection conn = ConexaoBD.obtemConexao(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, usuario.getNome());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getSenha());
-            ps.setBoolean(4, usuario.getIs_admin());
             ps.execute();
         }
     }
@@ -82,11 +81,12 @@ public class DAO {
     
     //Aqui foi criado o metodo para deletar o perfil do usuario no Banco de Dados
     public void deletarPerfil(Usuario usuario) throws Exception {
-        String sql="DELETE FROM tb_usuario WHERE id_usuario = ?";
+        String sql="DELETE FROM tb_usuario WHERE nome = ? AND senha = ?";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
-            ps.setInt(1, usuario.getId_usuario());
+            ps.setString(1, usuario.getNome());
+            ps.setString(2, usuario.getSenha());
             ps.execute();
         }
         

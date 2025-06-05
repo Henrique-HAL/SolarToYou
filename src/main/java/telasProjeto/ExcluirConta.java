@@ -4,6 +4,10 @@
  */
 package telasProjeto;
 
+import DAO.DAO;
+import com.mycompany.solartoyour.Usuario;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gabva
@@ -14,7 +18,9 @@ public class ExcluirConta extends javax.swing.JFrame {
      * Creates new form ExcluirConta
      */
     public ExcluirConta() {
+        super("Solartoyour");
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -29,44 +35,55 @@ public class ExcluirConta extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabelCadastro = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        nomeTextField1 = new javax.swing.JTextField();
+        NomeTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        nomeTextField = new javax.swing.JTextField();
+        SenhaTextField = new javax.swing.JTextField();
+        VoltarjButton = new javax.swing.JButton();
+        ConfirmarjButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
 
         jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabelCadastro.setForeground(new java.awt.Color(0, 0, 0));
-        jLabelCadastro.setText("Atualizar dados");
+        jLabelCadastro.setText("Excluir conta");
         jLabelCadastro.setPreferredSize(new java.awt.Dimension(150, 50));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Nome:");
 
-        nomeTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        nomeTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTextField1.setBorder(null);
-        nomeTextField1.setPreferredSize(new java.awt.Dimension(270, 55));
-        nomeTextField1.addActionListener(new java.awt.event.ActionListener() {
+        NomeTextField.setBackground(new java.awt.Color(204, 204, 204));
+        NomeTextField.setBorder(null);
+        NomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        NomeTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTextField1ActionPerformed(evt);
+                NomeTextFieldActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Senha:");
 
-        nomeTextField.setBackground(new java.awt.Color(204, 204, 204));
-        nomeTextField.setForeground(new java.awt.Color(0, 0, 0));
-        nomeTextField.setBorder(null);
-        nomeTextField.setPreferredSize(new java.awt.Dimension(270, 55));
-        nomeTextField.addActionListener(new java.awt.event.ActionListener() {
+        SenhaTextField.setBackground(new java.awt.Color(204, 204, 204));
+        SenhaTextField.setBorder(null);
+        SenhaTextField.setPreferredSize(new java.awt.Dimension(270, 55));
+        SenhaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTextFieldActionPerformed(evt);
+                SenhaTextFieldActionPerformed(evt);
+            }
+        });
+
+        VoltarjButton.setText("Voltar");
+        VoltarjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VoltarjButtonActionPerformed(evt);
+            }
+        });
+
+        ConfirmarjButton.setText("Confirmar");
+        ConfirmarjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmarjButtonActionPerformed(evt);
             }
         });
 
@@ -76,42 +93,74 @@ public class ExcluirConta extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SenhaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(VoltarjButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ConfirmarjButton)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(jLabel1))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1))
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jLabelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(NomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(110, 110, 110)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(SenhaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(VoltarjButton)
+                    .addComponent(ConfirmarjButton))
+                .addGap(14, 14, 14))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextField1ActionPerformed
+    private void NomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTextField1ActionPerformed
+    }//GEN-LAST:event_NomeTextFieldActionPerformed
 
-    private void nomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextFieldActionPerformed
+    private void SenhaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTextFieldActionPerformed
+    }//GEN-LAST:event_SenhaTextFieldActionPerformed
+
+    private void ConfirmarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarjButtonActionPerformed
+        String nome = NomeTextField.getText();
+        String senha = SenhaTextField.getText();
+        
+        try {
+            Usuario perfil = new Usuario(nome, senha);
+            DAO dao = new DAO();
+            dao.deletarPerfil(perfil);
+            JOptionPane.showMessageDialog(null, "Perfil Deletado Com Sucesso");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Perfil Nao Deletado");
+
+        }
+        this.dispose();
+    }//GEN-LAST:event_ConfirmarjButtonActionPerformed
+
+    private void VoltarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarjButtonActionPerformed
+        TelaPerfil perfil = new TelaPerfil();
+        perfil.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_VoltarjButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,11 +198,13 @@ public class ExcluirConta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ConfirmarjButton;
+    private javax.swing.JTextField NomeTextField;
+    private javax.swing.JTextField SenhaTextField;
+    private javax.swing.JButton VoltarjButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelCadastro;
-    private javax.swing.JTextField nomeTextField;
-    private javax.swing.JTextField nomeTextField1;
     // End of variables declaration//GEN-END:variables
 }

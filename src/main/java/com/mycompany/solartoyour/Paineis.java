@@ -27,13 +27,21 @@ public class Paineis {
     
     //Construtor para Atualizar BD so a inclusao Do Id//
     
-    public Paineis(String modelo, String descricao, double preco,int Id_paineis){
+    public Paineis(String modelo, String descricao, double preco,double potencia, int Id_paineis){
         this.modelo = modelo;
         this.descricao = descricao;
         this.preco = preco;
+        this.potencia = potencia;
         this.Id_paineis = Id_paineis;
     }
-    
+     //Construtor para inserir no bd
+     public Paineis(String modelo, String descricao, double preco,double potencia){
+        this.modelo = modelo;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.potencia = potencia;
+    }
+     
     //Construtor para Deletar Painel
     public Paineis(int Id_paineis){
         this.Id_paineis = Id_paineis;
