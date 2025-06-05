@@ -23,14 +23,6 @@ public class Usuario {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-    }
-    
-    //Construtor para deletar usuario
-    public Usuario(String nome, String senha) throws Exception {
-        this.nome = nome;
-        this.senha = senha;
-
-        //checa se o usuario a ser criado é um adm e atribue o valor ao is_admin
         DAO dao = new DAO();
         this.is_admin = dao.admin(this);
     }
