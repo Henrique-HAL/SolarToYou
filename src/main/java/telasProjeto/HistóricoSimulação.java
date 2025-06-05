@@ -45,7 +45,7 @@ public class HistóricoSimulação extends javax.swing.JFrame {
         VoltarButton.setText("Voltar");
         VoltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(VoltarButton);
-        VoltarButton.setBounds(20, 520, 72, 23);
+        VoltarButton.setBounds(20, 520, 76, 23);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
