@@ -175,7 +175,10 @@ public class CRUDPaineis extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExcluirPainelSolarActionPerformed
 
     private void btnVoltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar1ActionPerformed
-        // TODO add your handling code here:
+        Login login = new Login();
+        login.setVisible(true);
+
+        this.dispose();
     }//GEN-LAST:event_btnVoltar1ActionPerformed
 
     /**
