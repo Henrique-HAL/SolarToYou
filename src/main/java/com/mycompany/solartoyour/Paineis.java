@@ -34,6 +34,7 @@ public class Paineis {
         this.potencia = potencia;
         this.Id_paineis = Id_paineis;
     }
+    
      //Construtor para inserir no bd
      public Paineis(String modelo, String descricao, double preco,double potencia){
         this.modelo = modelo;
