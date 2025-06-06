@@ -26,6 +26,11 @@ public class Usuario {
         DAO dao = new DAO();
         this.is_admin = dao.admin(this);
     }
+    
+    public Usuario(String nome, String senha) throws Exception {
+        this.nome = nome;
+        this.senha = senha;
+    }
 
     //Encapsulamento
     public String getNome() {

@@ -4,6 +4,8 @@
  */
 package telasProjeto;
 
+import CRUDUsuario.TelaPerfil;
+
 /**
  *
  * @author USER

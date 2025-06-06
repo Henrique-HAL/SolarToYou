@@ -5,6 +5,7 @@
 package CRUD;
 
 import telasProjeto.Login;
+import telasProjeto.Menu;
 
 /**
  *
@@ -35,7 +36,8 @@ public class CRUDPaineis extends javax.swing.JFrame {
         btnExcluirPainelSolar = new javax.swing.JButton();
         btnAtualizarPainelSolar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        btnVoltar = new javax.swing.JButton();
+        btnMenu = new javax.swing.JButton();
+        btnVoltar1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,7 +50,6 @@ public class CRUDPaineis extends javax.swing.JFrame {
 
         btnInserirPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
         btnInserirPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnInserirPainelSolar.setForeground(new java.awt.Color(0, 0, 0));
         btnInserirPainelSolar.setText("Inserir");
         btnInserirPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInserirPainelSolar.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +60,6 @@ public class CRUDPaineis extends javax.swing.JFrame {
 
         btnExcluirPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
         btnExcluirPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnExcluirPainelSolar.setForeground(new java.awt.Color(0, 0, 0));
         btnExcluirPainelSolar.setText("Excluir");
         btnExcluirPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExcluirPainelSolar.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +70,6 @@ public class CRUDPaineis extends javax.swing.JFrame {
 
         btnAtualizarPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
         btnAtualizarPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnAtualizarPainelSolar.setForeground(new java.awt.Color(0, 0, 0));
         btnAtualizarPainelSolar.setText("Atualizar");
         btnAtualizarPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAtualizarPainelSolar.addActionListener(new java.awt.event.ActionListener() {
@@ -117,18 +116,29 @@ public class CRUDPaineis extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(100, 30, 551, 530);
 
-        btnVoltar.setBackground(new java.awt.Color(255, 255, 102));
-        btnVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnVoltar.setForeground(new java.awt.Color(0, 0, 0));
-        btnVoltar.setText("Voltar");
-        btnVoltar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+        btnMenu.setBackground(new java.awt.Color(255, 255, 102));
+        btnMenu.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnMenu.setText("Menu");
+        btnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltarActionPerformed(evt);
+                btnMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltar);
-        btnVoltar.setBounds(20, 550, 72, 24);
+        getContentPane().add(btnMenu);
+        btnMenu.setBounds(660, 530, 90, 30);
+
+        btnVoltar1.setBackground(new java.awt.Color(255, 255, 102));
+        btnVoltar1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnVoltar1.setText("Voltar");
+        btnVoltar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVoltar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVoltar1);
+        btnVoltar1.setBounds(20, 540, 80, 24);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ProjetoNoCanva.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -138,13 +148,13 @@ public class CRUDPaineis extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         //Voltar para a tela de Login
-        Login admin = new Login();
-        admin.setVisible(true);
+        Menu menu = new Menu();
+        menu.setVisible(true);
 
         this.dispose();
-    }//GEN-LAST:event_btnVoltarActionPerformed
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnInserirPainelSolarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirPainelSolarActionPerformed
         InserirPaineis create = new InserirPaineis();
@@ -163,6 +173,10 @@ public class CRUDPaineis extends javax.swing.JFrame {
         delete.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnExcluirPainelSolarActionPerformed
+
+    private void btnVoltar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVoltar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,7 +217,8 @@ public class CRUDPaineis extends javax.swing.JFrame {
     private javax.swing.JButton btnAtualizarPainelSolar;
     private javax.swing.JButton btnExcluirPainelSolar;
     private javax.swing.JButton btnInserirPainelSolar;
-    private javax.swing.JButton btnVoltar;
+    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnVoltar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

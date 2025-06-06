@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package telasProjeto;
+package CRUDUsuario;
+
+import telasProjeto.Menu;
 
 /**
  *
@@ -45,6 +47,7 @@ public class TelaPerfil extends javax.swing.JFrame {
         AtualizarjButton.setBackground(new java.awt.Color(255, 255, 102));
         AtualizarjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         AtualizarjButton.setText("Atualizar Dados");
+        AtualizarjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AtualizarjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AtualizarjButtonActionPerformed(evt);
@@ -54,6 +57,7 @@ public class TelaPerfil extends javax.swing.JFrame {
         ExcluirjButton.setBackground(new java.awt.Color(255, 255, 102));
         ExcluirjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ExcluirjButton.setText("Excluir Conta");
+        ExcluirjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ExcluirjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExcluirjButtonActionPerformed(evt);
@@ -63,6 +67,7 @@ public class TelaPerfil extends javax.swing.JFrame {
         VoltarjButton.setBackground(new java.awt.Color(255, 255, 102));
         VoltarjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         VoltarjButton.setText("Voltar");
+        VoltarjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VoltarjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltarjButtonActionPerformed(evt);

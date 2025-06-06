@@ -22,8 +22,8 @@ public class DAOPainel {
         try (Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setString(1, painel.getModelo());
-            ps.setString(1, painel.getDescricao());
-            ps.setDouble(2, painel.getPreco());
+            ps.setString(2, painel.getDescricao());
+            ps.setDouble(3, painel.getPreco());
             
             
             try(ResultSet rs = ps.executeQuery()){

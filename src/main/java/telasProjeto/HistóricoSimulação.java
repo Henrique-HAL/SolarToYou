@@ -28,19 +28,15 @@ public class HistóricoSimulação extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         VoltarButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabelCadastro = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(1280, 720));
         getContentPane().setLayout(null);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(380, -1, 680, 600);
 
         VoltarButton.setBackground(new java.awt.Color(255, 255, 102));
         VoltarButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -52,23 +48,49 @@ public class HistóricoSimulação extends javax.swing.JFrame {
             }
         });
         getContentPane().add(VoltarButton);
-        VoltarButton.setBounds(20, 520, 72, 23);
+        VoltarButton.setBounds(20, 520, 90, 24);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Modelo", "Custo"
+                "id_usuario", "id_painel", "dia", "consumo_mensal_previo", "consumo_mensal_seguinte", "reducao_CO2", "economia"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setShowGrid(true);
+        jTable1.setShowHorizontalLines(true);
+        jTable1.setShowVerticalLines(true);
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setMinWidth(75);
+            jTable1.getColumnModel().getColumn(0).setMaxWidth(75);
+            jTable1.getColumnModel().getColumn(1).setMinWidth(75);
+            jTable1.getColumnModel().getColumn(1).setMaxWidth(75);
+            jTable1.getColumnModel().getColumn(6).setMinWidth(80);
+            jTable1.getColumnModel().getColumn(6).setMaxWidth(80);
+        }
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(20, 60, 330, 430);
+        jScrollPane1.setBounds(10, 70, 840, 420);
 
         jLabelCadastro.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabelCadastro.setText("Histórico");
@@ -76,7 +98,11 @@ public class HistóricoSimulação extends javax.swing.JFrame {
         getContentPane().add(jLabelCadastro);
         jLabelCadastro.setBounds(20, 0, 320, 50);
 
-        setSize(new java.awt.Dimension(816, 609));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(870, 0, 680, 600);
+
+        setSize(new java.awt.Dimension(1296, 728));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
