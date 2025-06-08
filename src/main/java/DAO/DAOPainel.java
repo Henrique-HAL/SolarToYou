@@ -4,11 +4,13 @@
  */
 package DAO;
 
-import com.mycompany.solartoyour.ConexaoBD;
-import com.mycompany.solartoyour.Paineis;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mycompany.solartoyour.ConexaoBD;
+import com.mycompany.solartoyour.Paineis;
 
 /**
  *
@@ -59,8 +61,13 @@ public class DAOPainel {
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
             ps.setDouble(4, painel.getPotencia());
+<<<<<<< HEAD
             ps.setString(5, painel.getLink());
             ps.setInt(6, painel.getId_paineis());
+=======
+            ps.setInt(5, painel.getId_paineis());
+            
+>>>>>>> Classe-historico-e-DAO
             ps.execute();
         }
         
@@ -77,6 +84,7 @@ public class DAOPainel {
         }
         
     }
+<<<<<<< HEAD
     //criei esse metodo somente para buscar 1 link no banco e dados pela potencia que o usuario escolheu
     public Paineis buscarPorPotencia(double potencia) throws Exception {
     String sql = "SELECT * FROM tb_paineis WHERE potencia = ?";
@@ -103,5 +111,24 @@ public class DAOPainel {
     }
 }
     
+=======
+
+    //retorna o ID do painel 
+    public static int id_painel(Paineis painel) throws SQLException {
+        String sql = "SELECT Id_paineis FROM tb_paineis WHERE modelo = ?";
+        try(Connection conn = ConexaoBD.obtemConexao(); PreparedStatement ps = conn.prepareStatement(sql)){
+
+            ps.setString(1, painel.getModelo());
+            int id_painel = 0;
+
+            try (ResultSet rs = ps.executeQuery()){
+                while (rs.next()) {
+                    id_painel = rs.getInt("Id_paineis");
+                }
+            }
+            return id_painel;
+        }
+    }
+>>>>>>> Classe-historico-e-DAO
     
 }

@@ -37,6 +37,7 @@ public class Paineis {
         this.Id_paineis = Id_paineis;
         this.link = link;
     }
+    
      //Construtor para inserir no bd
      public Paineis(String modelo, String descricao, double preco,double potencia,String link){
         this.modelo = modelo;

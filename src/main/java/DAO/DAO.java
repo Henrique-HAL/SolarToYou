@@ -7,6 +7,7 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import com.mycompany.solartoyour.ConexaoBD;
 import com.mycompany.solartoyour.Usuario;
@@ -90,6 +91,22 @@ public class DAO {
             ps.execute();
         }
         
+    }
+
+    //retorna o ID do usuario
+    public static int id_usuario(Usuario usuario) throws SQLException {
+        String sql = "Select id_usuario from tb_usuario WHERE nome = ?";
+        try (Connection conn = ConexaoBD.obtemConexao(); PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, usuario.getNome());
+            int id_usuario = 0;
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    id_usuario = rs.getInt("id_usuario");
+                }
+            }
+            return id_usuario;
+        }
     }
     
     

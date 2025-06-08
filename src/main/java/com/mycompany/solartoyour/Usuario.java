@@ -23,8 +23,11 @@ public class Usuario {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+
+        //coloca os devidos valores ao is_admin (boolean) e ao id_usuario
         DAO dao = new DAO();
         this.is_admin = dao.admin(this);
+        this.id_usuario = dao.id_usuario(this);
     }
     
     public Usuario(String nome, String senha) throws Exception {
@@ -61,16 +64,7 @@ public class Usuario {
         return is_admin;
     }
 
-    public void setIs_admin(boolean is_admin) {
-        this.is_admin = is_admin;
-    }
-
     public int getId_usuario() {
         return id_usuario;
     }
-
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
-    }
-
 }
