@@ -71,7 +71,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/gif/giftela2menosmb.gif"/>
+          <Image iconType="3" name="/Imagens/welcome little one!.png"/>
         </Property>
       </Properties>
     </Component>
