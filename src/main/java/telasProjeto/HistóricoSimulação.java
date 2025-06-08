@@ -38,8 +38,9 @@ public class HistóricoSimulação extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1280, 720));
         getContentPane().setLayout(null);
 
-        VoltarButton.setBackground(new java.awt.Color(255, 255, 102));
+        VoltarButton.setBackground(new java.awt.Color(255, 153, 0));
         VoltarButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        VoltarButton.setForeground(new java.awt.Color(255, 255, 255));
         VoltarButton.setText("Voltar");
         VoltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VoltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +99,7 @@ public class HistóricoSimulação extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(870, 0, 680, 600);
+        jLabel2.setBounds(850, 0, 680, 600);
 
         setSize(new java.awt.Dimension(1296, 728));
         setLocationRelativeTo(null);

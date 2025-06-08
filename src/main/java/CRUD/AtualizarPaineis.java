@@ -79,8 +79,9 @@ public class AtualizarPaineis extends javax.swing.JFrame {
 
         txtPrecoAtualizar.setBorder(null);
 
-        btnVoltarAtualizar.setBackground(new java.awt.Color(255, 255, 102));
+        btnVoltarAtualizar.setBackground(new java.awt.Color(255, 153, 0));
         btnVoltarAtualizar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnVoltarAtualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltarAtualizar.setText("Voltar");
         btnVoltarAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,8 +89,9 @@ public class AtualizarPaineis extends javax.swing.JFrame {
             }
         });
 
-        btnConfirmarAtualizar.setBackground(new java.awt.Color(255, 255, 102));
+        btnConfirmarAtualizar.setBackground(new java.awt.Color(255, 153, 0));
         btnConfirmarAtualizar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnConfirmarAtualizar.setForeground(new java.awt.Color(255, 255, 255));
         btnConfirmarAtualizar.setText("Confirmar");
         btnConfirmarAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,27 +129,27 @@ public class AtualizarPaineis extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(btnVoltarAtualizar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnConfirmarAtualizar)
-                .addGap(31, 31, 31))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(403, Short.MAX_VALUE)
+                .addContainerGap(390, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtLinkAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPotenciaAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel2)
-                    .addComponent(txtDescricaoAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtModeloAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIdAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPrecoAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnVoltarAtualizar)
+                        .addGap(101, 101, 101)
+                        .addComponent(btnConfirmarAtualizar)
+                        .addGap(31, 31, 31))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtLinkAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtPotenciaAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7)
+                        .addComponent(jLabel2)
+                        .addComponent(txtDescricaoAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtModeloAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtIdAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtPrecoAtualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel6)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

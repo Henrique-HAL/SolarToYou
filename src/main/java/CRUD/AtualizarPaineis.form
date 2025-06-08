@@ -42,29 +42,30 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="btnVoltarAtualizar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btnConfirmarAtualizar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="403" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="390" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" pref="297" max="-2" attributes="0"/>
-                      <Component id="txtLinkAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="txtPotenciaAtualizar" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtDescricaoAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="txtModeloAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="txtIdAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="txtPrecoAtualizar" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel8" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnVoltarAtualizar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+                          <Component id="btnConfirmarAtualizar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" min="-2" pref="297" max="-2" attributes="0"/>
+                          <Component id="txtLinkAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
+                          <Component id="txtPotenciaAtualizar" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDescricaoAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
+                          <Component id="txtModeloAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
+                          <Component id="txtIdAtualizar" min="-2" pref="248" max="-2" attributes="0"/>
+                          <Component id="txtPrecoAtualizar" alignment="0" min="-2" pref="248" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel8" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
           </Group>
@@ -148,10 +149,13 @@
         <Component class="javax.swing.JButton" name="btnVoltarAtualizar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="ff" red="ff" type="rgb"/>
+              <Color blue="0" green="99" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Voltar"/>
           </Properties>
@@ -162,10 +166,13 @@
         <Component class="javax.swing.JButton" name="btnConfirmarAtualizar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="ff" red="ff" type="rgb"/>
+              <Color blue="0" green="99" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Confirmar"/>
           </Properties>

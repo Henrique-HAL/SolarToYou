@@ -117,8 +117,9 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(670, 10, 280, 30);
 
-        voltarButton.setBackground(new java.awt.Color(255, 255, 102));
+        voltarButton.setBackground(new java.awt.Color(255, 153, 0));
         voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        voltarButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarButton.setText("Voltar");
         voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -129,8 +130,9 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         getContentPane().add(voltarButton);
         voltarButton.setBounds(10, 620, 90, 30);
 
-        realizarSimulacaoButton.setBackground(new java.awt.Color(255, 255, 102));
+        realizarSimulacaoButton.setBackground(new java.awt.Color(255, 153, 0));
         realizarSimulacaoButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        realizarSimulacaoButton.setForeground(new java.awt.Color(255, 255, 255));
         realizarSimulacaoButton.setText("Realizar Simulação");
         realizarSimulacaoButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         realizarSimulacaoButton.addActionListener(new java.awt.event.ActionListener() {

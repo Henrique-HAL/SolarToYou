@@ -44,8 +44,9 @@ public class TelaPerfil extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
 
-        AtualizarjButton.setBackground(new java.awt.Color(255, 255, 102));
+        AtualizarjButton.setBackground(new java.awt.Color(255, 153, 0));
         AtualizarjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        AtualizarjButton.setForeground(new java.awt.Color(255, 255, 255));
         AtualizarjButton.setText("Atualizar Dados");
         AtualizarjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         AtualizarjButton.addActionListener(new java.awt.event.ActionListener() {
@@ -54,8 +55,9 @@ public class TelaPerfil extends javax.swing.JFrame {
             }
         });
 
-        ExcluirjButton.setBackground(new java.awt.Color(255, 255, 102));
+        ExcluirjButton.setBackground(new java.awt.Color(255, 153, 0));
         ExcluirjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ExcluirjButton.setForeground(new java.awt.Color(255, 255, 255));
         ExcluirjButton.setText("Excluir Conta");
         ExcluirjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ExcluirjButton.addActionListener(new java.awt.event.ActionListener() {
@@ -64,8 +66,9 @@ public class TelaPerfil extends javax.swing.JFrame {
             }
         });
 
-        VoltarjButton.setBackground(new java.awt.Color(255, 255, 102));
+        VoltarjButton.setBackground(new java.awt.Color(255, 153, 0));
         VoltarjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        VoltarjButton.setForeground(new java.awt.Color(255, 255, 255));
         VoltarjButton.setText("Voltar");
         VoltarjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VoltarjButton.addActionListener(new java.awt.event.ActionListener() {

@@ -65,18 +65,22 @@ public class InserirPaineis extends javax.swing.JFrame {
         DescricaoTextField.setBackground(new java.awt.Color(204, 204, 255));
         DescricaoTextField.setBorder(null);
 
-        ConfirmarButton.setBackground(new java.awt.Color(255, 255, 102));
+        ConfirmarButton.setBackground(new java.awt.Color(255, 153, 0));
         ConfirmarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ConfirmarButton.setForeground(new java.awt.Color(255, 255, 255));
         ConfirmarButton.setText("Confirmar");
+        ConfirmarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ConfirmarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConfirmarButtonActionPerformed(evt);
             }
         });
 
-        VoltarButton.setBackground(new java.awt.Color(255, 255, 102));
+        VoltarButton.setBackground(new java.awt.Color(255, 153, 0));
         VoltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        VoltarButton.setForeground(new java.awt.Color(255, 255, 255));
         VoltarButton.setText("Voltar");
+        VoltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VoltarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltarButtonActionPerformed(evt);
@@ -135,29 +139,29 @@ public class InserirPaineis extends javax.swing.JFrame {
                 .addContainerGap(438, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(48, 48, 48))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(PrecoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5)
-                                .addComponent(PotenciaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel7)
-                                .addComponent(inserirLinkTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(DescricaoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ModeloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(24, 24, 24))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addComponent(VoltarButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ConfirmarButton)
-                .addGap(57, 57, 57))
+                        .addComponent(VoltarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109)
+                        .addComponent(ConfirmarButton)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addGap(48, 48, 48))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(PrecoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(PotenciaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(inserirLinkTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(DescricaoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ModeloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(24, 24, 24)))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

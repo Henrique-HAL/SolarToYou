@@ -90,18 +90,22 @@ public class AtualizarDados extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setText("Senha:");
 
-        VoltarjButton.setBackground(new java.awt.Color(255, 255, 102));
+        VoltarjButton.setBackground(new java.awt.Color(255, 153, 0));
         VoltarjButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        VoltarjButton.setForeground(new java.awt.Color(255, 255, 255));
         VoltarjButton.setText("Voltar");
+        VoltarjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VoltarjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VoltarjButtonActionPerformed(evt);
             }
         });
 
-        ConfirmarjButton.setBackground(new java.awt.Color(255, 255, 102));
+        ConfirmarjButton.setBackground(new java.awt.Color(255, 153, 0));
         ConfirmarjButton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ConfirmarjButton.setForeground(new java.awt.Color(255, 255, 255));
         ConfirmarjButton.setText("Confirmar");
+        ConfirmarjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ConfirmarjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConfirmarjButtonActionPerformed(evt);

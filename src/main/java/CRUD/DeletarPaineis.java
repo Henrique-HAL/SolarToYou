@@ -57,20 +57,22 @@ public class DeletarPaineis extends javax.swing.JFrame {
             }
         });
 
-        btnVoltarDelete.setBackground(new java.awt.Color(255, 255, 102));
+        btnVoltarDelete.setBackground(new java.awt.Color(255, 153, 0));
         btnVoltarDelete.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnVoltarDelete.setForeground(new java.awt.Color(0, 0, 0));
+        btnVoltarDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltarDelete.setText("Voltar");
+        btnVoltarDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVoltarDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarDeleteActionPerformed(evt);
             }
         });
 
-        btnConfirmarDelete.setBackground(new java.awt.Color(255, 255, 102));
+        btnConfirmarDelete.setBackground(new java.awt.Color(255, 153, 0));
         btnConfirmarDelete.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnConfirmarDelete.setForeground(new java.awt.Color(0, 0, 0));
+        btnConfirmarDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnConfirmarDelete.setText("Confirmar");
+        btnConfirmarDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfirmarDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConfirmarDeleteActionPerformed(evt);

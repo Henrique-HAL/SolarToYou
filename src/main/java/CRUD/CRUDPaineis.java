@@ -48,8 +48,9 @@ public class CRUDPaineis extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 600));
 
-        btnInserirPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
+        btnInserirPainelSolar.setBackground(new java.awt.Color(255, 153, 0));
         btnInserirPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnInserirPainelSolar.setForeground(new java.awt.Color(255, 255, 255));
         btnInserirPainelSolar.setText("Inserir");
         btnInserirPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInserirPainelSolar.addActionListener(new java.awt.event.ActionListener() {
@@ -58,8 +59,9 @@ public class CRUDPaineis extends javax.swing.JFrame {
             }
         });
 
-        btnExcluirPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
+        btnExcluirPainelSolar.setBackground(new java.awt.Color(255, 153, 0));
         btnExcluirPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnExcluirPainelSolar.setForeground(new java.awt.Color(255, 255, 255));
         btnExcluirPainelSolar.setText("Excluir");
         btnExcluirPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnExcluirPainelSolar.addActionListener(new java.awt.event.ActionListener() {
@@ -68,8 +70,9 @@ public class CRUDPaineis extends javax.swing.JFrame {
             }
         });
 
-        btnAtualizarPainelSolar.setBackground(new java.awt.Color(255, 255, 102));
+        btnAtualizarPainelSolar.setBackground(new java.awt.Color(255, 153, 0));
         btnAtualizarPainelSolar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnAtualizarPainelSolar.setForeground(new java.awt.Color(255, 255, 255));
         btnAtualizarPainelSolar.setText("Atualizar");
         btnAtualizarPainelSolar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAtualizarPainelSolar.addActionListener(new java.awt.event.ActionListener() {
@@ -116,8 +119,9 @@ public class CRUDPaineis extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(100, 30, 551, 530);
 
-        btnMenu.setBackground(new java.awt.Color(255, 255, 102));
+        btnMenu.setBackground(new java.awt.Color(255, 153, 0));
         btnMenu.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnMenu.setForeground(new java.awt.Color(255, 255, 255));
         btnMenu.setText("Menu");
         btnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -128,8 +132,9 @@ public class CRUDPaineis extends javax.swing.JFrame {
         getContentPane().add(btnMenu);
         btnMenu.setBounds(660, 530, 90, 30);
 
-        btnVoltar1.setBackground(new java.awt.Color(255, 255, 102));
+        btnVoltar1.setBackground(new java.awt.Color(255, 153, 0));
         btnVoltar1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnVoltar1.setForeground(new java.awt.Color(255, 255, 255));
         btnVoltar1.setText("Voltar");
         btnVoltar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVoltar1.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +143,7 @@ public class CRUDPaineis extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnVoltar1);
-        btnVoltar1.setBounds(20, 540, 80, 24);
+        btnVoltar1.setBounds(20, 540, 80, 27);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ProjetoNoCanva.png"))); // NOI18N
         getContentPane().add(jLabel1);

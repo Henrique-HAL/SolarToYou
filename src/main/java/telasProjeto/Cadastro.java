@@ -42,10 +42,10 @@ public class Cadastro extends javax.swing.JFrame {
         senhaPasswordField = new javax.swing.JPasswordField();
         voltarButton = new javax.swing.JButton();
         cadastrarButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jPanelExterno.setOpaque(false);
         jPanelExterno.setPreferredSize(new java.awt.Dimension(500, 500));
@@ -113,8 +113,9 @@ public class Cadastro extends javax.swing.JFrame {
         getContentPane().add(senhaPasswordField);
         senhaPasswordField.setBounds(20, 340, 250, 40);
 
-        voltarButton.setBackground(new java.awt.Color(255, 255, 102));
+        voltarButton.setBackground(new java.awt.Color(255, 153, 0));
         voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        voltarButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarButton.setText("Voltar");
         voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -123,10 +124,11 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(voltarButton);
-        voltarButton.setBounds(20, 480, 90, 27);
+        voltarButton.setBounds(20, 480, 90, 30);
 
-        cadastrarButton.setBackground(new java.awt.Color(255, 255, 102));
+        cadastrarButton.setBackground(new java.awt.Color(255, 153, 0));
         cadastrarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cadastrarButton.setForeground(new java.awt.Color(255, 255, 255));
         cadastrarButton.setText("Cadastrar");
         cadastrarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -135,11 +137,7 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cadastrarButton);
-        cadastrarButton.setBounds(220, 480, 110, 27);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(380, 0, 420, 600);
+        cadastrarButton.setBounds(220, 480, 110, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel2.setText("Digite Seu Nome:");
@@ -155,6 +153,10 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel4.setText("Digite Sua Senha:");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(20, 320, 120, 14);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gif/gif22.gif"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(390, 0, 420, 600);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);

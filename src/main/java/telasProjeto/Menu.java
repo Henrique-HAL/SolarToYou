@@ -46,8 +46,9 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 10, 150, 80);
 
-        FazerSimulacaojButton.setBackground(new java.awt.Color(255, 255, 102));
+        FazerSimulacaojButton.setBackground(new java.awt.Color(255, 153, 0));
         FazerSimulacaojButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        FazerSimulacaojButton.setForeground(new java.awt.Color(255, 255, 255));
         FazerSimulacaojButton.setText("Fazer Simulação");
         FazerSimulacaojButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         FazerSimulacaojButton.addActionListener(new java.awt.event.ActionListener() {
@@ -56,10 +57,11 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(FazerSimulacaojButton);
-        FazerSimulacaojButton.setBounds(20, 230, 160, 27);
+        FazerSimulacaojButton.setBounds(10, 190, 360, 30);
 
-        VisualizarHistoricojButton.setBackground(new java.awt.Color(255, 255, 102));
+        VisualizarHistoricojButton.setBackground(new java.awt.Color(255, 153, 0));
         VisualizarHistoricojButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        VisualizarHistoricojButton.setForeground(new java.awt.Color(255, 255, 255));
         VisualizarHistoricojButton.setText("Visualizar Histórico");
         VisualizarHistoricojButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VisualizarHistoricojButton.addActionListener(new java.awt.event.ActionListener() {
@@ -68,10 +70,11 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(VisualizarHistoricojButton);
-        VisualizarHistoricojButton.setBounds(20, 270, 170, 27);
+        VisualizarHistoricojButton.setBounds(10, 250, 360, 30);
 
-        voltarButton.setBackground(new java.awt.Color(255, 255, 51));
+        voltarButton.setBackground(new java.awt.Color(255, 153, 0));
         voltarButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        voltarButton.setForeground(new java.awt.Color(255, 255, 255));
         voltarButton.setText("Voltar");
         voltarButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         voltarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,14 +83,15 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(voltarButton);
-        voltarButton.setBounds(10, 530, 90, 27);
+        voltarButton.setBounds(10, 530, 90, 30);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/newPng.png"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(380, 0, 800, 600);
 
-        PerfiljButton.setBackground(new java.awt.Color(255, 255, 102));
+        PerfiljButton.setBackground(new java.awt.Color(255, 153, 0));
         PerfiljButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        PerfiljButton.setForeground(new java.awt.Color(255, 255, 255));
         PerfiljButton.setText("Perfil");
         PerfiljButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         PerfiljButton.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +100,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(PerfiljButton);
-        PerfiljButton.setBounds(20, 320, 160, 27);
+        PerfiljButton.setBounds(10, 320, 360, 30);
 
         setSize(new java.awt.Dimension(816, 609));
         setLocationRelativeTo(null);

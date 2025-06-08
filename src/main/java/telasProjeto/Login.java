@@ -104,8 +104,9 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(senhaPasswordField);
         senhaPasswordField.setBounds(510, 270, 230, 40);
 
-        sairButton.setBackground(new java.awt.Color(255, 255, 102));
+        sairButton.setBackground(new java.awt.Color(255, 153, 0));
         sairButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        sairButton.setForeground(new java.awt.Color(255, 255, 255));
         sairButton.setText("Sair");
         sairButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         sairButton.addActionListener(new java.awt.event.ActionListener() {
@@ -114,10 +115,11 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sairButton);
-        sairButton.setBounds(550, 390, 72, 27);
+        sairButton.setBounds(550, 390, 80, 30);
 
-        loginButton.setBackground(new java.awt.Color(255, 255, 102));
+        loginButton.setBackground(new java.awt.Color(255, 153, 0));
         loginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
         loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -126,10 +128,11 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(loginButton);
-        loginButton.setBounds(710, 390, 72, 27);
+        loginButton.setBounds(700, 390, 80, 30);
 
-        cadastrarLoginButton.setBackground(new java.awt.Color(255, 255, 102));
+        cadastrarLoginButton.setBackground(new java.awt.Color(255, 153, 0));
         cadastrarLoginButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cadastrarLoginButton.setForeground(new java.awt.Color(255, 255, 255));
         cadastrarLoginButton.setText("Cadastrar Login");
         cadastrarLoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cadastrarLoginButton.addActionListener(new java.awt.event.ActionListener() {
@@ -138,7 +141,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cadastrarLoginButton);
-        cadastrarLoginButton.setBounds(630, 520, 150, 23);
+        cadastrarLoginButton.setBounds(630, 510, 150, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
         getContentPane().add(jLabel1);
