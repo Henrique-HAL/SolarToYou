@@ -42,7 +42,7 @@ public class TelaPerfil extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setText("Perfil de Usuário");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/TelaLogin.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gif/giftela2.gif"))); // NOI18N
 
         AtualizarjButton.setBackground(new java.awt.Color(255, 153, 0));
         AtualizarjButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
