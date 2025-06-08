@@ -48,7 +48,7 @@ public class HistóricoSimulação extends javax.swing.JFrame {
             }
         });
         getContentPane().add(VoltarButton);
-        VoltarButton.setBounds(20, 520, 90, 24);
+        VoltarButton.setBounds(20, 520, 90, 27);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -77,8 +77,6 @@ public class HistóricoSimulação extends javax.swing.JFrame {
             }
         });
         jTable1.setShowGrid(true);
-        jTable1.setShowHorizontalLines(true);
-        jTable1.setShowVerticalLines(true);
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setMinWidth(75);

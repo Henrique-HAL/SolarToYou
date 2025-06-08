@@ -18,12 +18,13 @@ public class DAOPainel {
     
     //Aqui foi criado o metodo para verificar o Painél na Simualação pelo Banco de Dados
     public boolean verificaPainel(Paineis painel ) throws Exception{
-        String sql="SELECT*FROM tb_paineis WHERE modelo = ? AND descricao = ? AND preco = ?";
+        String sql="SELECT*FROM tb_paineis WHERE modelo = ? AND descricao = ? AND preco = ? AND link = ?";
         try (Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setString(1, painel.getModelo());
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
+            ps.setString(4, painel.getLink());
             
             
             try(ResultSet rs = ps.executeQuery()){
@@ -33,7 +34,7 @@ public class DAOPainel {
     }
     //Aqui foi criado o metodo para cadastrar o Painél pelo CRUD no Banco de Dados
     public void cadastrarPainel(Paineis painel) throws Exception {
-        String sql="INSERT INTO tb_paineis(modelo,descricao,preco,potencia) values(?,?,?,?)";
+        String sql="INSERT INTO tb_paineis(modelo,descricao,preco,potencia,link) values(?,?,?,?,?)";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
@@ -41,6 +42,8 @@ public class DAOPainel {
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
             ps.setDouble(4, painel.getPotencia());
+            ps.setString(5, painel.getLink());
+            
             ps.execute();
         }
         
@@ -48,7 +51,7 @@ public class DAOPainel {
     
     //Aqui foi criado o metodo para atualizar o Painél pelo CRUD no Banco de Dados
     public void atualizarPainel(Paineis painel) throws Exception {
-        String sql="UPDATE tb_paineis SET modelo = ?, descricao = ?, preco = ?, potencia = ?  WHERE Id_paineis = ?";
+        String sql="UPDATE tb_paineis SET modelo = ?, descricao = ?, preco = ?, potencia = ?, link = ?  WHERE Id_paineis = ?";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             
@@ -56,7 +59,8 @@ public class DAOPainel {
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
             ps.setDouble(4, painel.getPotencia());
-            ps.setInt(5, painel.getId_paineis());
+            ps.setString(5, painel.getLink());
+            ps.setInt(6, painel.getId_paineis());
             ps.execute();
         }
         
@@ -73,5 +77,31 @@ public class DAOPainel {
         }
         
     }
+    //criei esse metodo somente para buscar 1 link no banco e dados pela potencia que o usuario escolheu
+    public Paineis buscarPorPotencia(double potencia) throws Exception {
+    String sql = "SELECT * FROM tb_paineis WHERE potencia = ?";
+    try (Connection conn = ConexaoBD.obtemConexao();
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+        
+        ps.setDouble(1, potencia);
+        
+        try (ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) {
+                Paineis painel = new Paineis();
+                //esse sao os dados que o metodo ira buscar na tabela e nas colunas dela////
+                painel.setId_paineis(rs.getInt("Id_paineis"));
+                painel.setModelo(rs.getString("modelo"));
+                painel.setDescricao(rs.getString("descricao"));
+                painel.setPreco(rs.getDouble("preco"));
+                painel.setPotencia(rs.getDouble("potencia"));
+                painel.setLink(rs.getString("link"));
+                return painel;
+            } else {
+                return null;
+            }
+        }
+    }
+}
+    
     
 }

@@ -288,33 +288,33 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" pref="685" max="-2" attributes="0"/>
-                          <EmptySpace pref="34" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="InserirLinkTextField" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel10" alignment="1" pref="407" max="32767" attributes="0"/>
+                              <Component id="retornarQuantidadedePaineisjLabel" alignment="1" max="32767" attributes="0"/>
+                              <Component id="retornarROIjLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="retornarEconomiaMensaljLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="retornarReducaoDeCO2jLabel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="EnergiaGeradajLabel" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="inserirLinkjLabel" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel10" alignment="1" pref="407" max="32767" attributes="0"/>
-                      <Component id="retornarQuantidadedePaineisjLabel" alignment="1" max="32767" attributes="0"/>
-                      <Component id="retornarROIjLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="retornarEconomiaMensaljLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="retornarReducaoDeCO2jLabel" alignment="0" max="32767" attributes="0"/>
-                      <Component id="EnergiaGeradajLabel" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="34" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -343,9 +343,9 @@
                   <Component id="EnergiaGeradajLabel" min="-2" pref="22" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" pref="30" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                  <Component id="InserirLinkTextField" min="-2" pref="31" max="-2" attributes="0"/>
-                  <EmptySpace pref="241" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                  <Component id="inserirLinkjLabel" min="-2" pref="75" max="-2" attributes="0"/>
+                  <EmptySpace pref="191" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -359,20 +359,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial" size="18" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value=" Aqui Estao Algumas Recomendacoes De Paines Solares. Ao Clicar no Link Voce sera Direcionado Para o Site do vendedor"/>
+            <Property name="text" type="java.lang.String" value=" Aqui Esta Uma Recomendacao De Painel Solar. Ao Clicar no Link Voce sera Direcionado Para o Site do vendedor"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="InserirLinkTextField">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Link A ser Inserido"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="InserirLinkTextFieldActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -467,6 +456,26 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Energia gerada com os paineis:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="inserirLinkjLabel">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="14" style="0"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="66" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="LINK:">
+                  <Color PropertyName="color" blue="ff" green="cc" red="0" type="rgb"/>
+                </TitledBorder>
+              </Border>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

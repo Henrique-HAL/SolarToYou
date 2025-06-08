@@ -15,31 +15,35 @@ public class Paineis {
     private double preco;
     private double potencia;
     private int Id_paineis;
+    private String link;
    
     //Construtor do Objeto Paineis
 
-    public Paineis(String modelo, String descricao, double preco) {
+    public Paineis(String modelo, String descricao, double preco,String link) {
         this.modelo = modelo;
         this.descricao = descricao;
         this.preco = preco;
+        this.link = link;
     
     }
     
     //Construtor para Atualizar BD so a inclusao Do Id//
     
-    public Paineis(String modelo, String descricao, double preco,double potencia, int Id_paineis){
+    public Paineis(String modelo, String descricao, double preco,double potencia, int Id_paineis,String link){
         this.modelo = modelo;
         this.descricao = descricao;
         this.preco = preco;
         this.potencia = potencia;
         this.Id_paineis = Id_paineis;
+        this.link = link;
     }
      //Construtor para inserir no bd
-     public Paineis(String modelo, String descricao, double preco,double potencia){
+     public Paineis(String modelo, String descricao, double preco,double potencia,String link){
         this.modelo = modelo;
         this.descricao = descricao;
         this.preco = preco;
         this.potencia = potencia;
+        this.link = link;
     }
      
     //Construtor para Deletar Painel
@@ -47,7 +51,9 @@ public class Paineis {
         this.Id_paineis = Id_paineis;
     }
     
+    public Paineis(){
     
+    }
     
     //Encapsulamento
 
@@ -87,6 +93,12 @@ public class Paineis {
 
     public void setId_paineis(int Id_paineis) {
         this.Id_paineis = Id_paineis;
+    }
+    public void setLink(String link){
+        this.link = link;
+    }
+    public String getLink(){
+        return link;
     }
     
     
