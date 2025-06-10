@@ -4,11 +4,13 @@
  */
 package telasProjeto;
 
-import CRUD.CRUDPaineis;
 import javax.swing.JOptionPane;
 
+import com.mycompany.solartoyour.ClasseTeste;
+import com.mycompany.solartoyour.TXT;
 import com.mycompany.solartoyour.Usuario;
 
+import CRUD.CRUDPaineis;
 import DAO.DAO;
 
 /**
@@ -33,6 +35,7 @@ public class Login extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    int id_usuario;
     private void initComponents() {
 
         jPanelExterno = new javax.swing.JPanel();
@@ -194,10 +197,12 @@ public class Login extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
                     CRUDPaineis paineis = new CRUDPaineis();
                     paineis.setVisible(true);
+                    TXT.salvar(usuario.getId_usuario());
                     this.dispose();
                 } else  {
                     JOptionPane.showMessageDialog(null, "Seja Bem vindo " + usuario.getNome() + "!");
                     Menu menu = new Menu();
+                    TXT.salvar(usuario.getId_usuario());
                     menu.setVisible(true);
                 }
             else {
@@ -220,6 +225,7 @@ public class Login extends javax.swing.JFrame {
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
         // TODO add your handling code here:
+        TXT.deletar();
         this.dispose();
     }//GEN-LAST:event_sairButtonActionPerformed
 
@@ -272,4 +278,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton sairButton;
     private javax.swing.JPasswordField senhaPasswordField;
     // End of variables declaration//GEN-END:variables
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
 }

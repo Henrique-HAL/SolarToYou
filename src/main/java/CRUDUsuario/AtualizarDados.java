@@ -5,8 +5,12 @@
 package CRUDUsuario;
 
 import DAO.DAO;
+
 import com.mycompany.solartoyour.Usuario;
+
 import javax.swing.JOptionPane;
+
+import com.mycompany.solartoyour.TXT;
 
 /**
  *
@@ -108,7 +112,12 @@ public class AtualizarDados extends javax.swing.JFrame {
         ConfirmarjButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ConfirmarjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfirmarjButtonActionPerformed(evt);
+                try {
+                    ConfirmarjButtonActionPerformed(evt);
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -184,22 +193,26 @@ public class AtualizarDados extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_VoltarjButtonActionPerformed
 
-    private void ConfirmarjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmarjButtonActionPerformed
+    private void ConfirmarjButtonActionPerformed(java.awt.event.ActionEvent evt) throws Exception {//GEN-FIRST:event_ConfirmarjButtonActionPerformed
         String nome = NomeTextField.getText();
         String email = EmailTextField.getText();
         String senha = SenhaTextField.getText();
-
+        
+        Usuario usuario = new Usuario(nome,email,senha);
+        Usuario perfil = new Usuario(TXT.ler());
+        
         try {
-            Usuario perfil = new Usuario(nome, email, senha);
-            DAO dao = new DAO();
+            if (usuario.getId_usuario() == perfil.getId_usuario()){
+                DAO dao = new DAO();
             dao.atualizarPerfil(perfil);
             JOptionPane.showMessageDialog(null, "Perfil Atualizado Com Sucesso");
+            } else {
+                JOptionPane.showMessageDialog(null, "Informações invalidas");
+            }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Perfil Nao Atualizado");
+            JOptionPane.showMessageDialog(null, "Perfil não atualizado!");
 
         }
-        
-        this.dispose();
     }//GEN-LAST:event_ConfirmarjButtonActionPerformed
 
     /**

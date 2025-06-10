@@ -61,13 +61,8 @@ public class DAOPainel {
             ps.setString(2, painel.getDescricao());
             ps.setDouble(3, painel.getPreco());
             ps.setDouble(4, painel.getPotencia());
-<<<<<<< HEAD
             ps.setString(5, painel.getLink());
             ps.setInt(6, painel.getId_paineis());
-=======
-            ps.setInt(5, painel.getId_paineis());
-            
->>>>>>> Classe-historico-e-DAO
             ps.execute();
         }
         
@@ -84,7 +79,6 @@ public class DAOPainel {
         }
         
     }
-<<<<<<< HEAD
     //criei esse metodo somente para buscar 1 link no banco e dados pela potencia que o usuario escolheu
     public Paineis buscarPorPotencia(double potencia) throws Exception {
     String sql = "SELECT * FROM tb_paineis WHERE potencia = ?";
@@ -111,7 +105,6 @@ public class DAOPainel {
     }
 }
     
-=======
 
     //retorna o ID do painel 
     public static int id_painel(Paineis painel) throws SQLException {
@@ -129,6 +122,5 @@ public class DAOPainel {
             return id_painel;
         }
     }
->>>>>>> Classe-historico-e-DAO
     
 }

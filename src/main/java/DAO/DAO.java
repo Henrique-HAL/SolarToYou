@@ -35,6 +35,25 @@ public class DAO {
         }
     }
 
+    public static String[] usuario(String id_usuario) throws SQLException{
+        String[] valores = new String[3];
+        String sql = "select * from tb_usuario where id_usuario = ?";
+        try (Connection conn = ConexaoBD.obtemConexao(); PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, id_usuario);
+
+            try (ResultSet rs = ps.executeQuery()){
+                while (rs.next()){
+
+                    valores[0] = rs.getString("nome");
+                    valores[1] = rs.getString("email");
+                    valores[2] = rs.getString("senha");
+
+                }
+            }
+        }
+        return valores;
+    }
+    
     //Aqui foi criado o metodo para cadastrar o usuario no Banco de Dados
     public void cadastrar(Usuario usuario) throws Exception {
         String sql = "INSERT INTO tb_usuario(nome,email,senha) values(?,?,?)";

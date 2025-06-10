@@ -1,18 +1,19 @@
 package com.mycompany.solartoyour;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 public class teste {
-    public static void main(String[] args) throws Exception {
-        Usuario usuario = new Usuario("Giovanni","Giovanni@Gmail.com", "123");
-        Paineis painel = new Paineis("Filme fino","descrição", 123.99);
-
-        HistoricoSimulacao hs = new HistoricoSimulacao(usuario, painel, 100.01, 100.02, 100.03, 100.04);
-        System.out.println(hs.toString());
-
-        //hs.ArquivarSimulacao();
-
-        double[] valores = HistoricoSimulacao.getHistorico(usuario);
-        for (double d : valores) {
-            System.out.println(d);
-        }
+    public static void main(String[] args) throws SQLException, IOException {
+    //    double[] valores = Historico.getHistorico("1");
+    //    for (double d : valores) {
+    //        System.out.println(d);
+    //    }
+        TXT.deletar();
+        TXT.salvar(1);
+        TXT.ler();
+        
     }
+    
+
 }

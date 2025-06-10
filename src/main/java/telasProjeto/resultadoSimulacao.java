@@ -5,15 +5,23 @@
 package telasProjeto;
 
 import DAO.DAOPainel;
+
 import com.mycompany.solartoyour.CalculoSimulacao;
+import com.mycompany.solartoyour.ClasseTeste;
 import com.mycompany.solartoyour.Paineis;
+import com.mycompany.solartoyour.Usuario;
+
 import java.awt.Cursor;
 import java.awt.Desktop;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URI;
+
 import javax.swing.JOptionPane;
+
+import com.mycompany.solartoyour.Historico;
+import com.mycompany.solartoyour.TXT;
 
 /**
  *
@@ -415,8 +423,10 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         retornarQuantidadedePaineisjLabel.setText("Voce Precisara de : " + quantidade + " Paineis");
         EnergiaGeradajLabel.setText("Sua energia atual em kWh: " + String.format("%.2f", energia));
         
-        
-        
+        //Colocando as informações no historico
+        Historico hist = new Historico(painelSelecionado, energia, consumoMensal, cO2, economiaMensal);
+        hist.ArquivarSimulacao();
+
         }catch(Exception e){
             retornarQuantidadedePaineisjLabel.setText("Deu Algo de errado nos Calculos:");
             retornarEconomiaMensaljLabel.setText("Deu Algo de errado nos Calculos");

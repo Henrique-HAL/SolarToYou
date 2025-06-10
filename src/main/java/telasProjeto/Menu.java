@@ -4,6 +4,9 @@
  */
 package telasProjeto;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 import CRUDUsuario.TelaPerfil;
 
 /**
@@ -66,7 +69,15 @@ public class Menu extends javax.swing.JFrame {
         VisualizarHistoricojButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VisualizarHistoricojButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VisualizarHistoricojButtonActionPerformed(evt);
+                try {
+                    VisualizarHistoricojButtonActionPerformed(evt);
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
             }
         });
         getContentPane().add(VisualizarHistoricojButton);
@@ -126,7 +137,7 @@ public class Menu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_PerfiljButtonActionPerformed
 
-    private void VisualizarHistoricojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VisualizarHistoricojButtonActionPerformed
+    private void VisualizarHistoricojButtonActionPerformed(java.awt.event.ActionEvent evt) throws SQLException, IOException {//GEN-FIRST:event_VisualizarHistoricojButtonActionPerformed
         HistóricoSimulação simulacao = new HistóricoSimulação();
         simulacao.setVisible(true);
         this.dispose();

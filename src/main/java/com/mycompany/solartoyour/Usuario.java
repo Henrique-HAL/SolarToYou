@@ -4,6 +4,8 @@
  */
 package com.mycompany.solartoyour;
 
+import java.sql.SQLException;
+
 import DAO.DAO;
 
 /**
@@ -29,7 +31,14 @@ public class Usuario {
         this.is_admin = dao.admin(this);
         this.id_usuario = dao.id_usuario(this);
     }
-    
+
+    public Usuario(String id_usuario) throws SQLException{
+        String[] valores = DAO.usuario(id_usuario);
+        this.nome = valores[0];
+        this.email = valores[1];
+        this.senha = valores[2];
+    }
+       
     public Usuario(String nome, String senha) throws Exception {
         this.nome = nome;
         this.senha = senha;
