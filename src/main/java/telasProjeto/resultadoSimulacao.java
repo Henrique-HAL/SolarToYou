@@ -136,7 +136,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(voltarButton);
-        voltarButton.setBounds(10, 620, 90, 30);
+        voltarButton.setBounds(10, 620, 90, 27);
 
         realizarSimulacaoButton.setBackground(new java.awt.Color(255, 153, 0));
         realizarSimulacaoButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -149,7 +149,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(realizarSimulacaoButton);
-        realizarSimulacaoButton.setBounds(250, 620, 180, 30);
+        realizarSimulacaoButton.setBounds(250, 620, 180, 27);
 
         inserirValorDeInvestimentoTextField.setBackground(new java.awt.Color(204, 204, 255));
         inserirValorDeInvestimentoTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -200,7 +200,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         inserirHorasDeSolTextField.setBounds(10, 300, 200, 30);
 
         selecionarPotenciaDoPainelComboBox.setBackground(new java.awt.Color(204, 204, 255));
-        selecionarPotenciaDoPainelComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "100", "200", "300", "400", "500" }));
+        selecionarPotenciaDoPainelComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "100", "160", "210", "575", "300" }));
         selecionarPotenciaDoPainelComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selecionarPotenciaDoPainelComboBoxActionPerformed(evt);
@@ -255,7 +255,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         inserirLinkjLabel.setBackground(new java.awt.Color(204, 204, 255));
         inserirLinkjLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inserirLinkjLabel.setForeground(new java.awt.Color(102, 255, 255));
-        inserirLinkjLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LINK:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 204, 255))); // NOI18N
+        inserirLinkjLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LINK:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 204, 255))); // NOI18N
 
         javax.swing.GroupLayout resultadoSimulacaoPanelLayout = new javax.swing.GroupLayout(resultadoSimulacaoPanel);
         resultadoSimulacaoPanel.setLayout(resultadoSimulacaoPanelLayout);
@@ -315,7 +315,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         );
 
         getContentPane().add(resultadoSimulacaoPanel);
-        resultadoSimulacaoPanel.setBounds(480, 40, 731, 680);
+        resultadoSimulacaoPanel.setBounds(480, 40, 725, 680);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -378,7 +378,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         String txtvalorDaConta = inserirValorDeConsumoMensalEmR$TextField.getText().replace(",",".");
         double valorConta = Double.parseDouble(txtvalorDaConta);
         String txtInvestimento = inserirValorDeInvestimentoTextField.getText().replace(",",".");
-        double investimentoROI = Double.parseDouble(txtInvestimento);
+        double investimentoTotal = Double.parseDouble(txtInvestimento);
         
         DAOPainel dao = new DAOPainel();
         Paineis painelSelecionado = dao.buscarPorPotencia(potenciaPainel);
@@ -413,7 +413,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         int quantidade = (int) quantidadeP;
         double economiaMensal = CalculoSimulacao.economiaMensal( valorConta,consumoMensal,quantidadeP,potenciaPainel,HorasDeSol);
         double cO2 = CalculoSimulacao.reducaoCO2(consumoMensal);
-        double roi = CalculoSimulacao.roi(investimentoROI, economiaMensal);
+        double roi = CalculoSimulacao.roi(investimentoTotal, economiaMensal);
         int roint = (int) roi;
         double energia = CalculoSimulacao.energiaGeradaTotal(quantidadeP, potenciaPainel, HorasDeSol);
         
