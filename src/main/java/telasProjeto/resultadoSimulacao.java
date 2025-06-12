@@ -136,7 +136,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(voltarButton);
-        voltarButton.setBounds(10, 620, 90, 27);
+        voltarButton.setBounds(10, 620, 90, 30);
 
         realizarSimulacaoButton.setBackground(new java.awt.Color(255, 153, 0));
         realizarSimulacaoButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -149,7 +149,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
             }
         });
         getContentPane().add(realizarSimulacaoButton);
-        realizarSimulacaoButton.setBounds(250, 620, 180, 27);
+        realizarSimulacaoButton.setBounds(250, 620, 180, 30);
 
         inserirValorDeInvestimentoTextField.setBackground(new java.awt.Color(204, 204, 255));
         inserirValorDeInvestimentoTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -219,7 +219,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Quantidade Necessarias de Paineis Solares:");
+        jLabel10.setText("Quantidade de Paineis Solares Necessarios:");
 
         jLabel11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -231,7 +231,7 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Reducao De CO2:");
+        jLabel13.setText("Redução De CO2:");
 
         retornarQuantidadedePaineisjLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         retornarQuantidadedePaineisjLabel.setOpaque(true);
@@ -250,12 +250,12 @@ public class resultadoSimulacao extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Energia gerada com os paineis:");
+        jLabel14.setText("Energia gerada em kWh com os paineis solares:");
 
         inserirLinkjLabel.setBackground(new java.awt.Color(204, 204, 255));
         inserirLinkjLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        inserirLinkjLabel.setForeground(new java.awt.Color(102, 255, 255));
-        inserirLinkjLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LINK:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 204, 255))); // NOI18N
+        inserirLinkjLabel.setForeground(new java.awt.Color(102, 255, 204));
+        inserirLinkjLabel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LINK:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 11), new java.awt.Color(0, 204, 255))); // NOI18N
 
         javax.swing.GroupLayout resultadoSimulacaoPanelLayout = new javax.swing.GroupLayout(resultadoSimulacaoPanel);
         resultadoSimulacaoPanel.setLayout(resultadoSimulacaoPanelLayout);
@@ -315,37 +315,37 @@ public class resultadoSimulacao extends javax.swing.JFrame {
         );
 
         getContentPane().add(resultadoSimulacaoPanel);
-        resultadoSimulacaoPanel.setBounds(480, 40, 725, 680);
+        resultadoSimulacaoPanel.setBounds(480, 40, 731, 680);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Valor De Investimento");
+        jLabel3.setText("Valor De Investimento :");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 80, 120, 16);
+        jLabel3.setBounds(10, 80, 260, 16);
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Digite o Valor da sua Conta de Energia:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(10, 150, 200, 14);
+        jLabel5.setBounds(10, 150, 250, 14);
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Consumo Mensal Em kWh");
+        jLabel6.setText("Consumo Mensal Em kWh :");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(10, 220, 190, 14);
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Qual a Media em Horas que sua Residencia/Propriedade recebe por Dia");
+        jLabel7.setText("Em média quantas Horas de Sol sua residencia/propriedade recebe por dia?");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(10, 270, 400, 30);
+        jLabel7.setBounds(10, 270, 480, 30);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Qual potencia de Painel voce ira Usar?");
+        jLabel9.setText("Qual a potencia do Painel Solar em W(watts)  voce ira usar?");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(10, 350, 240, 14);
+        jLabel9.setBounds(10, 350, 390, 14);
 
         PlanoDeFundoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/PlanoDeFundo5.jpg"))); // NOI18N
         getContentPane().add(PlanoDeFundoLabel);

@@ -56,12 +56,13 @@ public class DAO {
     
     //Aqui foi criado o metodo para cadastrar o usuario no Banco de Dados
     public void cadastrar(Usuario usuario) throws Exception {
-        String sql = "INSERT INTO tb_usuario(nome,email,senha) values(?,?,?)";
+        String sql = "INSERT INTO tb_usuario(nome,email,senha,is_admin) values(?,?,?,?)";
         try (Connection conn = ConexaoBD.obtemConexao(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, usuario.getNome());
             ps.setString(2, usuario.getEmail());
             ps.setString(3, usuario.getSenha());
+            ps.setBoolean(4,false);
             ps.execute();
         }
     }
@@ -86,7 +87,7 @@ public class DAO {
     
     //Aqui foi criado o metodo para atualizar o perfil do usuario no Banco de Dados
     public void atualizarPerfil(Usuario usuario) throws Exception {
-        String sql="UPDATE tb_usuario SET nome = ?, email = ?, senha = ?, WHERE id_usuario = ?";
+        String sql="UPDATE tb_usuario SET nome = ?, email = ?, senha = ? WHERE id_usuario = ?";
          try(Connection conn = ConexaoBD.obtemConexao();
         PreparedStatement ps = conn.prepareStatement(sql)){
             

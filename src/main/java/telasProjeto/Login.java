@@ -18,6 +18,7 @@ import DAO.DAO;
  * @author Henri
  */
 public class Login extends javax.swing.JFrame {
+    public static int id_usuario;
 
     /**
      * Creates new form Login
@@ -35,7 +36,6 @@ public class Login extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    int id_usuario;
     private void initComponents() {
 
         jPanelExterno = new javax.swing.JPanel();
@@ -156,7 +156,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setBounds(560, 60, 170, 50);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Ainda Nao Tem Login? Clique em Casdatrar e Crie Um!");
+        jLabel3.setText("Ainda não tem Login? Clique em Cadastrar e Crie Um!");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(430, 440, 370, 50);
 

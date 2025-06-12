@@ -187,7 +187,8 @@ public class Cadastro extends javax.swing.JFrame {
             login.setVisible(true);
             this.dispose();
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Algo de Errado Ocorreu.Usuario Nao Cadastrado!");
+        JOptionPane.showMessageDialog(null, "Algo de Errado Ocorreu. Usuário Não Cadastrado!\nErro: " + e.getMessage());
+        e.printStackTrace(); // Mostra no cons
         }
     }//GEN-LAST:event_cadastrarButtonActionPerformed
 

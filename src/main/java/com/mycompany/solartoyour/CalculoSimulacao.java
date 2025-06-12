@@ -15,19 +15,12 @@ public class CalculoSimulacao {
         
         
     }
+    //Calculo para saber a energia gerada apos colocar os paineis solares
     public static double energiaGeradaTotal(double quantidadePaineis, double potenciaPainelWatts, double horasDeSol) {
     double potenciaPainelKW = potenciaPainelWatts / 1000.0;
     return quantidadePaineis * potenciaPainelKW * horasDeSol * 30;
     }
-//Isso seria usado para saber quanto a pessoa paga por mes em cada kwh mas , como estamos pedindo o valor da conta de energia dela os valores da tarifa local ja estao inclusas no valor da conta
-    //public static double economiaMensal (double consumoMensal, String cidade){
-        //double tarifa = 0;
-    
-        //if (cidade.equalsIgnoreCase("São Paulo")) {  //igual da combo Box 
-         //   tarifa = 0.17;
-       // }
-     //   return consumoMensal * tarifa;
- //   }
+//Calculo de Economia Mensal
     public static double economiaMensal(double consumoMensalR$,double consumoMensal,double quantidadePaineis, double potenciaPainelWatts, double horasDeSol){
         
         if(consumoMensal <= 0 ) return 0;
@@ -37,11 +30,11 @@ public class CalculoSimulacao {
         
         
 
-}        
+}        //Calculo para saber a reducao de CO2 
     public static double reducaoCO2 (double consumoMensal){
         return consumoMensal * 0.5 * 12;
     }
-
+        //Calculo para o ROI
     public static double roi (double investimentoTotal, double economiaMensal){
         return investimentoTotal / economiaMensal;
     }
